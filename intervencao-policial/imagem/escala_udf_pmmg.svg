@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="100%" height="100%" style="background:#ffffff; font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <!-- Gradientes fiéis à impressão oficial do MTP 01 -->
+    <linearGradient id="gradVermelho" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e60000"/>
+      <stop offset="100%" stop-color="#cc0000"/>
+    </linearGradient>
+
+    <linearGradient id="gradVermelhoEscuro" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b30000"/>
+      <stop offset="100%" stop-color="#990000"/>
+    </linearGradient>
+
+    <linearGradient id="gradLaranja" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e65100"/>
+      <stop offset="100%" stop-color="#d84315"/>
+    </linearGradient>
+
+    <linearGradient id="gradVerde" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#009933"/>
+      <stop offset="100%" stop-color="#00802b"/>
+    </linearGradient>
+
+    <linearGradient id="gradAmarelo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffee00"/>
+      <stop offset="100%" stop-color="#e6d600"/>
+    </linearGradient>
+
+    <linearGradient id="gradAmareloClaro" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dce374"/>
+      <stop offset="100%" stop-color="#c5cc58"/>
+    </linearGradient>
+
+    <linearGradient id="gradAzul" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0066cc"/>
+      <stop offset="100%" stop-color="#004c99"/>
+    </linearGradient>
+
+    <!-- Gradientes das 4 colunas intermediárias -->
+    <linearGradient id="gradColContato" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00802b"/>
+      <stop offset="100%" stop-color="#006622"/>
+    </linearGradient>
+
+    <linearGradient id="gradColFisico" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cc3300"/>
+      <stop offset="100%" stop-color="#b32400"/>
+    </linearGradient>
+
+    <linearGradient id="gradColIMPO" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cc2900"/>
+      <stop offset="100%" stop-color="#b31f00"/>
+    </linearGradient>
+
+    <linearGradient id="gradColDissuasivo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cc2200"/>
+      <stop offset="100%" stop-color="#991100"/>
+    </linearGradient>
+  </defs>
+
+  <!-- MOLDURA EXTERNA DO QUADRO -->
+  <rect x="40" y="45" width="880" height="530" fill="none" stroke="#ffffff" stroke-width="3"/>
+
+  <!-- ========================================== -->
+  <!-- 1. NÍVEL VERMELHO (AGRESSÃO E FORÇA LETAL) -->
+  <!-- ========================================== -->
+  <!-- Esquerda: RESISTENTE ATIVO (AGRESSÃO LETAL) -->
+  <rect x="40" y="45" width="420" height="110" fill="url(#gradVermelho)" stroke="#ffffff" stroke-width="2"/>
+  <text x="250" y="93" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">RESISTENTE ATIVO</text>
+  <text x="250" y="117" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">(AGRESSÃO LETAL)</text>
+
+  <!-- Direita Superior: DISPARO DA ARMA DE FOGO -->
+  <rect x="500" y="45" width="420" height="55" fill="url(#gradVermelhoEscuro)" stroke="#ffffff" stroke-width="2"/>
+  <text x="710" y="78" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">DISPARO DA ARMA DE FOGO</text>
+
+  <!-- Direita Inferior: GOLPES DE DEFESA PESSOAL EM REGIÕES VITAIS -->
+  <rect x="500" y="100" width="420" height="55" fill="url(#gradVermelho)" stroke="#ffffff" stroke-width="2"/>
+  <text x="710" y="124" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">GOLPES DE DEFESA PESSOAL EM</text>
+  <text x="710" y="144" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">REGIÕES VITAIS</text>
+
+
+  <!-- ========================================== -->
+  <!-- 2. NÍVEL INTERMEDIÁRIO (LARANJA E VERDE)    -->
+  <!-- ========================================== -->
+  <!-- Esquerda Superior (Laranja): RESISTENTE ATIVO (AGRESSÃO NÃO LETAL) -->
+  <rect x="40" y="155" width="420" height="120" fill="url(#gradLaranja)" stroke="#ffffff" stroke-width="2"/>
+  <text x="250" y="208" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">RESISTENTE ATIVO</text>
+  <text x="250" y="232" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">(AGRESSÃO NÃO LETAL)</text>
+
+  <!-- Esquerda Inferior (Verde): RESISTENTE PASSIVO -->
+  <rect x="40" y="275" width="420" height="130" fill="url(#gradVerde)" stroke="#ffffff" stroke-width="2"/>
+  <text x="250" y="345" font-size="17" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="3">RESISTENTE PASSIVO</text>
+
+  <!-- Direita: QUATRO COLUNAS VERTICAIS -->
+  <!-- Coluna 1: CONTROLE DE CONTATO (Duas linhas verticais) -->
+  <rect x="500" y="155" width="105" height="250" fill="url(#gradColContato)" stroke="#ffffff" stroke-width="2"/>
+  <g transform="translate(542, 280) rotate(-90)">
+    <text x="0" y="0" font-size="13.5" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">CONTROLE DE</text>
+  </g>
+  <g transform="translate(566, 280) rotate(-90)">
+    <text x="0" y="0" font-size="13.5" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">CONTATO</text>
+  </g>
+
+  <!-- Coluna 2: CONTROLE FÍSICO (Uma linha vertical) -->
+  <rect x="605" y="155" width="105" height="250" fill="url(#gradColFisico)" stroke="#ffffff" stroke-width="2"/>
+  <g transform="translate(657, 280) rotate(-90)">
+    <text x="0" y="0" font-size="14.5" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2.5">CONTROLE FÍSICO</text>
+  </g>
+
+  <!-- Coluna 3: CONTROLE COM I.M.P.O. (Duas linhas verticais) -->
+  <rect x="710" y="155" width="105" height="250" fill="url(#gradColIMPO)" stroke="#ffffff" stroke-width="2"/>
+  <g transform="translate(752, 280) rotate(-90)">
+    <text x="0" y="0" font-size="13.5" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">CONTROLE COM</text>
+  </g>
+  <g transform="translate(776, 280) rotate(-90)">
+    <text x="0" y="0" font-size="13.5" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">I.M.P.O.</text>
+  </g>
+
+  <!-- Coluna 4: USO DISSUASIVO DA ARMA DE FOGO (Duas linhas verticais) -->
+  <rect x="815" y="155" width="105" height="250" fill="url(#gradColDissuasivo)" stroke="#ffffff" stroke-width="2"/>
+  <g transform="translate(856, 280) rotate(-90)">
+    <text x="0" y="0" font-size="13" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">USO DISSUASIVO</text>
+  </g>
+  <g transform="translate(880, 280) rotate(-90)">
+    <text x="0" y="0" font-size="13" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">DA ARMA DE FOGO</text>
+  </g>
+
+
+  <!-- ========================================== -->
+  <!-- 3. NÍVEL AMARELO (COOPERATIVO / PREV / VERB) -->
+  <!-- ========================================== -->
+  <!-- Esquerda: COOPERATIVO -->
+  <rect x="40" y="405" width="420" height="120" fill="url(#gradAmarelo)" stroke="#ffffff" stroke-width="2"/>
+  <text x="250" y="470" font-size="18" font-weight="900" fill="#000000" text-anchor="middle" letter-spacing="4">COOPERATIVO</text>
+
+  <!-- Direita Superior: VERBALIZAÇÃO -->
+  <rect x="500" y="405" width="420" height="60" fill="url(#gradAmareloClaro)" stroke="#ffffff" stroke-width="2"/>
+  <text x="710" y="442" font-size="17" font-weight="900" fill="#000000" text-anchor="middle" letter-spacing="3">VERBALIZAÇÃO</text>
+
+  <!-- Direita Inferior: PRESENÇA POLICIAL -->
+  <rect x="500" y="465" width="420" height="60" fill="url(#gradAmarelo)" stroke="#ffffff" stroke-width="2"/>
+  <text x="710" y="502" font-size="17" font-weight="900" fill="#000000" text-anchor="middle" letter-spacing="3">PRESENÇA POLICIAL</text>
+
+
+  <!-- ========================================== -->
+  <!-- 4. BASE AZUL (RODAPÉ DOS ATORES)          -->
+  <!-- ========================================== -->
+  <!-- Esquerda: ABORDADO -->
+  <rect x="40" y="525" width="420" height="50" fill="url(#gradAzul)" stroke="#ffffff" stroke-width="2"/>
+  <text x="250" y="557" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="4">ABORDADO</text>
+
+  <!-- Direita: POLICIAL MILITAR -->
+  <rect x="500" y="525" width="420" height="50" fill="url(#gradAzul)" stroke="#ffffff" stroke-width="2"/>
+  <text x="710" y="557" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="4">POLICIAL MILITAR</text>
+
+
+  <!-- ========================================== -->
+  <!-- 5. A GRANDE SETA DUPLA CENTRAL BRANCA      -->
+  <!-- ========================================== -->
+  <!-- Seta com ponta em cima (y=20 a 55) e ponta embaixo (y=370 a 405) -->
+  <path d="M 480 18
+           L 512 55
+           L 498 55
+           L 498 370
+           L 512 370
+           L 480 405
+           L 448 370
+           L 462 370
+           L 462 55
+           L 448 55
+           Z"
+        fill="#ffffff" stroke="#222222" stroke-width="2"/>
+
+  <!-- Linha tracejada preta divisória central na seta -->
+  <line x1="480" y1="55" x2="480" y2="370" stroke="#000000" stroke-width="1.5" stroke-dasharray="4,4"/>
+<text x="471" y="74" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">P</text>
+  <text x="471" y="91" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">R</text>
+  <text x="471" y="108" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">E</text>
+  <text x="471" y="125" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">S</text>
+  <text x="471" y="142" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">E</text>
+  <text x="471" y="159" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">N</text>
+  <text x="471" y="176" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">Ç</text>
+  <text x="471" y="193" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">A</text>
+  <text x="471" y="227" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">P</text>
+  <text x="471" y="244" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">O</text>
+  <text x="471" y="261" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">L</text>
+  <text x="471" y="278" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">I</text>
+  <text x="471" y="295" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">C</text>
+  <text x="471" y="312" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">I</text>
+  <text x="471" y="329" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">A</text>
+  <text x="471" y="346" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">L</text>
+  <text x="489" y="95" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">V</text>
+  <text x="489" y="116" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">E</text>
+  <text x="489" y="137" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">R</text>
+  <text x="489" y="158" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">B</text>
+  <text x="489" y="179" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">A</text>
+  <text x="489" y="200" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">L</text>
+  <text x="489" y="221" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">I</text>
+  <text x="489" y="242" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">Z</text>
+  <text x="489" y="263" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">A</text>
+  <text x="489" y="284" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">Ç</text>
+  <text x="489" y="305" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">Ã</text>
+  <text x="489" y="326" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">O</text>
+
+  <!-- Legenda Doutrinária MTP 01 -->
+  <text x="40" y="605" font-size="13" font-weight="700" fill="#1e293b">Figura 3 — Modelo do uso diferenciado da força</text>
+  <text x="40" y="623" font-size="11" font-weight="500" fill="#64748b">Fonte: Manual Técnico-Profissional Nº 3.04.01/2020-CG, p. 62, seção 7.1.3 (Doutrina PMMG).</text>
+</svg>

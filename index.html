@@ -1,0 +1,883 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <base href="/dentro-do-confronto/">
+  <meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=9f154d3f-6e12-4593-bf8d-b30918da5007
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dentro do Confronto — Central de Treinamento Virtual PMMG</title>
+  <meta name="description" content="Trilha de Capacitação e Especialização Tática Policial Militar: Tomada de Decisão, Fisiologia do Estresse, Comunicação Operacional e Balística Terminal.">
+  <meta name="theme-color" content="#0b0f19">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --bg-card: #131b2e;
+      --bg-card-hover: #18223a;
+      --accent-gold: #b89053;
+      --accent-gold-light: #d4a96a;
+      --accent-red: #c0392b;
+      --accent-green: #10b981;
+      --accent-blue: #3b82f6;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --border-color: #1e293b;
+      --border-gold: rgba(184, 144, 83, 0.35);
+      --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-title: 'Montserrat', var(--font-main);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER & HERO */
+    .hero-section {
+      background: radial-gradient(circle at 50% 0%, #1e293b 0%, #0b0f19 75%);
+      border-bottom: 1px solid var(--border-color);
+      padding: 45px 20px 35px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .badge-pmmg {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(184, 144, 83, 0.12);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold-light);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-family: var(--font-title);
+      font-size: 2.5rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .hero-title span {
+      color: var(--accent-gold);
+      background: linear-gradient(135deg, #e8c68c, var(--accent-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 28px auto;
+      font-weight: 400;
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: -25px auto 35px auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .stat-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(184, 144, 83, 0.15);
+      color: var(--accent-gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .stat-info h4 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+
+    .stat-info p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* PROGRESS CONTAINER */
+    .progress-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .progress-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .progress-stats {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-gold-light);
+    }
+
+    .progress-bar-bg {
+      background: #1e293b;
+      height: 10px;
+      border-radius: 6px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-bar-fill {
+      background: linear-gradient(90deg, var(--accent-gold), #10b981);
+      height: 100%;
+      width: 0%;
+      transition: width 0.4s ease;
+      border-radius: 6px;
+    }
+
+    /* SEARCH & FILTER */
+    .controls-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: 768px) {
+      .controls-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .search-wrapper {
+      position: relative;
+      flex: 1;
+      max-width: 480px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: #fff;
+      padding: 12px 16px 12px 42px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 0 2px rgba(184, 144, 83, 0.2);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .filter-btn:hover {
+      background: #1e293b;
+      color: #fff;
+    }
+
+    .filter-btn.active {
+      background: var(--accent-gold);
+      color: #0b0f19;
+      border-color: var(--accent-gold);
+    }
+
+    /* MODULES GRID */
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 22px;
+      margin-bottom: 50px;
+    }
+
+    .module-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .module-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-gold);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .module-card.completed {
+      border-color: rgba(16, 185, 129, 0.4);
+    }
+
+    .module-card.completed::after {
+      content: "✔ CONCLUÍDO";
+      position: absolute;
+      top: 14px;
+      right: -32px;
+      background: #10b981;
+      color: #0b0f19;
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 4px 34px;
+      transform: rotate(45deg);
+      letter-spacing: 0.05em;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .module-number {
+      font-family: var(--font-title);
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .module-time {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 500;
+    }
+
+    .module-title {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .module-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      line-height: 1.55;
+      flex-grow: 1;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .tag-item {
+      background: rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 16px;
+    }
+
+    .btn-access {
+      flex: 1;
+      background: var(--accent-gold);
+      color: #0b0f19;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-access:hover {
+      background: var(--accent-gold-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-check {
+      background: #1e293b;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.2s;
+      flex-shrink: 0;
+    }
+
+    .btn-check:hover {
+      background: #334155;
+      color: #fff;
+    }
+
+    .btn-check.checked {
+      background: #10b981;
+      color: #0b0f19;
+      border-color: #10b981;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: auto;
+      background: #080b12;
+      border-top: 1px solid var(--border-color);
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    footer a {
+      color: var(--accent-gold);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      .hero-title {
+        font-size: 1.8rem;
+      }
+      .modules-grid {
+        grid-template-columns: 1fr;
+      }
+      .stat-card {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <header class="hero-section">
+    <div class="container">
+      <div class="badge-pmmg">
+        🛡️ Polícia Militar de Minas Gerais &nbsp;|&nbsp; Central de Treinamento Virtual
+      </div>
+      <h1 class="hero-title">
+        DENTRO DO <span>CONFRONTO</span>
+      </h1>
+      <p class="hero-subtitle">
+        Trilha Especializada de Instruções Táticas e Comportamentais: Neurofisiologia do Combate, Tomada de Decisão Sob Estresse, Comunicação Operacional e Balística Terminal.
+      </p>
+    </div>
+  </header>
+
+  <main class="container" style="flex: 1; padding-top: 10px;">
+
+    <!-- STATS -->
+    <section class="stats-bar">
+      <div class="stat-card">
+        <div class="stat-icon">📚</div>
+        <div class="stat-info">
+          <h4>8 Módulos</h4>
+          <p>Instruções Interativas</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">⏱️</div>
+        <div class="stat-info">
+          <h4>~2h 30min</h4>
+          <p>Carga Horária Estimada</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🎖️</div>
+        <div class="stat-info">
+          <h4>PIDF & MTP</h4>
+          <p>Doutrina PMMG / FSI</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📱</div>
+        <div class="stat-info">
+          <h4>100% Online</h4>
+          <p>Mobile & Desktop Ready</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRESS BOX -->
+    <section class="progress-box">
+      <div class="progress-header">
+        <div class="progress-title">
+          <span>📊</span> Meu Progresso na Trilha
+        </div>
+        <div class="progress-stats" id="progressText">0 de 8 concluídos (0%)</div>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressBar"></div>
+      </div>
+    </section>
+
+    <!-- CONTROLS -->
+    <section class="controls-bar">
+      <div class="search-wrapper">
+        <svg class="search-icon" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="Pesquisar por tema, conceito ou doutrina...">
+      </div>
+
+      <div class="filter-pills">
+        <button class="filter-btn active" data-category="all">Todos (8)</button>
+        <button class="filter-btn" data-category="fisiologia">Fisiologia & Cognição</button>
+        <button class="filter-btn" data-category="comunicacao">Comunicação</button>
+        <button class="filter-btn" data-category="tatica">Tática & Decisão</button>
+        <button class="filter-btn" data-category="tiro">Tiro & Balística</button>
+        <button class="filter-btn" data-category="debriefing">Debriefing</button>
+      </div>
+    </section>
+
+    <!-- MODULES GRID -->
+    <section class="modules-grid" id="modulesGrid">
+
+      <!-- MÓDULO 1 -->
+      <article class="module-card" data-category="fisiologia" data-key="atencao-seletiva">
+        <div>
+          <div class="card-top">
+            <span class="module-number">Módulo 01</span>
+            <span class="module-time">⏱️ 20 min</span>
+          </div>
+          <h2 class="module-title">Leitura da Ameaça e Cegueira Cognitiva</h2>
+          <p class="module-desc">
+            Compreenda os mecanismos de atenção seletiva sob estresse extremo, o fenômeno da cegueira por desatenção, a varredura ocular rastreada e a disciplina essencial da canga (contato e cobertura).
+          </p>
+          <div class="tag-list">
+            <span class="tag-item">Atenção Seletiva</span>
+            <span class="tag-item">Canga</span>
+            <span class="tag-item">Eye-Tracking</span>
+            <span class="tag-item">Inattentional Blindness</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a class='btn-access' href='/dentro-do-confronto/atencao-seletiva/'>
+            Acessar Instrução
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
+          </a>
+          <button class="btn-check" onclick="toggleCompletion('atencao-seletiva')" title="Marcar como concluído">✔</button>
+        </div>
+      </article>
+
+      <!-- MÓDULO 2 -->
+      <article class="module-card" data-category="comunicacao" data-key="controle-verbal">
+        <div>
+          <div class="card-top">
+            <span class="module-number">Módulo 02</span>
+            <span class="module-time">⏱️ 25 min</span>
+          </div>
+          <h2 class="module-title">Técnicas de Verbalização e Comunicação Operacional</h2>
+          <p class="module-desc">
+            Domine as técnicas de comandos verbais assertivos, entonação de voz, linguagem corporal de dominância tática, desescalada de conflito e protocolos doutrinários de comunicação da PMMG.
+          </p>
+          <div class="tag-list">
+            <span class="tag-item">Verbalização</span>
+            <span class="tag-item">Comandos Assertivos</span>
+            <span class="tag-item">Desescalada</span>
+            <span class="tag-item">Dominância</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a class='btn-access' href='/dentro-do-confronto/controle-verbal/'>
+            Acessar Instrução
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
+          </a>
+          <button class="btn-check" onclick="toggleCompletion('controle-verbal')" title="Marcar como concluído">✔</button>
+        </div>
+      </article>
+
+      <!-- MÓDULO 3 -->
+      <article class="module-card" data-category="fisiologia" data-key="gestao-de-estresse">
+        <div>
+          <div class="card-top">
+            <span class="module-number">Módulo 03</span>
+            <span class="module-time">⏱️ 25 min</span>
+          </div>
+          <h2 class="module-title">Gestão do Estresse e Processamento Cognitivo</h2>
+          <p class="module-desc">
+            Análise das alterações fisiológicas em combate armado: frequência cardíaca crítica (>145 bpm), visão em túnel, exclusão auditiva, perda de motricidade fina e técnicas de respiração tática.
+          </p>
+          <div class="tag-list">
+            <span class="tag-item">Frequência Cardíaca</span>
+            <span class="tag-item">Visão em Túnel</span>
+            <span class="tag-item">Exclusão Auditiva</span>
+            <span class="tag-item">Dave Grossman</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a class='btn-access' href='/dentro-do-confronto/gestao-de-estresse/'>
+            Acessar Instrução
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
+          </a>
+          <button class="btn-check" onclick="toggleCompletion('gestao-de-estresse')" title="Marcar como concluído">✔</button>
+        </div>
+      </article>
+
+      <!-- MÓDULO 4 PARTE 1 -->
+      <article class="module-card" data-category="tatica" data-key="intervencao-policial">
+        <div>
+          <div class="card-top">
+            <span class="module-number">Módulo 04 — Parte 1</span>
+            <span class="module-time">⏱️ 20 min</span>
+          </div>
+          <h2 class="module-title">A Estrutura da Intervenção Tática</h2>
+          <p class="module-desc">
+            As quatro fases fundamentais da intervenção policial militar: identificação de risco, aproximação com segurança, contenção/neutralização e estabilização de perímetro.
+          </p>
+          <div class="tag-list">
+            <span class="tag-item">Fases da Intervenção</span>
+            <span class="tag-item">Perímetro</span>
+            <span class="tag-item">Geometria de Segurança</span>
+            <span class="tag-item">MTP 3.04</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a class='btn-access' href='/dentro-do-confronto/intervencao-policial/'>
+            Acessar Instrução
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
+          </a>
+          <button class="btn-check" onclick="toggleCompletion('intervencao-policial')" title="Marcar como concluído">✔</button>
+        </div>
+      </article>
+
+      <!-- MÓDULO 4 PARTE 2 -->
+      <article class="module-card" data-category="tatica" data-key="intervencao-policial-p2">
+        <div>
+          <div class="card-top">
+            <span class="module-number">Módulo 04 — Parte 2</span>
+            <span class="module-time">⏱️ 15 min</span>
+          </div>
+          <h2 class="module-title">Auditoria Policial & Neuroplasticidade</h2>
+          <p class="module-desc">
+            Metodologia de treinamento reflexo e mielinização de vias neurais para respostas táticas automáticas e seguras, minimizando o tempo de hesitação e erro em frações de segundo.
+          </p>
+          <div class="tag-list">
+            <span class="tag-item">Neuroplasticidade</span>
+            <span class="tag-item">Mielinização</span>
+            <span class="tag-item">Auditoria de Treinamento</span>
+            <span class="tag-item">Memória Muscular</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a class='btn-access' href='/dentro-do-confronto/intervencao-policial/treinamento_intervencao'>
+            Acessar Instrução
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
+          </a>
+          <button class="btn-check" onclick="toggleCompletion('intervencao-policial-p2')" title="Marcar como concluído">✔</button>
+        </div>
+      </article>
+
+      <!-- MÓDULO 5 -->
+      <article class="module-card" data-category="tiro" data-key="neutralizacao-da-ameaca">
+        <div>
+          <div class="card-top">
+            <span class="module-number">Módulo 05</span>
+            <span class="module-time">⏱️ 20 min</span>
+          </div>
+          <h2 class="module-title">Cessação da Ameaça e Follow-Through</h2>
+          <p class="module-desc">
+            Balística terminal, mecanismos de incapacitação fisiológica e psicológica, técnica de continuidade de mira (follow-through), varredura 360° e conduta pós-confronto imediato.
+          </p>
+          <div class="tag-list">
+            <span class="tag-item">Follow-Through</span>
+            <span class="tag-item">Varredura 360°</span>
+            <span class="tag-item">Balística Terminal</span>
+            <span class="tag-item">Cessação do Disparo</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a class='btn-access' href='/dentro-do-confronto/neutralizacao-da-ameaca/'>
+            Acessar Instrução
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
+          </a>
+          <button class="btn-check" onclick="toggleCompletion('neutralizacao-da-ameaca')" title="Marcar como concluído">✔</button>
+        </div>
+      </article>
+
+      <!-- MÓDULO 6 -->
+      <article class="module-card" data-category="debriefing" data-key="debriefing">
+        <div>
+          <div class="card-top">
+            <span class="module-number">Módulo 06</span>
+            <span class="module-time">⏱️ 15 min</span>
+          </div>
+          <h2 class="module-title">Debriefing Estruturado Pós-Ocorrência</h2>
+          <p class="module-desc">
+            Metodologia prática de Revisão Pós-Ação (After Action Review - AAR). Análise técnica e psicológica da ocorrência, identificação de lições aprendidas e preservação da saúde mental.
+          </p>
+          <div class="tag-list">
+            <span class="tag-item">After Action Review</span>
+            <span class="tag-item">Debriefing</span>
+            <span class="tag-item">Saúde Mental</span>
+            <span class="tag-item">Lições Aprendidas</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a class='btn-access' href='/dentro-do-confronto/debriefing/'>
+            Acessar Instrução
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
+          </a>
+          <button class="btn-check" onclick="toggleCompletion('debriefing')" title="Marcar como concluído">✔</button>
+        </div>
+      </article>
+
+      <!-- MÓDULO 7 -->
+      <article class="module-card" data-category="tatica" data-key="distancia-e-reacao">
+        <div>
+          <div class="card-top">
+            <span class="module-number">Módulo 07</span>
+            <span class="module-time">⏱️ 15 min</span>
+          </div>
+          <h2 class="module-title">Distância, Tempo e Reação na Abordagem</h2>
+          <p class="module-desc">
+            O clássico Princípio de Dennis Tueller (21 pés / 6,4m), tempos de percepção-reação humana (Ciclo OODA), a desvantagem da reação sobre a ação e criação de espaço e barricamento tático.
+          </p>
+          <div class="tag-list">
+            <span class="tag-item">Regra de Tueller</span>
+            <span class="tag-item">Ciclo OODA</span>
+            <span class="tag-item">Tempo de Reação</span>
+            <span class="tag-item">Margem de Segurança</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a class='btn-access' href='/dentro-do-confronto/distancia-e-reacao/'>
+            Acessar Instrução
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/></svg>
+          </a>
+          <button class="btn-check" onclick="toggleCompletion('distancia-e-reacao')" title="Marcar como concluído">✔</button>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p style="margin-bottom: 8px;"><strong>POLÍCIA MILITAR DE MINAS GERAIS — CENTRAL DE TREINAMENTO VIRTUAL</strong></p>
+      <p style="font-size: 0.8rem; color: #64748b;">
+        Desenvolvido em conformidade com o Manual Técnico-Profissional (MTP), Diretrizes Doutrinárias da PMMG e Padrões Científicos do Force Science Institute (FSI).
+      </p>
+      <p style="font-size: 0.75rem; margin-top: 10px; color: #475569;">
+        Documento de Uso Didático e Capacitação Continuada.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const TOTAL_MODULES = 8;
+
+    function getCompleted() {
+      try {
+        return JSON.parse(localStorage.getItem('pmmg_confronto_completed') || '[]');
+      } catch(e) {
+        return [];
+      }
+    }
+
+    function saveCompleted(arr) {
+      localStorage.setItem('pmmg_confronto_completed', JSON.stringify(arr));
+      updateProgress();
+    }
+
+    function toggleCompletion(key) {
+      let completed = getCompleted();
+      const idx = completed.indexOf(key);
+      if (idx > -1) {
+        completed.splice(idx, 1);
+      } else {
+        completed.push(key);
+      }
+      saveCompleted(completed);
+    }
+
+    function updateProgress() {
+      const completed = getCompleted();
+      const count = completed.length;
+      const pct = Math.round((count / TOTAL_MODULES) * 100);
+
+      document.getElementById('progressBar').style.width = pct + '%';
+      document.getElementById('progressText').innerText = `${count} de ${TOTAL_MODULES} concluídos (${pct}%)`;
+
+      document.querySelectorAll('.module-card').forEach(card => {
+        const key = card.getAttribute('data-key');
+        const btn = card.querySelector('.btn-check');
+        if (completed.includes(key)) {
+          card.classList.add('completed');
+          if (btn) btn.classList.add('checked');
+        } else {
+          card.classList.remove('completed');
+          if (btn) btn.classList.remove('checked');
+        }
+      });
+    }
+
+    // FILTER LOGIC
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const cat = this.getAttribute('data-category');
+
+        document.querySelectorAll('.module-card').forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // SEARCH LOGIC
+    document.getElementById('searchInput').addEventListener('input', function() {
+      const query = this.value.toLowerCase().trim();
+      document.querySelectorAll('.module-card').forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', updateProgress);
+  </script>
+</body>
+</html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="9f154d3f-6e12-4593-bf8d-b30918da5007" data-app-host="app.netlify.com" data-account-tier="free"></script>

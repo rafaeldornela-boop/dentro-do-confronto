@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <base href="/dentro-do-confronto/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trilha Geral: Dentro do Confronto - Visão Doutrinária Wise</title>
+  
+<style>
+  /* ==========================================================
+     NAV BAR & FOOTER PADRÃO - CENTRAL DE TREINAMENTO VIRTUAL
+     ========================================================== */
+  .pmmg-top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    background: #0f172a;
+    border-bottom: 2px solid #b89053;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+  .pmmg-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .pmmg-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #b89053;
+    color: #0f172a !important;
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 7px 14px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .pmmg-back-btn:hover {
+    background: #d4a96a;
+    transform: translateY(-1px);
+  }
+  .pmmg-nav-badge {
+    background: rgba(255,255,255,0.08);
+    color: #e2e8f0;
+    font-size: 0.80rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border-left: 2px solid #b89053;
+    font-weight: 500;
+  }
+  .pmmg-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pmmg-tool-btn {
+    background: #1e293b;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+  }
+  .pmmg-tool-btn:hover {
+    background: #334155;
+    color: #fff;
+    border-color: #64748b;
+  }
+  .pmmg-reading-progress {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 3px;
+    background: #b89053;
+    width: 0%;
+    transition: width 0.1s ease;
+  }
+  .pmmg-footer-nav {
+    max-width: 1000px;
+    margin: 50px auto 30px auto;
+    padding: 24px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .pmmg-btn-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none !important;
+    transition: 0.2s;
+  }
+  .pmmg-btn-prev {
+    background: #e2e8f0;
+    color: #334155 !important;
+  }
+  .pmmg-btn-prev:hover {
+    background: #cbd5e1;
+    color: #0f172a !important;
+  }
+  .pmmg-btn-next {
+    background: #0f172a;
+    color: #f8fafc !important;
+    border: 1px solid #b89053;
+  }
+  .pmmg-btn-next:hover {
+    background: #1e293b;
+    border-color: #d4a96a;
+  }
+  .pmmg-btn-complete {
+    background: #166534;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.2s;
+  }
+  .pmmg-btn-complete:hover {
+    background: #15803d;
+  }
+
+  @media print {
+    .pmmg-top-nav, .pmmg-footer-nav {
+      display: none !important;
+    }
+  }
+</style>
+
+</head>
+<body style="margin: 0; padding: 0; background: #ffffff;">
+  <nav class="pmmg-top-nav">
+    <div class="pmmg-nav-left">
+      <a class="pmmg-back-btn" href="/dentro-do-confronto/">
+        ← Voltar ao Portal
+      </a>
+      <span class="pmmg-nav-badge">Trilha: Dentro do Confronto &nbsp;|&nbsp; <strong>Estrutura Pedagógica Completa</strong></span>
+    </div>
+  </nav>
+  <page>
+  <style>
+
+    /* =====================================================================
+       PIDF v1.3 — PMMG INSTRUCTIONAL DESIGN FRAMEWORK (CMS WISE / DomSanitizer)
+       ===================================================================== */
+    *, *::before, *::after {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    :root {
+        --cor-primaria:      #826C2B;
+        --cor-caqui:         #A08F63;
+        --cor-ouro:          #B89053;
+        --cor-navy:          #141B4D;
+        --cor-texto:         #222222;
+        --cor-texto-fraco:   #555555;
+        --cor-preto:         #000000;
+        --cor-branco:        #FFFFFF;
+        --cor-cinza:         #E4E4E4;
+        --cor-cinza-claro:   #F8F8F8;
+        --cor-cinza-escuro:  #777777;
+        --cor-info:          #1995FF;
+        --cor-alerta:        #FF5722;
+        --cor-seguranca:     #AB2328;
+        --cor-sucesso:       #187731;
+
+        --espaco-p:          8px;
+        --espaco-m:          16px;
+        --espaco-l:          24px;
+        --espaco-xl:         32px;
+
+        --raio-p:            4px;
+        --raio-m:            8px;
+        --raio-g:            12px;
+
+        --sombra-suave:      0 4px 12px rgba(0, 0, 0, 0.06);
+        --sombra-card:       0 6px 16px rgba(20, 27, 77, 0.08);
+        --largura-maxima:    1140px;
+        --transicao-padrao:  all 0.25s ease-in-out;
+    }
+
+    page {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        color: var(--cor-texto);
+        line-height: 1.65;
+        font-size: clamp(0.95rem, 0.88rem + 0.35vw, 1.05rem);
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .aula {
+        width: 100%;
+        max-width: var(--largura-maxima);
+        margin: 0 auto;
+        padding: clamp(12px, 2.5vw, 24px);
+    }
+
+    /* FATIAMENTO ATÔMICO EM SECTIONS (<= 600px) */
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.15rem;
+        padding: clamp(16px, 2.5vw, 28px) 0;
+        margin-bottom: 2rem;
+        width: 100%;
+        border-bottom: 1px solid var(--cor-cinza);
+    }
+
+    section:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    /* FULLSCREEN FIXES */
+    page.fullscreen, section.fullscreen, .aula.fullscreen {
+        padding: clamp(16px, 3vw, 32px) !important;
+        box-sizing: border-box;
+    }
+    .fullscreen iframe, .fullscreen video, .fullscreen .video-container {
+        pointer-events: auto !important;
+        z-index: 2147483647 !important;
+        position: relative;
+        max-height: 85vh;
+    }
+
+    /* TIPOGRAFIA */
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        line-height: 1.3;
+        color: var(--cor-navy);
+        font-weight: 800;
+    }
+
+    h1 {
+        position: relative;
+        font-size: clamp(1.4rem, 1.2rem + 1vw, 2.1rem);
+        color: var(--cor-navy);
+        padding-bottom: 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    h1::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 90px;
+        height: 4px;
+        background: var(--cor-primaria);
+        border-radius: 4px;
+    }
+
+    h2 {
+        font-size: clamp(1.15rem, 1.05rem + 0.6vw, 1.45rem);
+        color: var(--cor-primaria);
+        border-left: 5px solid var(--cor-primaria);
+        padding-left: 12px;
+        margin-top: 0.2rem;
+    }
+
+    h3 {
+        font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.22rem);
+        color: var(--cor-navy);
+    }
+
+    h4 {
+        font-size: 1.02rem;
+        color: var(--cor-primaria);
+    }
+
+    p {
+        margin: 0;
+        text-align: justify;
+        line-height: 1.65;
+    }
+
+    strong { font-weight: 700; color: var(--cor-navy); }
+    em { font-style: italic; }
+
+    .subtitulo {
+        font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.1rem);
+        color: var(--cor-caqui);
+        font-weight: 600;
+        margin-top: -0.25rem;
+    }
+
+    .data-atualizacao {
+        font-size: 0.82rem;
+        color: var(--cor-texto-fraco);
+        font-style: italic;
+        margin-bottom: 0.5rem;
+    }
+
+    /* PAINÉIS SEMÂNTICOS PIDF */
+    .painel {
+        position: relative;
+        padding: 1.15rem 1.35rem;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-left: 5px solid var(--cor-primaria);
+        border-radius: var(--raio-m);
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        margin: 0.4rem 0;
+    }
+
+    .painel::before {
+        display: block;
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    .painel.neutro { border-left-color: var(--cor-primaria); background: #FAF9F6; }
+    .painel.neutro::before { content: "INFORMAÇÃO OPERACIONAL"; color: var(--cor-primaria); }
+
+    .painel.seguranca { border-left-color: var(--cor-seguranca); background: #FFF6F6; }
+    .painel.seguranca::before { content: "ALERTA DE SEGURANÇA OPERACIONAL"; color: var(--cor-seguranca); }
+
+    .painel.doutrina { border-left-color: var(--cor-navy); background: #F6F8FC; }
+    .painel.doutrina::before { content: "FUNDAMENTAÇÃO DOUTRINÁRIA PMMG"; color: var(--cor-navy); }
+
+    .painel.instrutor { border-left-color: var(--cor-caqui); background: #FDFBF7; }
+    .painel.instrutor::before { content: "DICA TÁTICA DO INSTRUTOR"; color: var(--cor-primaria); }
+
+    .painel.erro { border-left-color: var(--cor-alerta); background: #FFF8F5; }
+    .painel.erro::before { content: "ERRO CRÍTICO A EVITAR"; color: var(--cor-alerta); }
+
+    .painel.observacao { border-left-color: var(--cor-info); background: #F5FAFF; }
+    .painel.observacao::before { content: "OBSERVAÇÃO TÉCNICA"; color: var(--cor-info); }
+
+    .painel.pratica { border-left-color: var(--cor-sucesso); background: #F5FAF6; }
+    .painel.pratica::before { content: "DRILL DE APLICAÇÃO PRÁTICA"; color: var(--cor-sucesso); }
+
+    .painel.importante { border-left-color: var(--cor-primaria); background: #FCFAF4; }
+    .painel.importante::before { content: "IMPORTANTE"; color: var(--cor-primaria); }
+
+    .painel.resumo { border-left-color: var(--cor-cinza-escuro); background: #FAFAFA; }
+    .painel.resumo::before { content: "SÍNTESE DA REGRA DE OURO"; color: var(--cor-cinza-escuro); }
+
+    /* PROCEDIMENTO NUMERADO */
+    .procedimento {
+        counter-reset: etapa;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        margin: 0.4rem 0;
+    }
+
+    .etapa {
+        counter-increment: etapa;
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .etapa::before {
+        content: counter(etapa);
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 50%;
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        font-size: 1rem;
+        flex-shrink: 0;
+        align-self: flex-start;
+        box-shadow: var(--sombra-suave);
+    }
+
+    .etapa-conteudo { flex: 1; min-width: 0; }
+    .etapa-conteudo h4 { margin: 0 0 0.25rem 0; color: var(--cor-navy); font-size: 1rem; }
+    .etapa-conteudo p { margin: 0; font-size: 0.95rem; }
+
+    /* CHECKLIST OPERACIONAL */
+    .check-operacional {
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        background: #FFFFFF;
+        border-left: 5px solid var(--cor-sucesso);
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        overflow: hidden;
+        margin: 0.4rem 0;
+    }
+
+    .check-operacional header {
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        padding: 10px 16px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        letter-spacing: 0.04em;
+    }
+
+    .check-operacional ul { list-style: none !important; margin: 0 !important; padding: 0 !important; }
+    .check-operacional li {
+        position: relative;
+        padding: 12px 16px 12px 46px !important;
+        border-top: 1px solid #ECECEC;
+        line-height: 1.5;
+        font-size: 0.95rem;
+        margin: 0 !important;
+    }
+    .check-operacional li:first-child { border-top: none; }
+    .check-operacional li::before {
+        content: "✓";
+        position: absolute;
+        left: 16px;
+        top: 12px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--cor-sucesso);
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+
+    /* FAÇA / NÃO FAÇA */
+    .faca-nao {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 14px;
+        margin: 0.4rem 0;
+        width: 100%;
+    }
+
+    .faca {
+        border: 1px solid #C3E6CB;
+        border-top: 5px solid var(--cor-sucesso);
+        background: #F8FDF9;
+        padding: 14px 16px;
+        border-radius: var(--raio-m);
+    }
+    .faca h4 { color: var(--cor-sucesso); margin-bottom: 0.5rem; font-size: 0.98rem; }
+
+    .nao-faca {
+        border: 1px solid #F5C6CB;
+        border-top: 5px solid var(--cor-seguranca);
+        background: #FFF9F9;
+        padding: 14px 16px;
+        border-radius: var(--raio-m);
+    }
+    .nao-faca h4 { color: var(--cor-seguranca); margin-bottom: 0.5rem; font-size: 0.98rem; }
+
+    .faca ul, .nao-faca ul { margin: 0; padding-left: 1.2rem; }
+    .faca li, .nao-faca li { margin-bottom: 0.4rem; font-size: 0.92rem; line-height: 1.5; }
+
+    /* FICHAS E TABELAS */
+    .ficha {
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        background: #FFFFFF;
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        overflow: hidden;
+        margin: 0.4rem 0;
+    }
+
+    .ficha .titulo {
+        background: var(--cor-navy);
+        color: #FFFFFF;
+        padding: 10px 16px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        letter-spacing: 0.05em;
+    }
+
+    .tabela-scroll {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.92rem;
+    }
+
+    th, td {
+        padding: 10px 12px;
+        border: 1px solid #E2E8F0;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        background-color: #F1EFEA;
+        color: var(--cor-navy);
+        font-weight: 700;
+    }
+
+    tr:nth-child(even) td { background-color: #FAFAFA; }
+
+    /* MÍDIAS: IMAGENS E VÍDEOS */
+    .container-imagem {
+        display: block;
+        width: 100%;
+        max-width: 820px;
+        margin: 0.5rem auto;
+        border-radius: var(--raio-m);
+        border: 1px solid var(--cor-cinza);
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+        background: #F8F8F8;
+    }
+
+    .container-imagem img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 480px;
+        object-fit: contain;
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+    }
+
+    /* ZOOM NATIVO CSS (DOMSANITIZER-SAFE) */
+    .container-imagem img[tabindex="0"]:focus {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.4);
+        max-width: 90vw;
+        max-height: 85vh;
+        z-index: 2147483647;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+        outline: 4px solid var(--cor-primaria);
+        background-color: #FFFFFF;
+        cursor: zoom-out;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 820px;
+        margin: 0.5rem auto;
+        aspect-ratio: 16 / 9;
+        background: #000000;
+        border-radius: var(--raio-m);
+        overflow: hidden;
+        box-shadow: var(--sombra-card);
+    }
+
+    .video-container video, .video-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+    }
+
+    .legenda-midia {
+        font-size: 0.82rem;
+        text-align: center;
+        color: var(--cor-texto-fraco);
+        margin: 0.25rem 0 0.5rem 0;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    /* EXPANSÍVEIS DE APROFUNDAMENTO TÉCNICO (DOMSANITIZER-SAFE) */
+    details.popup-aprofundamento {
+        width: 100%;
+        background: #FAF8F2;
+        border: 1px solid var(--cor-caqui);
+        border-radius: var(--raio-m);
+        margin: 0.6rem 0;
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+    }
+
+    details.popup-aprofundamento summary.btn-popup {
+        background: linear-gradient(135deg, #826C2B, #A08F63);
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 0.92rem;
+        padding: 0.85rem 1.15rem;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        user-select: none;
+    }
+
+    details.popup-aprofundamento summary.btn-popup::-webkit-details-marker { display: none; }
+
+    details.popup-aprofundamento summary.btn-popup::after {
+        content: "▼ EXPANDIR";
+        font-size: 0.74rem;
+        background: rgba(0, 0, 0, 0.25);
+        padding: 3px 8px;
+        border-radius: var(--raio-p);
+    }
+
+    details.popup-aprofundamento[open] summary.btn-popup::after {
+        content: "▲ RECOLHER";
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .conteudo-popup {
+        padding: 1.15rem 1.35rem;
+        background: #FFFFFF;
+        border-top: 1px solid var(--cor-caqui);
+    }
+
+    /* CARDS EM GRID FLUIDO */
+    .grid-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+        gap: 12px;
+        width: 100%;
+        margin: 0.4rem 0;
+    }
+
+    .card-item {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        padding: 14px;
+        box-shadow: var(--sombra-suave);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .card-item-header {
+        font-weight: 800;
+        font-size: 0.94rem;
+        color: var(--cor-navy);
+        border-bottom: 2px solid var(--cor-cinza);
+        padding-bottom: 4px;
+        margin-bottom: 4px;
+    }
+
+    .badge-regra {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: var(--raio-p);
+        font-size: 0.74rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+    .badge-regra.ouro { background: #FEF9C3; color: #854D0E; }
+    .badge-regra.vermelho { background: #FEE2E2; color: #991B1B; }
+    .badge-regra.azul { background: #DBEAFE; color: #1E40AF; }
+    .badge-regra.verde { background: #DCFCE7; color: #166534; }
+
+    /* QUIZ E INTERATIVIDADE CSS PURO */
+    .quiz-bloco {
+        background: #FDFCF9;
+        border: 2px solid var(--cor-caqui);
+        border-radius: var(--raio-m);
+        padding: 16px 20px;
+        margin: 0.6rem 0;
+    }
+
+    .quiz-pergunta {
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--cor-navy);
+        margin-bottom: 12px;
+    }
+
+    .quiz-opcoes {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .quiz-opcao-box {
+        display: block;
+        padding: 10px 14px;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-p);
+        cursor: pointer;
+        font-size: 0.94rem;
+        transition: var(--transicao-padrao);
+    }
+
+    .quiz-opcao-box:hover {
+        background: #FAF8F2;
+        border-color: var(--cor-caqui);
+    }
+
+    .feedback-correto {
+        margin-top: 10px;
+        padding: 10px 14px;
+        background: #DCFCE7;
+        border-left: 4px solid var(--cor-sucesso);
+        border-radius: var(--raio-p);
+        font-size: 0.9rem;
+        color: #14532D;
+    }
+
+    .feedback-incorreto {
+        margin-top: 10px;
+        padding: 10px 14px;
+        background: #FEE2E2;
+        border-left: 4px solid var(--cor-seguranca);
+        border-radius: var(--raio-p);
+        font-size: 0.9rem;
+        color: #7F1D1D;
+    }
+
+    /* CARROSSEL CSS PURO */
+    .carrossel-container {
+        width: 100%;
+        overflow-x: auto;
+        display: flex;
+        gap: 14px;
+        scroll-snap-type: x mandatory;
+        padding: 10px 0;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .carrossel-slide {
+        flex: 0 0 min(100%, 360px);
+        scroll-snap-align: center;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        overflow: hidden;
+        box-shadow: var(--sombra-suave);
+    }
+
+    .carrossel-slide img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .carrossel-slide-corpo {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+
+    /* RODAPÉ DOUTRINÁRIO ABNT */
+    .referencias-box {
+        background: #F8F9FA;
+        border-left: 4px solid var(--cor-navy);
+        padding: 14px 18px;
+        border-radius: var(--raio-p);
+        font-size: 0.88rem;
+    }
+    .referencias-box ul {
+        margin: 0;
+        padding-left: 1.2rem;
+    }
+    .referencias-box li {
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+
+    /* RESPONSIVIDADE MOBILE */
+    @media (max-width: 768px) {
+        .aula { padding: 12px; }
+        section { gap: 0.95rem; padding: 14px 0; margin-bottom: 1.5rem; }
+        .etapa { gap: 0.75rem; }
+        .etapa::before { width: 34px; height: 34px; min-width: 34px; font-size: 0.9rem; }
+        .ficha thead th, .ficha tbody td { padding: 8px 10px; font-size: 0.86rem; }
+        .faca-nao { grid-template-columns: 1fr; }
+    }
+
+    /* IMPRESSÃO / PDF */
+    @media print {
+        page, .aula { padding: 0 !important; max-width: 100% !important; font-size: 10pt !important; }
+        section { page-break-after: always; break-after: page; border-bottom: none; }
+        .painel, .ficha, .procedimento, .check-operacional { page-break-inside: avoid; break-inside: avoid; }
+        details.popup-aprofundamento { display: block !important; }
+        details.popup-aprofundamento summary { display: none !important; }
+        .conteudo-popup { display: block !important; padding: 0 !important; }
+        video, audio { display: none !important; }
+    }
+
+    /* Refinamentos PIDF v1.3 - Containers Semânticos */
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 14px;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .card-nivel {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        padding: 14px 16px;
+        box-shadow: var(--sombra-suave);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .card-nivel.nivel-1 { border-left: 5px solid #EAB308; }
+    .card-nivel.nivel-2 { border-left: 5px solid #FF5722; }
+    .card-nivel.nivel-3 { border-left: 5px solid #DC2626; }
+
+    .card-item-header {
+        font-family: var(--fonte-titulos);
+        font-weight: 800;
+        font-size: 1.05rem;
+        color: var(--cor-primaria);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .box-aviso-erro {
+        background: #FFF8F5;
+        border-left: 3px solid var(--cor-alerta);
+        padding: 8px 10px;
+        border-radius: var(--raio-p);
+        font-size: 0.88rem;
+        line-height: 1.4;
+    }
+
+    .box-aviso-seguranca {
+        background: #FFF6F6;
+        border-left: 3px solid var(--cor-seguranca);
+        padding: 8px 10px;
+        border-radius: var(--raio-p);
+        font-size: 0.88rem;
+        line-height: 1.4;
+    }
+
+    .box-saiba-mais {
+        background: #F0F9FF;
+        border-left: 4px solid var(--cor-destaque);
+        padding: 12px 14px;
+        border-radius: var(--raio-p);
+        margin: 0.6rem 0;
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
+
+    .quiz-opcao-box.correta {
+        border: 2px solid var(--cor-sucesso);
+        background: #F0FDF4;
+        font-weight: 700;
+    }
+
+    .transicao-bloco {
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--cor-texto-mutado);
+        margin: 0.5rem 0 0.3rem 0;
+    }
+
+    .btn-acao-destaque {
+        display: inline-block;
+        background: var(--cor-seguranca);
+        color: #FFFFFF;
+        font-weight: 800;
+        padding: 12px 28px;
+        text-decoration: none;
+        border-radius: var(--raio-m);
+        letter-spacing: 0.05em;
+        transition: var(--transicao-padrao);
+        border: none;
+        text-align: center;
+    }
+    .btn-acao-destaque:hover {
+        background: #801216;
+        transform: translateY(-2px);
+    }
+
+    .carrossel-item-imagem {
+        flex: 0 0 calc(50% - 12px);
+        min-width: 260px;
+        scroll-snap-align: start;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        padding: 8px;
+        box-shadow: var(--sombra-suave);
+    }
+    @media (max-width: 600px) {
+        .carrossel-item-imagem {
+            flex: 0 0 85%;
+        }
+    }
+
+    .trilha-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        transition: var(--transicao-padrao);
+    }
+    .trilha-card-link:hover .card-nivel {
+        transform: translateY(-3px);
+        box-shadow: var(--sombra-elevada);
+        border-color: var(--cor-destaque);
+    }
+    .badge-tempo {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        background: #F1F5F9;
+        color: var(--cor-texto-mutado);
+        padding: 3px 8px;
+        border-radius: var(--raio-p);
+        margin-left: auto;
+    }
+</style>
+
+  <div class="aula">
+    <!-- SLIDE 1: ABERTURA DO PROGRAMA -->
+    <section>
+      <h1>Trilha de Treinamento Operacional: Dentro do Confronto</h1>
+      <p class="subtitulo">Programa Avançado de Sobrevivência Policial Militar, Tomada de Decisão e Gestão do Confronto Armado (MTP 01 a 05 / PMMG)</p>
+
+      <div class="painel doutrina">
+        <h3>🏛️ O Eixo Estruturante da Capacitação</h3>
+        <p>O programa <strong>Dentro do Confronto</strong> foi concebido para capacitar o policial militar a atuar com técnica cirúrgica, amparo jurídico estrito e controle psicofisiológico em ocorrências de alta complexidade e risco letal. Estruturado segundo as diretrizes dos Manuais Técnicos-Profissionais (MTPs 3.04.01 a 3.04.05 da PMMG) e da Diretriz de Segurança nº 3.02.007/2024-CG, o currículo integra a neurociência do combate à prática operacional diária.</p>
+      </div>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">👥 Público-Alvo</div>
+          <p>Oficiais e Praças da PMMG empregados no policiamento ostensivo geral, radiopatrulhamento, tático móvel e forças especializadas.</p>
+        </div>
+
+        <div class="card-nivel nivel-2">
+          <div class="card-item-header">⏱️ Carga Horária Total</div>
+          <p>8 módulos autoinstrucionais em microaprendizagem (~10 a 15 minutos por módulo) com oficinas práticas e estudos de caso.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: MÓDULOS 1 A 4 -->
+    <section>
+      <h2>Módulos da Trilha (Fase 1: Preparação e Aproximação)</h2>
+      <p>A sequência pedagógica desenvolve-se da base conceitual à gestão da dinâmica de aproximação:</p>
+
+      <div class="cards-container">
+        <a href="Intervencao policial/index.html" class="trilha-card-link">
+          <div class="card-nivel nivel-1">
+            <div class="card-item-header">
+              Módulo 1: Intervenção Policial
+              <span class="badge-tempo">15 min</span>
+            </div>
+            <p>Conceito estruturante, 4 fases da intervenção, Níveis I, II e III, e a Escada do Uso Diferenciado da Força.</p>
+          </div>
+        </a>
+
+        <a href="Atenção seletiva/index.html" class="trilha-card-link">
+          <div class="card-nivel nivel-1">
+            <div class="card-item-header">
+              Módulo 2: Atenção Seletiva e Ameaça
+              <span class="badge-tempo">12 min</span>
+            </div>
+            <p>Diagnóstico situacional, sinais de pré-agressão, visão em túnel, geometria da canga (12h x 360°) e efeito "Quiet Eye".</p>
+          </div>
+        </a>
+
+        <a href="Controle verbal/index.html" class="trilha-card-link">
+          <div class="card-nivel nivel-2">
+            <div class="card-item-header">
+              Módulo 3: Técnicas de Verbalização
+              <span class="badge-tempo">10 min</span>
+            </div>
+            <p>Método dos 3 tempos de comando (Identificação, Ordem, Consequência), princípio da voz única e postura vocal.</p>
+          </div>
+        </a>
+
+        <a href="distancia/index.html" class="trilha-card-link">
+          <div class="card-nivel nivel-2">
+            <div class="card-item-header">
+              Módulo 4: Distância, Tempo e Reação
+              <span class="badge-tempo">12 min</span>
+            </div>
+            <p>O Experimento dos 21 Pés (Tueller), hiato reacionário, perigo da aproximação automática e manobra angular "Saia do X".</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: MÓDULOS 5 A 8 -->
+    <section>
+      <h2>Módulos da Trilha (Fase 2: Confronto, Pós-Tiro e Auditoria)</h2>
+      <p>Desenvolvimento da resiliência fisiológica sob fogo e consolidação técnica pós-ação:</p>
+
+      <div class="cards-container">
+        <a href="Gestão de estresse/index.html" class="trilha-card-link">
+          <div class="card-nivel nivel-3">
+            <div class="card-item-header">
+              Módulo 5: Gestão de Estresse
+              <span class="badge-tempo">15 min</span>
+            </div>
+            <p>Neurofisiologia do combate, ciclo decisório ICDA, automação motora, Box Breathing 4x4x4x4 e apoio psicológico (SAS).</p>
+          </div>
+        </a>
+
+        <a href="Neutralizacao da ameaca/index.html" class="trilha-card-link">
+          <div class="card-nivel nivel-3">
+            <div class="card-item-header">
+              Módulo 6: Conduta Pós-Neutralização
+              <span class="badge-tempo">15 min</span>
+            </div>
+            <p>Cessação da agressão, dedo fora do gatilho, protocolo dos 5 ciclos, Súmula Vinculante 11 (PRF) e exceção do torniquete (MARC1).</p>
+          </div>
+        </a>
+
+        <a href="debrifing/index.html" class="trilha-card-link">
+          <div class="card-nivel nivel-1">
+            <div class="card-item-header">
+              Módulo 7: Debriefing Estruturado
+              <span class="badge-tempo">12 min</span>
+            </div>
+            <p>Análise Pós-Ação (AAR) não punitiva em 5 etapas, dimensões tática, procedimental e emocional, e liderança de guarnição.</p>
+          </div>
+        </a>
+
+        <a href="Intervencao policial/treinamento_intervencao.html" class="trilha-card-link">
+          <div class="card-nivel nivel-2">
+            <div class="card-item-header">
+              Módulo 8: Oficina de Auditoria
+              <span class="badge-tempo">20 min</span>
+            </div>
+            <p>Análise de 4 casos reais em vídeo, neuroplasticidade reflexa e matriz técnica de redação do REDS e preenchimento do RIUF.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: DIRETRIZES METODOLÓGICAS NO CMS WISE -->
+    <section>
+      <h2>Diretrizes de Navegação e Estudo no CMS Wise</h2>
+      <p>Orientações práticas para aproveitamento máximo da plataforma de ensino a distância:</p>
+
+      <div class="procedimento">
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>1. Progressão Sequencial Obrigatória</h4>
+            <p>Recomenda-se cursar os módulos na ordem numérica planejada (1 a 8), permitindo que cada conceito fundamente o próximo degrau técnico.</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>2. Interatividade Pura sem Scripts (Segurança Angular)</h4>
+            <p>Todos os diagramas, carrosséis, ampliação de imagens (:focus com tabindex) e simuladores de decisão operam nativamente em CSS seguro, sem risco de bloqueio.</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>3. Responsividade em Dispositivos Móveis e Tablets</h4>
+            <p>As páginas foram segmentadas em seções atômicas de até 600px de altura, prevenindo quebras em visualizadores de tela reduzida e impressão em PDF.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: REFERÊNCIAS BIBLIOGRÁFICAS GERAIS -->
+    <section>
+      <h2>Fontes Normativas e Doutrinárias da Trilha</h2>
+      <p class="legenda-bloco">Normatização ABNT NBR 6023 — Ordenação Alfabética Rigorosa</p>
+
+      <div class="painel doutrina">
+        <ul>
+          <li><strong>BRASIL.</strong> <em>Código Penal Brasileiro (Decreto-Lei nº 2.848/1940)</em>. Brasília, DF: Presidência da República, 1940.</li>
+          <li><strong>BRASIL.</strong> <em>Código de Processo Penal (Decreto-Lei nº 3.689/1941)</em>. Brasília, DF: Presidência da República, 1941.</li>
+          <li><strong>BRASIL.</strong> <em>Lei Federal nº 13.060, de 22 de dezembro de 2014</em>. Disciplina o uso dos instrumentos de menor potencial ofensivo. Brasília, DF: Presidência da República, 2014.</li>
+          <li><strong>BRASIL. Supremo Tribunal Federal.</strong> <em>Súmula Vinculante nº 11</em>. Uso de algemas em casos de resistência e de fundado receio de fuga ou de perigo. Brasília, DF: STF, 2008.</li>
+          <li><strong>GROSSMAN, Dave; CHRISTENSEN, Loren W.</strong> <em>On Combat: The Psychology and Physiology of Deadly Conflict in War and in Peace</em>. 3. ed. Millstadt, IL: Warrior Science Publications, 2008.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar.</strong> <em>Manual Técnico-Profissional nº 3.04.01/2020-CG</em>: Intervenção Policial, Processo de Comunicação e Uso da Força. Belo Horizonte: Academia de Polícia Militar, 2020.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar.</strong> <em>Manual Técnico-Profissional nº 3.04.02/2020-CG</em>: Abordagem a Pessoas e Técnicas de Busca. Belo Horizonte: Academia de Polícia Militar, 2020.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar.</strong> <em>Manual Técnico-Profissional nº 3.04.03/2020-CG</em>: Blitz Policial. Belo Horizonte: Academia de Polícia Militar, 2020.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar.</strong> <em>Manual Técnico-Profissional nº 3.04.04/2020-CG</em>: Abordagem a Veículos. Belo Horizonte: Academia de Polícia Militar, 2020.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar. Comando-Geral.</strong> <em>Diretriz de Segurança para o Emprego Operacional nº 3.02.007/2024-CG</em>. Belo Horizonte: PMMG, 2024.</li>
+          <li><strong>SIDDLE, Bruce K.</strong> <em>Sharpening the Warrior's Edge: The Psychology & Science of Training</em>. Belleville, IL: PPCT Research Publications, 1995.</li>
+          <li><strong>TUELLER, Dennis.</strong> How Close is Too Close? <em>SWAT Magazine</em>, v. 2, n. 1, p. 54-58, Mar. 1983.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</page>
+
+</body>
+</html>

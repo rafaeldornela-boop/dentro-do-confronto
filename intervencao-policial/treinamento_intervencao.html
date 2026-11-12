@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <base href="/dentro-do-confronto/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 4 (Parte 2): Oficina Prática de Auditoria e Casos Reais - Central de Treinamento Virtual PMMG</title>
+  
+<style>
+  /* ==========================================================
+     NAV BAR & FOOTER PADRÃO - CENTRAL DE TREINAMENTO VIRTUAL
+     ========================================================== */
+  .pmmg-top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    background: #0f172a;
+    border-bottom: 2px solid #b89053;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+  .pmmg-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .pmmg-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #b89053;
+    color: #0f172a !important;
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 7px 14px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .pmmg-back-btn:hover {
+    background: #d4a96a;
+    transform: translateY(-1px);
+  }
+  .pmmg-nav-badge {
+    background: rgba(255,255,255,0.08);
+    color: #e2e8f0;
+    font-size: 0.80rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border-left: 2px solid #b89053;
+    font-weight: 500;
+  }
+  .pmmg-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pmmg-tool-btn {
+    background: #1e293b;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+  }
+  .pmmg-tool-btn:hover {
+    background: #334155;
+    color: #fff;
+    border-color: #64748b;
+  }
+  .pmmg-reading-progress {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 3px;
+    background: #b89053;
+    width: 0%;
+    transition: width 0.1s ease;
+  }
+  .pmmg-footer-nav {
+    max-width: 1000px;
+    margin: 50px auto 30px auto;
+    padding: 24px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .pmmg-btn-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none !important;
+    transition: 0.2s;
+  }
+  .pmmg-btn-prev {
+    background: #e2e8f0;
+    color: #334155 !important;
+  }
+  .pmmg-btn-prev:hover {
+    background: #cbd5e1;
+    color: #0f172a !important;
+  }
+  .pmmg-btn-next {
+    background: #0f172a;
+    color: #f8fafc !important;
+    border: 1px solid #b89053;
+  }
+  .pmmg-btn-next:hover {
+    background: #1e293b;
+    border-color: #d4a96a;
+  }
+  .pmmg-btn-complete {
+    background: #166534;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.2s;
+  }
+  .pmmg-btn-complete:hover {
+    background: #15803d;
+  }
+
+  @media print {
+    .pmmg-top-nav, .pmmg-footer-nav {
+      display: none !important;
+    }
+  }
+</style>
+
+</head>
+<body style="margin: 0; padding: 0; background: #ffffff;">
+  
+<nav class="pmmg-top-nav">
+  <div class="pmmg-nav-left">
+    <a class="pmmg-back-btn" href="/dentro-do-confronto/">
+      <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>
+      Central de Instruções
+    </a>
+    <span class="pmmg-nav-badge">Trilha: Dentro do Confronto &nbsp;|&nbsp; <strong>Oficina de Auditoria em Vídeo (Parte 2)</strong></span>
+  </div>
+  <div class="pmmg-nav-actions">
+    <button class="pmmg-tool-btn" onclick="adjustFontSize(-1)" title="Diminuir Fonte">A-</button>
+    <button class="pmmg-tool-btn" onclick="adjustFontSize(1)" title="Aumentar Fonte">A+</button>
+    <button class="pmmg-tool-btn" onclick="window.print()" title="Imprimir Instrução / Salvar PDF">
+      <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/></svg>
+      Imprimir
+    </button>
+  </div>
+  <div class="pmmg-reading-progress" id="pmmgScrollProgress"></div>
+</nav>
+
+  ﻿<page>
+  <style>
+
+    /* =====================================================================
+       PIDF v1.3 — PMMG INSTRUCTIONAL DESIGN FRAMEWORK (CMS WISE / DomSanitizer)
+       ===================================================================== */
+    *, *::before, *::after {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    :root {
+        --cor-primaria:      #826C2B;
+        --cor-caqui:         #A08F63;
+        --cor-ouro:          #B89053;
+        --cor-navy:          #141B4D;
+        --cor-texto:         #222222;
+        --cor-texto-fraco:   #555555;
+        --cor-preto:         #000000;
+        --cor-branco:        #FFFFFF;
+        --cor-cinza:         #E4E4E4;
+        --cor-cinza-claro:   #F8F8F8;
+        --cor-cinza-escuro:  #777777;
+        --cor-info:          #1995FF;
+        --cor-alerta:        #FF5722;
+        --cor-seguranca:     #AB2328;
+        --cor-sucesso:       #187731;
+
+        --espaco-p:          8px;
+        --espaco-m:          16px;
+        --espaco-l:          24px;
+        --espaco-xl:         32px;
+
+        --raio-p:            4px;
+        --raio-m:            8px;
+        --raio-g:            12px;
+
+        --sombra-suave:      0 4px 12px rgba(0, 0, 0, 0.06);
+        --sombra-card:       0 6px 16px rgba(20, 27, 77, 0.08);
+        --largura-maxima:    1140px;
+        --transicao-padrao:  all 0.25s ease-in-out;
+    }
+
+    page {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        color: var(--cor-texto);
+        line-height: 1.65;
+        font-size: clamp(0.95rem, 0.88rem + 0.35vw, 1.05rem);
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .aula {
+        width: 100%;
+        max-width: var(--largura-maxima);
+        margin: 0 auto;
+        padding: clamp(12px, 2.5vw, 24px);
+    }
+
+    /* FATIAMENTO ATÔMICO EM SECTIONS (<= 600px) */
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.15rem;
+        padding: clamp(16px, 2.5vw, 28px) 0;
+        margin-bottom: 2rem;
+        width: 100%;
+        border-bottom: 1px solid var(--cor-cinza);
+    }
+
+    section:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    /* FULLSCREEN FIXES */
+    page.fullscreen, section.fullscreen, .aula.fullscreen {
+        padding: clamp(16px, 3vw, 32px) !important;
+        box-sizing: border-box;
+    }
+    .fullscreen iframe, .fullscreen video, .fullscreen .video-container {
+        pointer-events: auto !important;
+        z-index: 2147483647 !important;
+        position: relative;
+        max-height: 85vh;
+    }
+
+    /* TIPOGRAFIA */
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        line-height: 1.3;
+        color: var(--cor-navy);
+        font-weight: 800;
+    }
+
+    h1 {
+        position: relative;
+        font-size: clamp(1.4rem, 1.2rem + 1vw, 2.1rem);
+        color: var(--cor-navy);
+        padding-bottom: 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    h1::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 90px;
+        height: 4px;
+        background: var(--cor-primaria);
+        border-radius: 4px;
+    }
+
+    h2 {
+        font-size: clamp(1.15rem, 1.05rem + 0.6vw, 1.45rem);
+        color: var(--cor-primaria);
+        border-left: 5px solid var(--cor-primaria);
+        padding-left: 12px;
+        margin-top: 0.2rem;
+    }
+
+    h3 {
+        font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.22rem);
+        color: var(--cor-navy);
+    }
+
+    h4 {
+        font-size: 1.02rem;
+        color: var(--cor-primaria);
+    }
+
+    p {
+        margin: 0;
+        text-align: justify;
+        line-height: 1.65;
+    }
+
+    strong { font-weight: 700; color: var(--cor-navy); }
+    em { font-style: italic; }
+
+    .subtitulo {
+        font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.1rem);
+        color: var(--cor-caqui);
+        font-weight: 600;
+        margin-top: -0.25rem;
+    }
+
+    .data-atualizacao {
+        font-size: 0.82rem;
+        color: var(--cor-texto-fraco);
+        font-style: italic;
+        margin-bottom: 0.5rem;
+    }
+
+    /* PAINÉIS SEMÂNTICOS PIDF */
+    .painel {
+        position: relative;
+        padding: 1.15rem 1.35rem;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-left: 5px solid var(--cor-primaria);
+        border-radius: var(--raio-m);
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        margin: 0.4rem 0;
+    }
+
+    .painel::before {
+        display: block;
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    .painel.neutro { border-left-color: var(--cor-primaria); background: #FAF9F6; }
+    .painel.neutro::before { content: "INFORMAÇÃO OPERACIONAL"; color: var(--cor-primaria); }
+
+    .painel.seguranca { border-left-color: var(--cor-seguranca); background: #FFF6F6; }
+    .painel.seguranca::before { content: "ALERTA DE SEGURANÇA OPERACIONAL"; color: var(--cor-seguranca); }
+
+    .painel.doutrina { border-left-color: var(--cor-navy); background: #F6F8FC; }
+    .painel.doutrina::before { content: "FUNDAMENTAÇÃO DOUTRINÁRIA PMMG"; color: var(--cor-navy); }
+
+    .painel.instrutor { border-left-color: var(--cor-caqui); background: #FDFBF7; }
+    .painel.instrutor::before { content: "DICA TÁTICA DO INSTRUTOR"; color: var(--cor-primaria); }
+
+    .painel.erro { border-left-color: var(--cor-alerta); background: #FFF8F5; }
+    .painel.erro::before { content: "ERRO CRÍTICO A EVITAR"; color: var(--cor-alerta); }
+
+    .painel.observacao { border-left-color: var(--cor-info); background: #F5FAFF; }
+    .painel.observacao::before { content: "OBSERVAÇÃO TÉCNICA"; color: var(--cor-info); }
+
+    .painel.pratica { border-left-color: var(--cor-sucesso); background: #F5FAF6; }
+    .painel.pratica::before { content: "DRILL DE APLICAÇÃO PRÁTICA"; color: var(--cor-sucesso); }
+
+    .painel.importante { border-left-color: var(--cor-primaria); background: #FCFAF4; }
+    .painel.importante::before { content: "IMPORTANTE"; color: var(--cor-primaria); }
+
+    .painel.resumo { border-left-color: var(--cor-cinza-escuro); background: #FAFAFA; }
+    .painel.resumo::before { content: "SÍNTESE DA REGRA DE OURO"; color: var(--cor-cinza-escuro); }
+
+    /* PROCEDIMENTO NUMERADO */
+    .procedimento {
+        counter-reset: etapa;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        margin: 0.4rem 0;
+    }
+
+    .etapa {
+        counter-increment: etapa;
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .etapa::before {
+        content: counter(etapa);
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 50%;
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        font-size: 1rem;
+        flex-shrink: 0;
+        align-self: flex-start;
+        box-shadow: var(--sombra-suave);
+    }
+
+    .etapa-conteudo { flex: 1; min-width: 0; }
+    .etapa-conteudo h4 { margin: 0 0 0.25rem 0; color: var(--cor-navy); font-size: 1rem; }
+    .etapa-conteudo p { margin: 0; font-size: 0.95rem; }
+
+    /* CHECKLIST OPERACIONAL */
+    .check-operacional {
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        background: #FFFFFF;
+        border-left: 5px solid var(--cor-sucesso);
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        overflow: hidden;
+        margin: 0.4rem 0;
+    }
+
+    .check-operacional header {
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        padding: 10px 16px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        letter-spacing: 0.04em;
+    }
+
+    .check-operacional ul { list-style: none !important; margin: 0 !important; padding: 0 !important; }
+    .check-operacional li {
+        position: relative;
+        padding: 12px 16px 12px 46px !important;
+        border-top: 1px solid #ECECEC;
+        line-height: 1.5;
+        font-size: 0.95rem;
+        margin: 0 !important;
+    }
+    .check-operacional li:first-child { border-top: none; }
+    .check-operacional li::before {
+        content: "✓";
+        position: absolute;
+        left: 16px;
+        top: 12px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--cor-sucesso);
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+
+    /* FAÇA / NÃO FAÇA */
+    .faca-nao {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 14px;
+        margin: 0.4rem 0;
+        width: 100%;
+    }
+
+    .faca {
+        border: 1px solid #C3E6CB;
+        border-top: 5px solid var(--cor-sucesso);
+        background: #F8FDF9;
+        padding: 14px 16px;
+        border-radius: var(--raio-m);
+    }
+    .faca h4 { color: var(--cor-sucesso); margin-bottom: 0.5rem; font-size: 0.98rem; }
+
+    .nao-faca {
+        border: 1px solid #F5C6CB;
+        border-top: 5px solid var(--cor-seguranca);
+        background: #FFF9F9;
+        padding: 14px 16px;
+        border-radius: var(--raio-m);
+    }
+    .nao-faca h4 { color: var(--cor-seguranca); margin-bottom: 0.5rem; font-size: 0.98rem; }
+
+    .faca ul, .nao-faca ul { margin: 0; padding-left: 1.2rem; }
+    .faca li, .nao-faca li { margin-bottom: 0.4rem; font-size: 0.92rem; line-height: 1.5; }
+
+    /* FICHAS E TABELAS */
+    .ficha {
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        background: #FFFFFF;
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        overflow: hidden;
+        margin: 0.4rem 0;
+    }
+
+    .ficha .titulo {
+        background: var(--cor-navy);
+        color: #FFFFFF;
+        padding: 10px 16px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        letter-spacing: 0.05em;
+    }
+
+    .tabela-scroll {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.92rem;
+    }
+
+    th, td {
+        padding: 10px 12px;
+        border: 1px solid #E2E8F0;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        background-color: #F1EFEA;
+        color: var(--cor-navy);
+        font-weight: 700;
+    }
+
+    tr:nth-child(even) td { background-color: #FAFAFA; }
+
+    /* MÍDIAS: IMAGENS E VÍDEOS */
+    .container-imagem {
+        display: block;
+        width: 100%;
+        max-width: 820px;
+        margin: 0.5rem auto;
+        border-radius: var(--raio-m);
+        border: 1px solid var(--cor-cinza);
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+        background: #F8F8F8;
+    }
+
+    .container-imagem img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 480px;
+        object-fit: contain;
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+    }
+
+    /* ZOOM NATIVO: gerenciado ao final do <style> */
+
+    .video-container {
+        pointer-events: auto !important;
+        z-index: 2147483647 !important;
+        position: relative;
+        max-height: 85vh;
+    }
+
+    /* TIPOGRAFIA */
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        line-height: 1.3;
+        color: var(--cor-navy);
+        font-weight: 800;
+    }
+
+    h1 {
+        position: relative;
+        font-size: clamp(1.4rem, 1.2rem + 1vw, 2.1rem);
+        color: var(--cor-navy);
+        padding-bottom: 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    h1::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 90px;
+        height: 4px;
+        background: var(--cor-primaria);
+        border-radius: 4px;
+    }
+
+    h2 {
+        font-size: clamp(1.15rem, 1.05rem + 0.6vw, 1.45rem);
+        color: var(--cor-primaria);
+        border-left: 5px solid var(--cor-primaria);
+        padding-left: 12px;
+        margin-top: 0.2rem;
+    }
+
+    h3 {
+        font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.22rem);
+        color: var(--cor-navy);
+    }
+
+    h4 {
+        font-size: 1.02rem;
+        color: var(--cor-primaria);
+    }
+
+    p {
+        margin: 0;
+        text-align: justify;
+        line-height: 1.65;
+    }
+
+    strong { font-weight: 700; color: var(--cor-navy); }
+    em { font-style: italic; }
+
+    .subtitulo {
+        font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.1rem);
+        color: var(--cor-caqui);
+        font-weight: 600;
+        margin-top: -0.25rem;
+    }
+
+    .data-atualizacao {
+        font-size: 0.82rem;
+        color: var(--cor-texto-fraco);
+        font-style: italic;
+        margin-bottom: 0.5rem;
+    }
+
+    /* PAINÉIS SEMÂNTICOS PIDF */
+    .painel {
+        position: relative;
+        padding: 1.15rem 1.35rem;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-left: 5px solid var(--cor-primaria);
+        border-radius: var(--raio-m);
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        margin: 0.4rem 0;
+    }
+
+    .painel::before {
+        display: block;
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    .painel.neutro { border-left-color: var(--cor-primaria); background: #FAF9F6; }
+    .painel.neutro::before { content: "INFORMAÇÃO OPERACIONAL"; color: var(--cor-primaria); }
+
+    .painel.seguranca { border-left-color: var(--cor-seguranca); background: #FFF6F6; }
+    .painel.seguranca::before { content: "ALERTA DE SEGURANÇA OPERACIONAL"; color: var(--cor-seguranca); }
+
+    .painel.doutrina { border-left-color: var(--cor-navy); background: #F6F8FC; }
+    .painel.doutrina::before { content: "FUNDAMENTAÇÃO DOUTRINÁRIA PMMG"; color: var(--cor-navy); }
+
+    .painel.instrutor { border-left-color: var(--cor-caqui); background: #FDFBF7; }
+    .painel.instrutor::before { content: "DICA TÁTICA DO INSTRUTOR"; color: var(--cor-primaria); }
+
+    .painel.erro { border-left-color: var(--cor-alerta); background: #FFF8F5; }
+    .painel.erro::before { content: "ERRO CRÍTICO A EVITAR"; color: var(--cor-alerta); }
+
+    .painel.observacao { border-left-color: var(--cor-info); background: #F5FAFF; }
+    .painel.observacao::before { content: "OBSERVAÇÃO TÉCNICA"; color: var(--cor-info); }
+
+    .painel.pratica { border-left-color: var(--cor-sucesso); background: #F5FAF6; }
+    .painel.pratica::before { content: "DRILL DE APLICAÇÃO PRÁTICA"; color: var(--cor-sucesso); }
+
+    .painel.importante { border-left-color: var(--cor-primaria); background: #FCFAF4; }
+    .painel.importante::before { content: "IMPORTANTE"; color: var(--cor-primaria); }
+
+    .painel.resumo { border-left-color: var(--cor-cinza-escuro); background: #FAFAFA; }
+    .painel.resumo::before { content: "SÍNTESE DA REGRA DE OURO"; color: var(--cor-cinza-escuro); }
+
+    /* PROCEDIMENTO NUMERADO */
+    .procedimento {
+        counter-reset: etapa;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        margin: 0.4rem 0;
+    }
+
+    .etapa {
+        counter-increment: etapa;
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .etapa::before {
+        content: counter(etapa);
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 50%;
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        font-size: 1rem;
+        flex-shrink: 0;
+        align-self: flex-start;
+        box-shadow: var(--sombra-suave);
+    }
+
+    .etapa-conteudo { flex: 1; min-width: 0; }
+    .etapa-conteudo h4 { margin: 0 0 0.25rem 0; color: var(--cor-navy); font-size: 1rem; }
+    .etapa-conteudo p { margin: 0; font-size: 0.95rem; }
+
+    /* CHECKLIST OPERACIONAL */
+    .check-operacional {
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        background: #FFFFFF;
+        border-left: 5px solid var(--cor-sucesso);
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        overflow: hidden;
+        margin: 0.4rem 0;
+    }
+
+    .check-operacional header {
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        padding: 10px 16px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        letter-spacing: 0.04em;
+    }
+
+    .check-operacional ul { list-style: none !important; margin: 0 !important; padding: 0 !important; }
+    .check-operacional li {
+        position: relative;
+        padding: 12px 16px 12px 46px !important;
+        border-top: 1px solid #ECECEC;
+        line-height: 1.5;
+        font-size: 0.95rem;
+        margin: 0 !important;
+    }
+    .check-operacional li:first-child { border-top: none; }
+    .check-operacional li::before {
+        content: "✓";
+        position: absolute;
+        left: 16px;
+        top: 12px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--cor-sucesso);
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+
+    /* FAÇA / NÃO FAÇA */
+    .faca-nao {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 14px;
+        margin: 0.4rem 0;
+        width: 100%;
+    }
+
+    .faca {
+        border: 1px solid #C3E6CB;
+        border-top: 5px solid var(--cor-sucesso);
+        background: #F8FDF9;
+        padding: 14px 16px;
+        border-radius: var(--raio-m);
+    }
+    .faca h4 { color: var(--cor-sucesso); margin-bottom: 0.5rem; font-size: 0.98rem; }
+
+    .nao-faca {
+        border: 1px solid #F5C6CB;
+        border-top: 5px solid var(--cor-seguranca);
+        background: #FFF9F9;
+        padding: 14px 16px;
+        border-radius: var(--raio-m);
+    }
+    .nao-faca h4 { color: var(--cor-seguranca); margin-bottom: 0.5rem; font-size: 0.98rem; }
+
+    .faca ul, .nao-faca ul { margin: 0; padding-left: 1.2rem; }
+    .faca li, .nao-faca li { margin-bottom: 0.4rem; font-size: 0.92rem; line-height: 1.5; }
+
+    /* FICHAS E TABELAS */
+    .ficha {
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        background: #FFFFFF;
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        overflow: hidden;
+        margin: 0.4rem 0;
+    }
+
+    .ficha .titulo {
+        background: var(--cor-navy);
+        color: #FFFFFF;
+        padding: 10px 16px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        letter-spacing: 0.05em;
+    }
+
+    .tabela-scroll {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.92rem;
+    }
+
+    th, td {
+        padding: 10px 12px;
+        border: 1px solid #E2E8F0;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        background-color: #F1EFEA;
+        color: var(--cor-navy);
+        font-weight: 700;
+    }
+
+    tr:nth-child(even) td { background-color: #FAFAFA; }
+
+    /* MÍDIAS: IMAGENS E VÍDEOS */
+    .container-imagem {
+        display: block;
+        width: 100%;
+        max-width: 820px;
+        margin: 0.5rem auto;
+        border-radius: var(--raio-m);
+        border: 1px solid var(--cor-cinza);
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+        background: #F8F8F8;
+    }
+
+    .container-imagem img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 480px;
+        object-fit: contain;
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+    }
+
+    /* ZOOM NATIVO CSS (DOMSANITIZER-SAFE) */
+    .container-imagem img[tabindex="0"]:focus {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.4);
+        max-width: 90vw;
+        max-height: 85vh;
+        z-index: 2147483647;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+        outline: 4px solid var(--cor-primaria);
+        background-color: #FFFFFF;
+        cursor: zoom-out;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 820px;
+        margin: 0.5rem auto;
+        aspect-ratio: 16 / 9;
+        background: #000000;
+        border-radius: var(--raio-m);
+        overflow: hidden;
+        box-shadow: var(--sombra-card);
+    }
+
+    .video-container video, .video-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+    }
+
+    .legenda-midia {
+        font-size: 0.82rem;
+        text-align: center;
+        color: var(--cor-texto-fraco);
+        margin: 0.25rem 0 0.5rem 0;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    /* EXPANSÍVEIS DE APROFUNDAMENTO TÉCNICO (DOMSANITIZER-SAFE) */
+    details.popup-aprofundamento {
+        width: 100%;
+        background: #FAF8F2;
+        border: 1px solid var(--cor-caqui);
+        border-radius: var(--raio-m);
+        margin: 0.6rem 0;
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+    }
+
+    details.popup-aprofundamento summary.btn-popup {
+        background: linear-gradient(135deg, #826C2B, #A08F63);
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 0.92rem;
+        padding: 0.85rem 1.15rem;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        user-select: none;
+    }
+
+    details.popup-aprofundamento summary.btn-popup::-webkit-details-marker { display: none; }
+
+    details.popup-aprofundamento summary.btn-popup::after {
+        content: "▼ EXPANDIR";
+        font-size: 0.74rem;
+        background: rgba(0, 0, 0, 0.25);
+        padding: 3px 8px;
+        border-radius: var(--raio-p);
+    }
+
+    details.popup-aprofundamento[open] summary.btn-popup::after {
+        content: "▲ RECOLHER";
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .conteudo-popup {
+        padding: 1.15rem 1.35rem;
+        background: #FFFFFF;
+        border-top: 1px solid var(--cor-caqui);
+    }
+
+    /* CARDS EM GRID FLUIDO */
+    .grid-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+        gap: 12px;
+        width: 100%;
+        margin: 0.4rem 0;
+    }
+
+    .card-item {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        padding: 14px;
+        box-shadow: var(--sombra-suave);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .card-item-header {
+        font-weight: 800;
+        font-size: 0.94rem;
+        color: var(--cor-navy);
+        border-bottom: 2px solid var(--cor-cinza);
+        padding-bottom: 4px;
+        margin-bottom: 4px;
+    }
+
+    .badge-regra {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: var(--raio-p);
+        font-size: 0.74rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+    .badge-regra.ouro { background: #FEF9C3; color: #854D0E; }
+    .badge-regra.vermelho { background: #FEE2E2; color: #991B1B; }
+    .badge-regra.azul { background: #DBEAFE; color: #1E40AF; }
+    .badge-regra.verde { background: #DCFCE7; color: #166534; }
+
+    /* QUIZ E INTERATIVIDADE CSS PURO */
+    .quiz-bloco {
+        background: #FDFCF9;
+        border: 2px solid var(--cor-caqui);
+        border-radius: var(--raio-m);
+        padding: 16px 20px;
+        margin: 0.6rem 0;
+    }
+
+    .quiz-pergunta {
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--cor-navy);
+        margin-bottom: 12px;
+    }
+
+    .quiz-opcoes {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .quiz-opcao-box {
+        display: block;
+        padding: 10px 14px;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-p);
+        cursor: pointer;
+        font-size: 0.94rem;
+        transition: var(--transicao-padrao);
+    }
+
+    .quiz-opcao-box:hover {
+        background: #FAF8F2;
+        border-color: var(--cor-caqui);
+    }
+
+    .feedback-correto {
+        margin-top: 10px;
+        padding: 10px 14px;
+        background: #DCFCE7;
+        border-left: 4px solid var(--cor-sucesso);
+        border-radius: var(--raio-p);
+        font-size: 0.9rem;
+        color: #14532D;
+    }
+
+    .feedback-incorreto {
+        margin-top: 10px;
+        padding: 10px 14px;
+        background: #FEE2E2;
+        border-left: 4px solid var(--cor-seguranca);
+        border-radius: var(--raio-p);
+        font-size: 0.9rem;
+        color: #7F1D1D;
+    }
+
+    /* CARROSSEL CSS PURO */
+    .carrossel-container {
+        width: 100%;
+        overflow-x: auto;
+        display: flex;
+        gap: 14px;
+        scroll-snap-type: x mandatory;
+        padding: 10px 0;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .carrossel-slide {
+        flex: 0 0 min(100%, 360px);
+        scroll-snap-align: center;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        overflow: hidden;
+        box-shadow: var(--sombra-suave);
+    }
+
+    .carrossel-slide img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .carrossel-slide-corpo {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+
+    /* RODAPÉ DOUTRINÁRIO ABNT */
+    .referencias-box {
+        background: #F8F9FA;
+        border-left: 4px solid var(--cor-navy);
+        padding: 14px 18px;
+        border-radius: var(--raio-p);
+        font-size: 0.88rem;
+    }
+    .referencias-box ul {
+        margin: 0;
+        padding-left: 1.2rem;
+    }
+    .referencias-box li {
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+
+    /* RESPONSIVIDADE MOBILE */
+    @media (max-width: 768px) {
+        .aula { padding: 12px; }
+        section { gap: 0.95rem; padding: 14px 0; margin-bottom: 1.5rem; }
+        .etapa { gap: 0.75rem; }
+        .etapa::before { width: 34px; height: 34px; min-width: 34px; font-size: 0.9rem; }
+        .ficha thead th, .ficha tbody td { padding: 8px 10px; font-size: 0.86rem; }
+        .faca-nao { grid-template-columns: 1fr; }
+    }
+
+    /* IMPRESSÃO / PDF */
+    @media print {
+        page, .aula { padding: 0 !important; max-width: 100% !important; font-size: 10pt !important; }
+        section { page-break-after: always; break-after: page; border-bottom: none; }
+        .painel, .ficha, .procedimento, .check-operacional { page-break-inside: avoid; break-inside: avoid; }
+        details.popup-aprofundamento { display: block !important; }
+        details.popup-aprofundamento summary { display: none !important; }
+        .conteudo-popup { display: block !important; padding: 0 !important; }
+        video, audio { display: none !important; }
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 14px;
+        width: 100%;
+        margin: 0.4rem 0;
+    }
+
+    .card-nivel {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        padding: 14px 16px;
+        box-shadow: var(--sombra-suave);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .card-nivel.nivel-1 { border-left: 5px solid #EAB308; }
+    .card-nivel.nivel-2 { border-left: 5px solid #FF5722; }
+
+    .box-aviso-erro {
+        background: #FFF8F5;
+        border-left: 3px solid var(--cor-alerta);
+        padding: 8px 10px;
+        border-radius: var(--raio-p);
+        font-size: 0.88rem;
+    }
+
+    .box-aviso-seguranca {
+        background: #FFF6F6;
+        border-left: 3px solid var(--cor-seguranca);
+        padding: 8px 10px;
+        border-radius: var(--raio-p);
+        font-size: 0.88rem;
+    }
+
+    
+
+    .btn-acao-destaque {
+        display: inline-block;
+        background: var(--cor-seguranca);
+        color: #FFFFFF;
+        font-weight: 800;
+        padding: 12px 28px;
+        text-decoration: none;
+        border-radius: var(--raio-m);
+        letter-spacing: 0.05em;
+        transition: var(--transicao-padrao);
+        border: none;
+    }
+    .btn-acao-destaque:hover {
+        background: #801216;
+        transform: translateY(-2px);
+    }
+
+
+    /* =====================================================================
+       PIDF v1.4 REFINADO — ZOOM POR DETAILS, CORES POR RISCO E REDS EXPANDIDO
+       ===================================================================== */
+    
+    /* 1. CARTÕES POR NÍVEL DE RISCO E PRONTIDÃO (CORES FORTEMENTE DISTINTAS) */
+    .card-nivel {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        padding: 14px 16px;
+        box-shadow: var(--sombra-suave);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* NÍVEL 1 / RISCO 1 / ATENÇÃO: TODO AMARELADO */
+    .card-nivel.nivel-1 {
+        background: #FEFCE8 !important;
+        border: 1.5px solid #FACC15 !important;
+        border-left: 6px solid #CA8A04 !important;
+    }
+    .card-nivel.nivel-1 .card-item-header {
+        color: #854D0E !important;
+        border-bottom: 2px solid #FDE047 !important;
+    }
+
+    /* NÍVEL 2 / RISCO 2 / ALERTA: MAIS ALARANJADO */
+    .card-nivel.nivel-2 {
+        background: #FFF7ED !important;
+        border: 1.5px solid #FDBA74 !important;
+        border-left: 6px solid #EA580C !important;
+    }
+    .card-nivel.nivel-2 .card-item-header {
+        color: #9A3412 !important;
+        border-bottom: 2px solid #FED7AA !important;
+    }
+
+    /* NÍVEL 3 / RISCO 3 / ALARME: MAIS AVERMELHADO */
+    .card-nivel.nivel-3 {
+        background: #FEF2F2 !important;
+        border: 1.5px solid #FCA5A5 !important;
+        border-left: 6px solid #DC2626 !important;
+    }
+    .card-nivel.nivel-3 .card-item-header {
+        color: #991B1B !important;
+        border-bottom: 2px solid #FECACA !important;
+    }
+
+    .card-nivel.nivel-0 {
+        background: #FDFBF7;
+        border: 1px solid var(--cor-cinza);
+        border-left: 5px solid var(--cor-caqui);
+    }
+    .card-nivel p { font-size: 0.93rem; }
+    .card-nivel ul { margin: 0; padding-left: 1.1rem; font-size: 0.92rem; }
+    .card-nivel li { margin-bottom: 0.3rem; line-height: 1.5; }
+
+    /* 2. BADGES DE REGRA E ESTADO DE PRONTIDÃO */
+    .badge-regra {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: var(--raio-p);
+        font-size: 0.74rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        align-self: flex-start;
+    }
+    .badge-regra.ouro { background: #FEF08A; color: #713F12; border: 1px solid #FACC15; }
+    .badge-regra.laranja { background: #FFEDD5; color: #9A3412; border: 1px solid #FB923C; }
+    .badge-regra.vermelho { background: #FEE2E2; color: #991B1B; border: 1px solid #F87171; }
+    .badge-regra.azul { background: #DBEAFE; color: #1E40AF; border: 1px solid #93C5FD; }
+    .badge-regra.verde { background: #DCFCE7; color: #166534; border: 1px solid #86EFAC; }
+
+    /* 3. ZOOM NATIVO CSS VIA DETAILS/SUMMARY (DOMSANITIZER-SAFE: ENTRA E SAI COM 1 CLIQUE) */
+    details.container-imagem {
+        display: block;
+        width: 100%;
+        max-width: 820px;
+        margin: 0.5rem auto;
+        border-radius: var(--raio-m);
+        border: 1px solid var(--cor-cinza);
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+        background: #F8F8F8;
+    }
+    details.container-imagem summary {
+        display: block;
+        cursor: zoom-in;
+        list-style: none;
+        position: relative;
+        outline: none;
+    }
+    details.container-imagem summary::-webkit-details-marker { display: none; }
+    details.container-imagem summary img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+        background: #FFFFFF;
+    }
+    details.container-imagem .dica-zoom {
+        display: block;
+        text-align: center;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--cor-texto-fraco);
+        background: #FFFFFF;
+        padding: 6px 10px;
+        border-top: 1px solid var(--cor-cinza);
+        user-select: none;
+    }
+    details.container-imagem .zoom-fechar-aviso { display: none; }
+
+    /* ESTADO EXPANDIDO EM TELA CHEIA */
+    details.container-imagem[open] summary {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        width: 100vw; height: 100vh;
+        z-index: 2147483647;
+        background: rgba(10, 14, 41, 0.96);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2vh 2vw;
+        box-sizing: border-box;
+        cursor: zoom-out;
+    }
+    details.container-imagem[open] summary img {
+        max-width: 95vw;
+        max-height: 85vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.85);
+        border-radius: 6px;
+        background: transparent;
+        pointer-events: none; /* Clique atravessa para o summary e fecha o zoom */
+    }
+    details.container-imagem[open] .dica-zoom { display: none; }
+    details.container-imagem[open] .zoom-fechar-aviso {
+        display: inline-block;
+        margin-top: 14px;
+        background: #DC2626;
+        color: #FFFFFF;
+        font-weight: 800;
+        font-size: 0.88rem;
+        padding: 8px 22px;
+        border-radius: 20px;
+        letter-spacing: 0.04em;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+        pointer-events: none; /* Clique no botão também fecha o zoom */
+    }
+
+    /* 4. VÍDEOS OPERACIONAIS */
+    .video-container.vertical { aspect-ratio: 9 / 16; max-width: 240px; }
+    .video-container.quadrado { aspect-ratio: 720 / 736; max-width: 420px; }
+    .video-container.vertical-grande { aspect-ratio: 9 / 16; max-width: 320px; margin-left: auto; margin-right: auto; }
+    .video-container video { object-fit: contain; background: #000000; }
+
+    .transicao-bloco { font-weight: 600; color: var(--cor-primaria); }
+    .legenda-bloco { font-size: 0.85rem; color: var(--cor-texto-fraco); font-style: italic; }
+
+    /* 5. QUIZ INTERATIVO (GABARITO REVELADO SOMENTE APÓS EXPANDIR) */
+    details.quiz-alt {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-p);
+        margin-bottom: 8px;
+        overflow: hidden;
+    }
+    details.quiz-alt summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 10px 14px;
+        font-size: 0.94rem;
+        transition: var(--transicao-padrao);
+    }
+    details.quiz-alt summary::-webkit-details-marker { display: none; }
+    details.quiz-alt summary:hover { background: #FAF8F2; }
+    details.quiz-alt .retorno {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+        border-top: 1px solid var(--cor-cinza);
+    }
+    details.quiz-alt.certa[open] { border: 2px solid var(--cor-sucesso); }
+    details.quiz-alt.certa[open] .retorno { background: #DCFCE7; color: #14532D; }
+    details.quiz-alt.errada[open] { border: 2px solid var(--cor-seguranca); }
+    details.quiz-alt.errada[open] .retorno { background: #FEE2E2; color: #7F1D1D; }
+    .quiz-dica { font-size: 0.82rem; color: var(--cor-texto-fraco); font-style: italic; margin-bottom: 8px; }
+
+    @media print {
+        details.quiz-alt .retorno { display: block !important; }
+    }
+
+  </style>
+
+  <div class="aula">
+    <!-- SEÇÃO 1: ABERTURA -->
+    <section>
+      <h1>Oficina Prática: Auditoria de Intervenção em Vídeo</h1>
+      <p class="subtitulo">Estudo crítico de ocorrências reais gravadas, decomposição de falhas e reflexos motores defensivos (MTP 01 e MTP 02)</p>
+
+      <div class="painel doutrina">
+        <h3>Metodologia de Análise Operacional</h3>
+        <p>A consolidação da tomada de decisão exige dissecar ocorrências reais com método. Descreva rigorosamente os fatos observáveis na tela antes de vincular à doutrina. Hipóteses não registradas em vídeo não devem ser assumidas como verdade factual.</p>
+      </div>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">Auditoria Perceptiva</div>
+          <p>Identificar o momento exato em que a guarnição perdeu a consciência situacional ou ignorou sinais prévios de perigo.</p>
+        </div>
+        <div class="card-nivel nivel-2">
+          <div class="card-item-header">Correção Doutrinária</div>
+          <p>Substituir a hesitação por reflexos condicionados da PMMG: evasão angular imediata, voz única, contenção biomecânica e desescalada segura.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3B: BASE NORMATIVA DA ALGEMAÇÃO -->
+    <section>
+      <h2>Fundamentação Jurídica da Algemação (SV 11)</h2>
+
+      <div class="painel seguranca">
+        <p><strong>Súmula Vinculante nº 11 do STF:</strong> Só é lícito o uso de algemas em casos de <strong>resistência</strong>, de <strong>fundado receio de fuga</strong> ou de <strong>perigo à integridade física própria ou alheia</strong> (por parte do preso ou de terceiros), exigindo-se justificativa por escrito no REDS sob pena de responsabilidade administrativa, civil e penal.</p>
+      </div>
+
+      <div class="painel doutrina">
+        <p>No preenchimento do REDS, o militar deve assinalar o campo próprio e detalhar minuciosamente no histórico qual comportamento violento ou tentativa de fuga ensejou a medida (MTP 02, seção 4.2.1).</p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 6: CASO 3 VÍDEO -->
+    <section>
+      <h2>Caso 1: Confinamento e Perigo de Fogo Cruzado</h2>
+      <p>Análise tática quadro a quadro de intervenção de policiais em hall de escada estreito para conter indivíduo em surto armado:</p>
+
+      <div class="video-container vertical">
+        <video controls preload="metadata" playsinline src="video/caso3_fogo_cruzado_hall_escada.mp4"></video>
+      </div>
+      <p class="legenda-midia">Vídeo 1 — Análise tática com quadro congelado em hall de escadaria com múltiplos operadores (Cheektowaga, EUA), demonstrando a violação de ângulos de segurança. <em>(Fonte: Acervo da Curadoria CVT / PMMG)</em></p>
+    </section>
+
+    <!-- SEÇÃO 7: CASO 3 ANÁLISE -->
+    <section>
+      <h2>Análise do Caso 1: Geometria da Guarnição e Linhas de Tiro</h2>
+      <p>Em ambientes exíguos (portas, corredores e escadarias), a aglomeração desordenada gera sobreposição de linhas de tiro e perigo iminente de fogo amigo. A prevenção nasce no Plano de Ação (MTP 01, seção 5.2):</p>
+
+      <div class="procedimento">
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>1. Disciplina do Funil Fatal</h4>
+            <p>Nunca permanecer no vão de portas ou escadas. A transposição deve ser imediata em direção ao quadrante dominante.</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>2. Setorização Rígida de Fogo</h4>
+            <p>Cada operador é responsável por um setor exclusivo de tiro. A cobertura nunca projeta seu cano através do ombro ou flanco do operador de contato.</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>3. Comando da Voz Única</h4>
+            <p>Apenas o policial de contato verbaliza. A pluralidade de gritos contraditórios sobrecarrega o cérebro dos policiais e atrasa a reação em mais de 1 segundo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 8: CASO 4 VÍDEO -->
+    <section>
+      <h2>Caso 2: Contenção Noturna por Múltiplos Policiais</h2>
+      <p>Ocorrência noturna em que cinco policiais tentam imobilizar um indivíduo resistente em pé junto à viatura:</p>
+
+      <div class="video-container quadrado">
+        <video controls preload="metadata" playsinline src="video/caso4_contencao_multiplos_operadores.mp4"></video>
+      </div>
+      <p class="legenda-midia">Vídeo 2 — Tentativa desordenada de contenção física por múltiplos policiais em pé, prolongando o confronto e o risco de lesões mútuas. <em>(Fonte: Acervo da Curadoria CVT / PMMG)</em></p>
+    </section>
+
+    <!-- SEÇÃO 9: CASO 4 ANÁLISE -->
+    <section>
+      <h2>Análise do Caso 2: Quantidade Não Substitui Técnica</h2>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-3">
+          <div class="card-item-header">Falha Crítica Observada</div>
+          <p>Tentar forçar a algemação com o resistente em pé, puxando membros em direções opostas sem aplicar princípios biomecânicos de alavanca e desequilíbrio.</p>
+        </div>
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">Doutrina PMMG de Controle Físico</div>
+          <p>A condução técnica ao solo em 3 pontos de apoio neutraliza a base do abordado, poupa a energia física da guarnição e possibilita o controle dos punhos com menor probabilidade de lesão corporal.</p>
+        </div>
+        <div class="card-nivel nivel-0">
+          <div class="card-item-header">Divisão Estrita de Funções</div>
+          <p>Um operador lidera o comando de cabeça/tronco enquanto os demais controlam os membros inferiores e superiores de maneira sinérgica.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 3: VÍDEO COM PERGUNTAS -->
+    <section>
+      <h2>Caso 3: Ataque com faca a curta distância</h2>
+      <div class="video-container vertical-grande">
+        <video controls preload="metadata" playsinline src="video/Bodycam_Ataque_Faca_Curta_Distancia_Reacao_Policial_cognitivo.mp4"></video>
+      </div>
+      <p class="legenda-midia">Vídeo 3 — Ataque com faca a curta distância, editado com 3 pausas de decisão. <em>(Fonte: Acervo da Curadoria CVT / PMMG, vídeos de ocorrências reais)</em></p>
+      <div class="painel observacao">
+        <p>Câmera corporal em estacionamento. O abordado caminha em direção ao policial com as mãos junto ao corpo, saca uma faca e avança. O policial saca e dispara antes do contato. A gravação repete o trecho, com a faca destacada em círculo vermelho por volta de 0:09.</p>
+        <p><strong>Como funciona:</strong> o vídeo para, exibe a pergunta e uma contagem de tempo e depois segue sozinho. A análise de referência está nas fichas abaixo.</p>
+      </div>
+    </section>
+
+    <!-- CASO 3: PERGUNTA 1 -->
+    <section>
+      <h2>Caso 3 | Pergunta 1 de 3</h2>
+      <p><span class="badge-regra ouro">Antes do saque</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">O abordado se aproxima caminhando, com as mãos junto ao corpo e sem obedecer a distância imposta. Quais indicadores de risco já existem nesse momento e qual deveria ser a posição de armas, a distância e o comando verbal do policial?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> Indicadores: aproximação contínua mesmo sob comando, mãos fora de vista, ausência de cumprimento de ordens. Conduta preconizada: nível II ou superior, arma em pronta resposta (Nível 2 de empunhadura), comando único e firme (<em>pare, mostre as mãos</em>) e recuo para ampliar distância e tempo de reação, enquanto a cobertura se posiciona. Cada metro cedido equivale a tempo para decidir.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 3: PERGUNTA 2 -->
+    <section>
+      <h2>Caso 3 | Pergunta 2 de 3</h2>
+      <p><span class="badge-regra ouro">Mão na cintura e faca à mostra</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">A mão do abordado desce à cintura e a faca aparece. Pela referência empírica de Tueller (cerca de 6 m percorridos em aproximadamente 1,5 s), que decisão o policial ainda consegue tomar, e qual é o critério jurídico que autoriza o disparo?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> O tempo disponível só permite reação, não deliberação: saque, disparo e, se possível, deslocamento lateral. Critério: agressão injusta atual ou iminente com meio letal, nos termos dos arts. 23 e 25 do Código Penal, com necessidade e proporcionalidade (Decreto nº 12.341/2024). A faca é arma branca com potencial letal. A decisão anterior de manter ou ceder distância é o que define se o policial terá tempo.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 3: PERGUNTA 3 -->
+    <section>
+      <h2>Caso 3 | Pergunta 3 de 3</h2>
+      <p><span class="badge-regra ouro">Pós-neutralização</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">O agressor está ao solo e a faca está a poucos metros dele. Qual a sequência de ações do policial nos 30 primeiros segundos após o disparo?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> Cessar fogo ao cessar a agressão, manter cobertura sobre o agressor, afastar a arma branca com segurança, chamar apoio e socorro pelo rádio, algemar quando houver segurança e prestar primeiros socorros (APH). Preservar o local e registrar no REDS e RIUF os fatos que justificaram o emprego da força.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 4: VÍDEO COM PERGUNTAS -->
+    <section>
+      <h2>Caso 4: Abordagem de trânsito: motorista desembarca armado</h2>
+      <div class="video-container vertical-grande">
+        <video controls preload="metadata" playsinline src="video/Dashcam_Abordagem_Transito_Reacao_Armada_Motorista_cognitivo.mp4"></video>
+      </div>
+      <p class="legenda-midia">Vídeo 4 — Abordagem de trânsito: motorista desembarca armado, editado com 3 pausas de decisão. <em>(Fonte: Acervo da Curadoria CVT / PMMG, vídeos de ocorrências reais)</em></p>
+      <div class="painel observacao">
+        <p>Câmera de painel de viatura. O condutor de um sedan branco, orientado a permanecer no veículo, desembarca e permanece ao lado da porta aberta. Por volta de 0:12 volta a se debruçar sobre a porta, saca uma pistola e se desloca para o outro lado da rua. O policial dentro da viatura reage pelo para-brisa e o suspeito cai na via.</p>
+        <p><strong>Como funciona:</strong> o vídeo para, exibe a pergunta e uma contagem de tempo e depois segue sozinho. A análise de referência está nas fichas abaixo.</p>
+      </div>
+    </section>
+
+    <!-- CASO 4: PERGUNTA 1 -->
+    <section>
+      <h2>Caso 4 | Pergunta 1 de 3</h2>
+      <p><span class="badge-regra ouro">Desembarque contra a ordem</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">O condutor desce do carro mesmo com a ordem de permanecer. O que isso altera no nível de risco e como a guarnição deve reposicionar cobertura, contato e distância?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> A desobediência a um comando básico em abordagem veicular é indicador de risco e eleva o nível de intervenção. Conduta: reiterar comando único, manter a viatura como obstáculo balístico, definir quem cobre e quem comanda (contato e cobertura), e manter o motorista em ângulo de visão com as mãos visíveis. Não aproximar enquanto o condutor não estiver sob controle.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 4: PERGUNTA 2 -->
+    <section>
+      <h2>Caso 4 | Pergunta 2 de 3</h2>
+      <p><span class="badge-regra ouro">Volta ao interior da porta</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">Depois de ficar parado, o condutor se debruça de novo sobre a porta aberta, ocultando as mãos. Qual deve ser a decisão do policial neste instante e quais comandos devem ser emitidos?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> Mãos ocultas somadas ao movimento em direção ao interior do veículo configuram risco iminente de arma. Conduta: comando imperativo e simultâneo (<em>mãos à vista</em>), empunhadura de pronta resposta, abrigo atrás do motor e do bloco do veículo e preparo para o disparo caso surja arma. Antecipar é mais seguro do que reagir ao primeiro disparo.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 4: PERGUNTA 3 -->
+    <section>
+      <h2>Caso 4 | Pergunta 3 de 3</h2>
+      <p><span class="badge-regra ouro">Reação do policial e fim da ameaça</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">O policial responde pelo para-brisa e o suspeito atravessa a rua. Quais são os riscos do disparo através do vidro e quando a cessação do fogo é obrigatória?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> O para-brisa pode desviar o projétil e trincar, reduzindo a visibilidade. Se o abrigo é o veículo, avaliar desembarcar pelo lado protegido para obter linha de tiro limpa. A cessação é obrigatória quando a ameaça é neutralizada (suspeito caído, arma fora do alcance), com verificação do entorno, arma em segurança, chamado de apoio e socorro.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 5: VÍDEO COM PERGUNTAS -->
+    <section>
+      <h2>Caso 5: Abordagem veicular noturna: disparo do passageiro do banco traseiro</h2>
+      <div class="video-container vertical-grande">
+        <video controls preload="metadata" playsinline src="video/Bodycam_Abordagem_Veicular_Disparo_Passageiro_Banco_Tras_cognitivo.mp4"></video>
+      </div>
+      <p class="legenda-midia">Vídeo 5 — Abordagem veicular noturna: disparo do passageiro do banco traseiro, editado com 4 pausas de decisão. <em>(Fonte: Acervo da Curadoria CVT / PMMG, vídeos de ocorrências reais)</em></p>
+      <div class="painel observacao">
+        <p>Câmera corporal, abordagem noturna a um veículo com três ocupantes. Dois ocupantes são retirados e revistados junto à viatura sem incidentes. Ao ordenar que o passageiro do banco traseiro mostre as mãos, ele saca uma arma e dispara contra o policial a curta distância. Os policiais recuam, buscam abrigo e respondem ao fogo. A parte final traz a imagem da câmera do segundo policial.</p>
+        <p><strong>Como funciona:</strong> o vídeo para, exibe a pergunta e uma contagem de tempo e depois segue sozinho. A análise de referência está nas fichas abaixo.</p>
+      </div>
+    </section>
+
+    <!-- CASO 5: PERGUNTA 1 -->
+    <section>
+      <h2>Caso 5 | Pergunta 1 de 4</h2>
+      <p><span class="badge-regra ouro">Revista e terceiro ocupante no veículo</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">Dois ocupantes estão sendo revistados e o terceiro permanece no banco de trás. Quem deve manter atenção sobre esse ocupante e como o policial que revista divide a atenção?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> O ocupante que permanece no veículo é o ponto cego da operação. Conduta: um policial (cobertura) mantém o foco exclusivo no interior do veículo, com ângulo de visão das mãos e arma em pronta resposta; o outro realiza a revista. Idealmente todos os ocupantes são desembarcados e controlados, um a um, antes de continuar. A revista a dois sem cobertura efetiva é falha crítica.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 5: PERGUNTA 2 -->
+    <section>
+      <h2>Caso 5 | Pergunta 2 de 4</h2>
+      <p><span class="badge-regra ouro">Comando para mostrar as mãos</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">Ao pedir que o passageiro levante a mão, ele se mexe no interior do carro. Que sinais de pré-agressão aparecem e qual é a decisão correta quando a ordem não é cumprida?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> Indicadores: movimento do tronco e do braço fora do campo de visão, ausência de resposta às ordens e posição de partida para saque. Conduta: voz única e imperativa, recuo para abrigo atrás da porta ou do bloco do motor, arma em pronta resposta e, se houver arma, resposta imediata. A distância curta no momento do comando reduz o tempo de reação.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 5: PERGUNTA 3 -->
+    <section>
+      <h2>Caso 5 | Pergunta 3 de 4</h2>
+      <p><span class="badge-regra ouro">Disparo à queima-roupa</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">O passageiro dispara contra o policial. Qual é a sequência imediata de reação e por que o abrigo e o deslocamento importam mais do que o volume de disparos?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> Ação, abrigo e resposta: sair da linha de tiro (movimento lateral ou para trás), buscar abrigo balístico (motor, bloco, viatura) e responder com disparos precisos. Prioridades: manter a integridade do policial, proteger o parceiro e controlar os demais ocupantes. O volume de disparos não substitui a precisão, e a cessação deve ocorrer quando a ameaça é neutralizada.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 5: PERGUNTA 4 -->
+    <section>
+      <h2>Caso 5 | Pergunta 4 de 4</h2>
+      <p><span class="badge-regra ouro">Pós-confronto e comunicação</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">A câmera do segundo policial mostra o ambiente após os disparos. Que informações devem ser transmitidas pelo rádio e em que ordem?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> Mensagem objetiva: <em>disparos efetuados, policial atingido ou não, localização, número e situação dos suspeitos, necessidade de apoio e de socorro</em>. Em seguida, controlar os suspeitos, prestar APH e isolar a cena para a perícia. O primeiro minuto de comunicação define a chegada do apoio.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 6: VÍDEO COM PERGUNTAS -->
+    <section>
+      <h2>Caso 6: Contenção de pessoa em surto com objeto pontiagudo</h2>
+      <div class="video-container quadrado">
+        <video controls preload="metadata" playsinline src="video/Bodycam_San_Diego_Contencao_Suspeita_Arma_Branca_Taser_cognitivo.mp4"></video>
+      </div>
+      <p class="legenda-midia">Vídeo 6 — Contenção de pessoa em surto com objeto pontiagudo, editado com 3 pausas de decisão. <em>(Fonte: Acervo da Curadoria CVT / PMMG, vídeos de ocorrências reais)</em></p>
+      <div class="painel observacao">
+        <p>Câmera corporal de policiais de San Diego (EUA). Uma mulher visivelmente agitada, segurando um objeto pontiagudo (uma caneta), é orientada a largar o objeto e deitar no chão. Ela ignora as ordens e caminha na direção dos policiais. Após comandos verbais continuados e emprego da arma de fogo em pronta resposta, é usado o Taser. A contenção é concluída no solo.</p>
+        <p><strong>Como funciona:</strong> o vídeo para, exibe a pergunta e uma contagem de tempo e depois segue sozinho. A análise de referência está nas fichas abaixo.</p>
+      </div>
+    </section>
+
+    <!-- CASO 6: PERGUNTA 1 -->
+    <section>
+      <h2>Caso 6 | Pergunta 1 de 3</h2>
+      <p><span class="badge-regra ouro">Aproximação e escalada</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">A pessoa se aproxima caminhando, com objeto pontiagudo na mão e sem cumprir as ordens. Como a guarnição deve gerenciar distância, tempo e cobertura para ganhar opções de desescalada?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> Princípios: distância, tempo e cobertura. Usar a viatura como barreira, manter policial de cobertura letal com um policial de IMPO (Taser), comando verbal único e claro e recuo quando possível. Em pessoa em crise, a desescalada exige paciência, mas o policial só conserva essa margem se mantiver distância segura e cobertura.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 6: PERGUNTA 2 -->
+    <section>
+      <h2>Caso 6 | Pergunta 2 de 3</h2>
+      <p><span class="badge-regra ouro">Decisão: Taser, arma de fogo ou continuar a comunicação?</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">A pessoa mantém o objeto e continua avançando. Qual critério define o instante de escolher o IMPO, e por que a cobertura letal precisa estar posicionada antes do disparo do Taser?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> O Taser é opção quando há resistência ativa ou risco potencial e quando a distância permite o uso. A cobertura letal garante a proteção caso o IMPO falhe (sondas fora de alvo ou sem incapacitação). Cada opção considera objeto, distância, comportamento e terreno. Se houver agressão letal iminente, a escala de uso da força autoriza a resposta com arma de fogo, o que não ocorre aqui.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 6: PERGUNTA 3 -->
+    <section>
+      <h2>Caso 6 | Pergunta 3 de 3</h2>
+      <p><span class="badge-regra ouro">Após o disparo do Taser</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">A suspeita cai e a equipe a contém. Quais cuidados são necessários na aproximação, no recolhimento do objeto e nos primeiros socorros em pessoa atingida pelo Taser?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> Aproximar com cobertura, afastar o objeto antes de tocar na pessoa, controlar membros, algemar quando necessário e conforme a SV 11, retirar as sondas conforme protocolo e avaliar a saúde (encaminhamento médico em pessoa em crise, sondas em áreas sensíveis ou queda). Registrar no REDS o uso do IMPO e o número de ciclos, conforme a Lei nº 13.060/2014.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 7: VÍDEO COM PERGUNTAS -->
+    <section>
+      <h2>Caso 7: Abordagem de homem armado em mesa de bar</h2>
+      <div class="video-container vertical-grande">
+        <video controls preload="metadata" playsinline src="video/HomemArmadoReageAbordagemPolicial_cognitivo.mp4"></video>
+      </div>
+      <p class="legenda-midia">Vídeo 7 — Abordagem de homem armado em mesa de bar, editado com 3 pausas de decisão. <em>(Fonte: Acervo da Curadoria CVT / PMMG, vídeos de ocorrências reais)</em></p>
+      <div class="painel observacao">
+        <p>Reportagem de TV com imagens de câmera de segurança de um estabelecimento. Policiais civis à paisana abordam um homem sentado a uma mesa; ele tenta sacar uma arma durante a abordagem e é imobilizado. A parte final mostra a arma apreendida e os policiais no controle do suspeito.</p>
+        <p><strong>Como funciona:</strong> o vídeo para, exibe a pergunta e uma contagem de tempo e depois segue sozinho. A análise de referência está nas fichas abaixo.</p>
+      </div>
+    </section>
+
+    <!-- CASO 7: PERGUNTA 1 -->
+    <section>
+      <h2>Caso 7 | Pergunta 1 de 3</h2>
+      <p><span class="badge-regra ouro">Abordagem de pessoa sentada em local público</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">Os policiais se aproximam de uma mesa onde o abordado está sentado, rodeado de outras pessoas. Quais fatores aumentam o risco nessa abordagem e como definir posição, aproximação e controle das mãos?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> Riscos: pessoa sentada com as mãos abaixo da mesa, presença de terceiros, mobilidade limitada dos policiais e civis no entorno. Conduta: aproximação em ângulo pelo lado não dominante, um policial em contato e outro em cobertura, controle visual das mãos, comando para levantar e afastar da mesa antes da busca pessoal.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 7: PERGUNTA 2 -->
+    <section>
+      <h2>Caso 7 | Pergunta 2 de 3</h2>
+      <p><span class="badge-regra ouro">Tentativa de sacar a arma e imobilização</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">No momento em que o abordado tenta sacar a arma, qual é a prioridade do policial que está mais próximo e qual deve ser o papel do parceiro?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> Prioridade: controle da mão e da arma do abordado (retenção, travamento do braço e deslocamento para fora da linha de tiro), seguido de levar ao solo. O parceiro auxilia no controle, evitando entrar na linha da arma, e comunica <em>arma</em>. O disparo só se justifica diante de ameaça letal atual quando não há alternativa de menor risco. Aplicar técnica de IMPO ou imobilização compatível com o risco.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO 7: PERGUNTA 3 -->
+    <section>
+      <h2>Caso 7 | Pergunta 3 de 3</h2>
+      <p><span class="badge-regra ouro">Controle final e arma apreendida</span></p>
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">Com o suspeito dominado e a arma recolhida, quais providências garantem a segurança no local e a regularidade do procedimento?</div>
+        <p class="quiz-dica">Esta pergunta aparece no vídeo. Responda mentalmente e toque abaixo para ver a análise de referência.</p>
+        <div class="quiz-opcoes">
+          <details class="quiz-alt certa">
+            <summary>Ver análise de referência</summary>
+            <div class="retorno"><strong>Análise.</strong> Verificar a arma (segurança, carregador, numeração), buscar outras armas, algemar com travamento conforme MTP 02 e a SV 11, controlar curiosos no entorno, solicitar apoio e registrar no REDS a conduta do abordado e os instrumentos empregados. Preservar as imagens do local como prova.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 10A: REDS PARTE 1 -->
+    <section>
+      <h2>Matriz de Redação do REDS: Suspeita e Algemas</h2>
+      <p>A blindagem jurídica da guarnição inicia-se na precisão e fidelidade dos termos técnicos empregados no histórico da ocorrência:</p>
+
+      <div class="grid-cards">
+        <div class="card-item">
+          <div class="card-item-header">Fundada Suspeita (CPP, art. 244)</div>
+          <div class="box-aviso-erro"><strong>Genérico:</strong> "Indivíduo em atitude suspeita nas proximidades."</div>
+          <div class="box-aviso-seguranca"><strong>Técnico PMMG:</strong> "Indivíduo mudou abruptamente de direção ao avistar a viatura e ajustou volume rígido sob a camisa na linha de cintura."</div>
+        </div>
+
+        <div class="card-item">
+          <div class="card-item-header">Uso de Algemas (SV 11)</div>
+          <div class="box-aviso-erro"><strong>Genérico:</strong> "O autor foi algemado de praxe pela equipe."</div>
+          <div class="box-aviso-seguranca"><strong>Técnico PMMG:</strong> "Algemação empregada com base na SV 11 em virtude de resistência ativa (desferiu socos contra a guarnição) e fundado receio de fuga durante a busca."</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 10B: REDS PARTE 2 -->
+    <section>
+      <h2>Matriz do REDS: Avaliação da Ameaça e Desescalada</h2>
+      <p>A comprovação documental da desescalada da força é o que comprova a estrita observância da legítima defesa e afasta a imputação de excesso (CP, art. 23 e 25):</p>
+
+      <div class="grid-cards">
+        <div class="card-item">
+          <div class="card-item-header">Avaliação da Ameaça e Desescalada Imediata</div>
+          <div class="box-aviso-erro"><strong>Genérico:</strong> "A equipe efetuou disparos para intimidar e o autor caiu."</div>
+          <div class="box-aviso-seguranca"><strong>Técnico PMMG:</strong> "Diante de agressão armada letal e iminente (autor avançava com faca em punho desobedecendo ordem de largá-la), foi efetuado disparo defensivo para cessar a ameaça. No instante em que o autor tombou e largou a arma, a guarnição desescalou imediatamente a força, não efetuando novos disparos, prestando socorro de urgência via SAMU."</div>
+        </div>
+      </div>
+
+      <div class="painel importante">
+        <p><strong>Axioma Jurídico:</strong> Descreva sempre fatos objetivos e comportamentos perceptíveis. A menção expressa ao momento em que a força cessou comprova o estrito cumprimento da legítima defesa e afasta qualquer imputação de excesso (CP, art. 23).</p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 11: SÍNTESE -->
+    <section>
+      <h2>Síntese Integradora da Oficina</h2>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">1. Diagnóstico e Prontidão</div>
+          <p>Estado de Atenção contínuo, leitura 360° do terreno e reclassificação de risco diante de armas ou dissimulações.</p>
+        </div>
+        <div class="card-nivel nivel-2">
+          <div class="card-item-header">2. Plano, Comunicação e Canga</div>
+          <p>Funções de Contato e Cobertura delimitadas, voz única, disciplina angular em recintos fechados e controle de linhas de tiro.</p>
+        </div>
+        <div class="card-nivel nivel-3">
+          <div class="card-item-header">3. Força, Desescalada e Registro</div>
+          <p>Uso seletivo da força, desescalada instantânea com o fim da agressão, travamento correto de algemas e histórico técnico no REDS.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 12: REFERÊNCIAS -->
+    <section>
+      <h2>Referências Normativas e Doutrinárias</h2>
+
+      <div class="referencias-box">
+        <strong>Referências Bibliográficas e Doutrinárias (ABNT NBR 6023):</strong>
+        <ul>
+          <li>BRASIL. <em>Código de Processo Penal</em>. Decreto-Lei nº 3.689, de 03/10/1941. Arts. 240 e 244 (Busca Pessoal e Fundada Suspeita).</li>
+          <li>BRASIL. <em>Código Penal</em>. Decreto-Lei nº 2.848, de 07/12/1940. Arts. 23 e 25 (Exclusão de Ilicitude, Legítima Defesa e Excesso).</li>
+          <li>BRASIL. <em>Decreto nº 12.341, de 23/12/2024</em>. Regulamenta a Lei nº 13.060/2014, disciplinando o uso da força pelos agentes de segurança pública.</li>
+          <li>BRASIL. <em>Lei nº 13.060, de 22/12/2014</em>. Disciplina o uso dos instrumentos de menor potencial ofensivo pelos agentes de segurança pública em todo o território nacional.</li>
+          <li>BRASIL. Supremo Tribunal Federal. <em>Súmula Vinculante nº 11</em>. Uso de algemas em caso de resistência, fundado receio de fuga ou perigo à integridade física. Brasília, DF: STF, 22/08/2008.</li>
+          <li>MINAS GERAIS. Polícia Militar. <em>Manual Técnico-Profissional nº 3.04.01/2020-CG (MTP 01): Intervenção Policial, Processo de Comunicação e Uso da Força</em>. Belo Horizonte: Academia de Polícia Militar, 2020. Publicado no BEPM nº 10, de 05/10/2020.</li>
+          <li>MINAS GERAIS. Polícia Militar. <em>Manual Técnico-Profissional nº 3.04.02/2020-CG (MTP 02): Abordagem a Pessoas</em>. Belo Horizonte: Academia de Polícia Militar, 2020. Publicado no BEPM nº 11, de 06/10/2020.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</page>
+
+  
+<footer class="pmmg-footer-nav">
+  <a class='pmmg-btn-nav pmmg-btn-prev' href='/dentro-do-confronto/intervencao-policial/'>← Módulo 4 (Parte 1): Intervenção</a>
+  <button id="completeModuleBtn" class="pmmg-btn-complete" onclick="markModuleCompleted('intervencao-policial-p2')">
+    Marcar como Concluído
+  </button>
+  <a class='pmmg-btn-nav pmmg-btn-next' href='/dentro-do-confronto/neutralizacao-da-ameaca/'>Módulo 5: Neutralização da Ameaça →</a>
+</footer>
+
+  
+<script>
+  window.addEventListener('scroll', function() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const bar = document.getElementById('pmmgScrollProgress');
+    if (bar) bar.style.width = Math.min(100, Math.max(0, scrolled)) + '%';
+  });
+
+  function adjustFontSize(delta) {
+    const root = document.querySelector('.aula') || document.querySelector('page') || document.body;
+    const current = parseFloat(window.getComputedStyle(root, null).getPropertyValue('font-size')) || 16;
+    const next = Math.max(12, Math.min(26, current + delta));
+    root.style.fontSize = next + 'px';
+  }
+
+  function markModuleCompleted(modKey) {
+    let completed = JSON.parse(localStorage.getItem('pmmg_confronto_completed') || '[]');
+    if (!completed.includes(modKey)) {
+      completed.push(modKey);
+      localStorage.setItem('pmmg_confronto_completed', JSON.stringify(completed));
+    }
+    const btn = document.getElementById('completeModuleBtn');
+    if (btn) {
+      btn.innerHTML = '✔ Concluído com Sucesso!';
+      btn.style.background = '#15803d';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const parts = window.location.pathname.replace(/\\/g, '/').split('/');
+    let modKey = parts[parts.length - 2] || 'modulo';
+    if (parts[parts.length - 1].includes('treinamento_intervencao')) {
+      modKey = 'intervencao-policial-p2';
+    }
+    let completed = JSON.parse(localStorage.getItem('pmmg_confronto_completed') || '[]');
+    const btn = document.getElementById('completeModuleBtn');
+    if (btn && completed.includes(modKey)) {
+      btn.innerHTML = '✔ Módulo Concluído';
+      btn.style.background = '#15803d';
+    }
+  });
+</script>
+
+</body>
+</html>

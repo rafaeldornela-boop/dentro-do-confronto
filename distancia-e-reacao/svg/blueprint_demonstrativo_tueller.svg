@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="100%" height="auto" style="background:#091E36; border-radius:8px; border:2px solid #1E4D7A; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Malha Blueprint (Grid Técnico) -->
+    <pattern id="grid-20" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#123356" stroke-width="0.8" />
+    </pattern>
+    <pattern id="grid-100" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#grid-20)" />
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#1B4773" stroke-width="1.5" />
+    </pattern>
+
+    <!-- Marcadores Técnicos -->
+    <marker id="seta-azul" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#38BDF8" />
+    </marker>
+    <marker id="seta-vermelha" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#F87171" />
+    </marker>
+    <marker id="seta-verde" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#4ADE80" />
+    </marker>
+
+    <!-- Cone de Visada Blueprint -->
+    <radialGradient id="cone-blueprint" cx="0%" cy="50%" r="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.35" />
+      <stop offset="70%" stop-color="#38BDF8" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Fundo com Grade Ortogonal CAD -->
+  <rect width="1600" height="800" fill="#08182B" />
+  <rect width="1600" height="800" fill="url(#grid-100)" />
+
+  <!-- Moldura Dupla de Desenho Técnico -->
+  <rect x="20" y="20" width="1560" height="760" fill="none" stroke="#38BDF8" stroke-width="2" />
+  <rect x="28" y="28" width="1544" height="744" fill="none" stroke="#1B4773" stroke-width="1" stroke-dasharray="6,4" />
+
+  <!-- IDENTIFICADOR DO PROJETO (SIMPLES, ESTILO CAD) -->
+  <text x="45" y="58" font-size="14" font-weight="900" fill="#38BDF8" letter-spacing="1.5">PLANTA TÁTICA DE ENGENHARIA BIOMECÂNICA • PMMG / CTP</text>
+  <text x="1555" y="58" font-size="12" font-weight="700" fill="#93C5FD" text-anchor="end" letter-spacing="1">REF: MTP 3.04.01 • REGRA DOS 21 PÉS (6,4m)</text>
+
+  <!-- COTA MÉTRICA PRINCIPAL: 6,4 METROS (21 FT) -->
+  <g id="cota-principal" transform="translate(0, 100)">
+    <!-- Linhas de Extensão de Cota -->
+    <line x1="220" y1="20" x2="220" y2="70" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="4,3" />
+    <line x1="1100" y1="20" x2="1100" y2="70" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="4,3" />
+
+    <!-- Linha de Cota com Setas Técnicas -->
+    <line x1="225" y1="45" x2="1095" y2="45" stroke="#38BDF8" stroke-width="2" marker-start="url(#seta-azul)" marker-end="url(#seta-azul)" />
+
+    <!-- Badge Central da Cota -->
+    <rect x="600" y="28" width="160" height="34" rx="4" fill="#0C2A4A" stroke="#38BDF8" stroke-width="1.5" />
+    <text x="680" y="51" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">6,4 m  [21 ft]</text>
+  </g>
+
+  <!-- CENÁRIO TÁTICO BLUEPRINT (CENTRO) -->
+
+  <!-- 1. VETOR DE ARRANCADA DO AGRESSOR (LINHA RETA) -->
+  <g id="vetor-ataque">
+    <!-- Linha de Trajetória Retilínea -->
+    <line x1="220" y1="420" x2="1070" y2="420" stroke="#F87171" stroke-width="3" stroke-dasharray="8,6" marker-end="url(#seta-vermelha)" />
+    <!-- Faixa Técnica com Eixo Tracejado -->
+    <line x1="220" y1="400" x2="1100" y2="400" stroke="#EF4444" stroke-width="0.8" opacity="0.4" />
+    <line x1="220" y1="440" x2="1100" y2="440" stroke="#EF4444" stroke-width="0.8" opacity="0.4" />
+    <text x="660" y="408" font-size="11" font-weight="800" fill="#FCA5A5" text-anchor="middle" letter-spacing="1">EIXO RETILÍNEO DE INVESTIDA (INÉRCIA FRONTAL)</text>
+  </g>
+
+  <!-- 2. SILHUETA TÉCNICA BLUEPRINT: AGRESSOR COM FACA -->
+  <g id="silhueta-agressor" transform="translate(180, 395)">
+    <!-- Círculos de Centro de Massa e Eixo CAD -->
+    <circle cx="25" cy="25" r="38" fill="none" stroke="#F87171" stroke-width="1" stroke-dasharray="4,4" opacity="0.6" />
+    <line x1="25" y1="-18" x2="25" y2="68" stroke="#F87171" stroke-width="0.8" opacity="0.5" />
+    <line x1="-18" y1="25" x2="68" y2="25" stroke="#F87171" stroke-width="0.8" opacity="0.5" />
+
+    <!-- Braço com Faca (Linhas CAD) -->
+    <path d="M 25,12 L 52,18 L 72,22" fill="none" stroke="#FCA5A5" stroke-width="5" stroke-linecap="round" />
+    <!-- Lâmina Geométrica -->
+    <polygon points="72,18 96,14 78,26" fill="#FFFFFF" stroke="#F87171" stroke-width="1.2" />
+
+    <!-- Outro Braço -->
+    <path d="M 25,38 L 46,44 L 56,38" fill="none" stroke="#FCA5A5" stroke-width="5" stroke-linecap="round" />
+
+    <!-- Torso e Ombros (Silhueta Blueprint) -->
+    <ellipse cx="25" cy="25" rx="18" ry="24" fill="#7F1D1D" stroke="#F87171" stroke-width="2" />
+    <circle cx="22" cy="25" r="9" fill="#1E293B" stroke="#F87171" stroke-width="1.5" />
+
+    <!-- Rótulo Simples de Cota -->
+    <rect x="-30" y="65" width="110" height="22" rx="3" fill="#0C2540" stroke="#F87171" stroke-width="1.2" />
+    <text x="25" y="80" font-size="10.5" font-weight="900" fill="#FCA5A5" text-anchor="middle">AGRESSOR</text>
+  </g>
+
+  <!-- 3. O PONTO "X" (ALVO ESTÁTICO / RETÍCULO CAD) -->
+  <g id="reticulo-ponto-x" transform="translate(1100, 395)">
+    <!-- Retículo de Alvo Técnico -->
+    <circle cx="25" cy="25" r="32" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4,4" />
+    <circle cx="25" cy="25" r="16" fill="rgba(239, 68, 68, 0.15)" stroke="#EF4444" stroke-width="1.5" />
+    <line x1="-15" y1="25" x2="65" y2="25" stroke="#EF4444" stroke-width="2" />
+    <line x1="25" y1="-15" x2="25" y2="65" stroke="#EF4444" stroke-width="2" />
+
+    <!-- Cruz Vermelha do "X" -->
+    <line x1="12" y1="12" x2="38" y2="38" stroke="#EF4444" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="38" y1="12" x2="12" y2="38" stroke="#EF4444" stroke-width="4.5" stroke-linecap="round" />
+
+    <!-- Rótulo do Ponto X -->
+    <rect x="-35" y="65" width="120" height="22" rx="3" fill="#450A0A" stroke="#EF4444" stroke-width="1.2" />
+    <text x="25" y="80" font-size="10.5" font-weight="900" fill="#FCA5A5" text-anchor="middle">PONTO &quot;X&quot;</text>
+
+    <!-- Seta do Recuo Linear Proibido -->
+    <line x1="60" y1="25" x2="120" y2="25" stroke="#EF4444" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#seta-vermelha)" />
+    <text x="90" y="15" font-size="9" font-weight="800" fill="#EF4444" text-anchor="middle">RECUO LINEAR (ERRO)</text>
+  </g>
+
+  <!-- 4. MANOBRA ANGULAR: ARCO & LINHA DE 45° -->
+  <g id="geometria-evasao" transform="translate(1100, 395)">
+    <!-- Arco de Ângulo Técnico -->
+    <path d="M 25,25 L -75,170" fill="none" stroke="#4ADE80" stroke-width="3" stroke-linecap="round" marker-end="url(#seta-verde)" />
+    <path d="M -5,25 A 30 30 0 0 1 5,55" fill="none" stroke="#4ADE80" stroke-width="1.5" stroke-dasharray="3,3" />
+    
+    <!-- Badge do Ângulo -->
+    <rect x="-70" y="80" width="60" height="24" rx="3" fill="#0C2A4A" stroke="#4ADE80" stroke-width="1.2" />
+    <text x="-40" y="96" font-size="12" font-weight="900" fill="#4ADE80" text-anchor="middle">45°</text>
+  </g>
+
+  <!-- 5. SILHUETA TÉCNICA BLUEPRINT: POLICIAL MILITAR PMMG (EVADIDO A 45°) -->
+  <g id="silhueta-pm" transform="translate(980, 565) rotate(-35)">
+    <!-- Cone de Visada Blueprint -->
+    <path d="M 45,25 L 360,-40 L 360,90 Z" fill="url(#cone-blueprint)" />
+    <line x1="45" y1="25" x2="350" y2="25" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#seta-azul)" />
+
+    <!-- Linhas de Eixo CAD do Operador -->
+    <circle cx="25" cy="25" r="36" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4,4" opacity="0.6" />
+    <line x1="25" y1="-15" x2="25" y2="65" stroke="#38BDF8" stroke-width="0.8" opacity="0.5" />
+    <line x1="-15" y1="25" x2="65" y2="25" stroke="#38BDF8" stroke-width="0.8" opacity="0.5" />
+
+    <!-- Braços estendidos em empunhadura isósceles -->
+    <path d="M 16,10 L 35,18 L 48,22" fill="none" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" />
+    <path d="M 16,40 L 35,32 L 48,28" fill="none" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" />
+    <!-- Arma CAD -->
+    <rect x="46" y="22.5" width="16" height="5" rx="1" fill="#FFFFFF" stroke="#0C2540" stroke-width="1" />
+
+    <!-- Ombros e Torso (Silhueta CAD) -->
+    <ellipse cx="16" cy="25" rx="16" ry="22" fill="#0C345B" stroke="#38BDF8" stroke-width="2" />
+    <!-- Colete Modular -->
+    <rect x="4" y="12" width="18" height="26" rx="3" fill="#1E293B" stroke="#38BDF8" stroke-width="1" />
+    <!-- Cobertura com Aba -->
+    <circle cx="15" cy="25" r="8" fill="#38BDF8" />
+    <path d="M 21,20 L 25,25 L 21,30 Z" fill="#FFFFFF" />
+
+    <!-- Rótulo Simples PM -->
+    <rect x="-40" y="48" width="120" height="22" rx="3" fill="#0C2540" stroke="#4ADE80" stroke-width="1.2" />
+    <text x="20" y="63" font-size="10.5" font-weight="900" fill="#4ADE80" text-anchor="middle">PM (EVASÃO 45°)</text>
+  </g>
+
+  <!-- 6. VIATURA SUV PMMG EM BLUEPRINT CAD (ABRIGO TÁTICO) -->
+  <g id="viatura-blueprint" transform="translate(1180, 540) rotate(-30)">
+    <!-- Chassi e Pneus -->
+    <rect x="20" y="-6" width="30" height="8" rx="2" fill="#1E293B" stroke="#38BDF8" stroke-width="1" />
+    <rect x="130" y="-6" width="30" height="8" rx="2" fill="#1E293B" stroke="#38BDF8" stroke-width="1" />
+    <rect x="20" y="74" width="30" height="8" rx="2" fill="#1E293B" stroke="#38BDF8" stroke-width="1" />
+    <rect x="130" y="74" width="30" height="8" rx="2" fill="#1E293B" stroke="#38BDF8" stroke-width="1" />
+
+    <!-- Carroceria da SUV em Linhas CAD -->
+    <path d="M 10,20 C 10,5 20,0 40,0 L 150,0 C 170,0 185,8 185,25 L 185,55 C 185,72 170,80 150,80 L 40,80 C 20,80 10,75 10,60 Z"
+          fill="#0B2644" stroke="#38BDF8" stroke-width="2" />
+
+    <!-- Para-brisa CAD -->
+    <path d="M 50,8 C 45,8 42,12 40,40 C 42,68 45,72 50,72 L 62,68 C 58,55 58,25 62,12 Z"
+          fill="#133D6B" stroke="#38BDF8" stroke-width="1.2" />
+
+    <!-- Teto com Faixa PMMG -->
+    <rect x="66" y="10" width="82" height="60" rx="3" fill="#0E3054" stroke="#38BDF8" stroke-width="1" />
+    <text x="107" y="45" font-size="13" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">PMMG</text>
+
+    <!-- Giroflex LED -->
+    <rect x="88" y="18" width="14" height="44" rx="2" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
+
+    <!-- Rótulo Abrigo -->
+    <rect x="30" y="-28" width="130" height="20" rx="3" fill="#081A2E" stroke="#38BDF8" stroke-width="1" />
+    <text x="95" y="-14" font-size="10" font-weight="900" fill="#38BDF8" text-anchor="middle">ANTEPARO / ABRIGO</text>
+  </g>
+
+  <!-- CARIMBO TÉCNICO CAD DE RODAPÉ (CANTO INFERIOR DIREITO) -->
+  <g id="carimbo-cad" transform="translate(1220, 695)">
+    <rect x="0" y="0" width="345" height="75" fill="#07192C" stroke="#38BDF8" stroke-width="1.5" />
+    <!-- Título do Bloco -->
+    <rect x="0" y="0" width="345" height="22" fill="#0E355C" />
+    <text x="172" y="15" font-size="11" font-weight="900" fill="#38BDF8" text-anchor="middle" letter-spacing="1">POLÍCIA MILITAR DE MINAS GERAIS • CTP</text>
+
+    <line x1="0" y1="48" x2="345" y2="48" stroke="#1A4570" stroke-width="1" />
+    <line x1="172" y1="22" x2="172" y2="75" stroke="#1A4570" stroke-width="1" />
+
+    <text x="12" y="38" font-size="10" font-weight="700" fill="#93C5FD">DISCIPLINA:</text>
+    <text x="80" y="38" font-size="10" font-weight="900" fill="#FFFFFF">TÉCNICA POLICIAL</text>
+
+    <text x="184" y="38" font-size="10" font-weight="700" fill="#93C5FD">ESCALA:</text>
+    <text x="235" y="38" font-size="10" font-weight="900" fill="#4ADE80">1:1 BIOMECÂNICA</text>
+
+    <text x="12" y="64" font-size="9.5" font-weight="700" fill="#93C5FD">MÓDULO: DENTRO DO CONFRONTO</text>
+    <text x="184" y="64" font-size="9.5" font-weight="700" fill="#38BDF8">GEOMETRIA 'SAIA DO X'</text>
+  </g>
+</svg>

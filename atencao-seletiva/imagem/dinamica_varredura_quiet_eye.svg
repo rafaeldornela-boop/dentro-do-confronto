@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="auto" style="background:#F8F9FA; border-radius:10px; border:1px solid #CBD5E1; font-family:system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Gradiente de Foco Foveal vs Periférico -->
+    <radialGradient id="foco-foveal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#16A34A" stop-opacity="0.5" />
+      <stop offset="40%" stop-color="#16A34A" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#16A34A" stop-opacity="0.0" />
+    </radialGradient>
+
+    <radialGradient id="feixe-varredura" cx="50%" cy="100%" r="90%">
+      <stop offset="0%" stop-color="#826C2B" stop-opacity="0.35" />
+      <stop offset="80%" stop-color="#826C2B" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#826C2B" stop-opacity="0.0" />
+    </radialGradient>
+
+    <filter id="sombra-card-svg" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.12" />
+    </filter>
+
+    <marker id="seta-ouro" markerWidth="6" markerHeight="6" refX="4" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#B89053" />
+    </marker>
+    <marker id="seta-verde" markerWidth="6" markerHeight="6" refX="4" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#16A34A" />
+    </marker>
+  </defs>
+
+  <!-- Cabeçalho Institucional PMMG -->
+  <rect x="0" y="0" width="900" height="42" fill="#826C2B" />
+  <text x="20" y="26" font-size="13" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">POLÍCIA MILITAR DE MINAS GERAIS • TREINAMENTO OCULAR TÁTICO</text>
+  <text x="880" y="26" font-size="11" font-weight="700" fill="#F3EFE6" text-anchor="end">PESQUISA EXPERIMENTAL / CTP</text>
+
+  <!-- Card 1: Padrão de Varredura em Z (Esquerda) -->
+  <g transform="translate(20, 56)" filter="url(#sombra-card-svg)">
+    <rect x="0" y="0" width="270" height="375" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+    <rect x="0" y="0" width="270" height="34" rx="8" fill="#1E293B" />
+    <rect x="0" y="26" width="270" height="8" fill="#1E293B" />
+    <text x="135" y="22" font-size="11" font-weight="800" fill="#F8FAFC" text-anchor="middle">1. VARREDURA EM Z / LEQUE</text>
+
+    <!-- Silhueta Abordado Simplificada e Pontos de Varredura -->
+    <ellipse cx="135" cy="85" rx="20" ry="24" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+    <path d="M 100,120 C 115,110 155,110 170,120 L 180,240 L 90,240 Z" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1" />
+
+    <!-- Trajeto Sacádico (Linhas pontilhadas do olhar em Z) -->
+    <path d="M 80,75 L 190,75 L 85,155 L 185,155 L 75,220 L 195,220" fill="none" stroke="#B89053" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#seta-ouro)" />
+
+    <!-- Fixações Oculares Numeradas -->
+    <!-- Ponto 1: Olhos/Face -->
+    <circle cx="135" cy="80" r="10" fill="#B89053" />
+    <text x="135" y="84" font-size="9.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="205" y="84" font-size="9" font-weight="700" fill="#475569">Face e Olhar</text>
+
+    <!-- Ponto 2: Mãos e Linha de Cintura -->
+    <circle cx="135" cy="155" r="12" fill="#EF4444" />
+    <text x="135" y="159" font-size="10" font-weight="900" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="215" y="159" font-size="9" font-weight="800" fill="#DC2626">Mãos / Arma</text>
+
+    <!-- Ponto 3: Pés e Base Postural -->
+    <circle cx="135" cy="220" r="10" fill="#B89053" />
+    <text x="135" y="224" font-size="9.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="210" y="224" font-size="9" font-weight="700" fill="#475569">Base e Fuga</text>
+
+    <!-- Rodapé do Card 1 -->
+    <rect x="10" y="295" width="250" height="70" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+    <text x="135" y="314" font-size="9.5" font-weight="800" fill="#1E293B" text-anchor="middle">MOVIMENTO SACÁDICO VOLUNTÁRIO</text>
+    <text x="135" y="330" font-size="8.5" font-weight="500" fill="#64748B" text-anchor="middle">Impede o congelamento visual em um</text>
+    <text x="135" y="344" font-size="8.5" font-weight="500" fill="#64748B" text-anchor="middle">único ponto e mapeia pistas corporais</text>
+    <text x="135" y="358" font-size="8.5" font-weight="700" fill="#826C2B" text-anchor="middle">Ciclo rápido: 100ms a 200ms por salto</text>
+  </g>
+
+  <!-- Card 2: O Efeito "Quiet Eye" (Centro) -->
+  <g transform="translate(310, 56)" filter="url(#sombra-card-svg)">
+    <rect x="0" y="0" width="280" height="375" rx="8" fill="#FFFFFF" stroke="#16A34A" stroke-width="2" />
+    <rect x="0" y="0" width="280" height="34" rx="8" fill="#166534" />
+    <rect x="0" y="26" width="280" height="8" fill="#166534" />
+    <text x="140" y="22" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">2. FIXAÇÃO "QUIET EYE" (350-500ms)</text>
+
+    <!-- Mira Tática / Foco Ocular Estável -->
+    <circle cx="140" cy="140" r="65" fill="url(#foco-foveal)" />
+    <circle cx="140" cy="140" r="45" fill="none" stroke="#16A34A" stroke-width="1.8" />
+    <circle cx="140" cy="140" r="18" fill="#DCFCE7" stroke="#16A34A" stroke-width="2" />
+    <line x1="140" y1="80" x2="140" y2="200" stroke="#16A34A" stroke-width="1.2" stroke-dasharray="3,3" />
+    <line x1="80" y1="140" x2="200" y2="140" stroke="#16A34A" stroke-width="1.2" stroke-dasharray="3,3" />
+
+    <!-- Alvo no Centro da Retícula (Mão com Objeto) -->
+    <rect x="133" y="133" width="14" height="14" rx="2" fill="#15803D" />
+    <text x="140" y="144" font-size="8" font-weight="900" fill="#FFFFFF" text-anchor="middle">ALVO</text>
+
+    <!-- Badge Cronômetro Quiet Eye -->
+    <rect x="60" y="220" width="160" height="26" rx="4" fill="#166534" />
+    <text x="140" y="237" font-size="10.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">DURAÇÃO: 350ms A 500ms</text>
+
+    <!-- Descrição Científica -->
+    <rect x="10" y="260" width="260" height="105" rx="6" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1" />
+    <text x="140" y="280" font-size="9.5" font-weight="800" fill="#166534" text-anchor="middle">PRECISÃO MOTORA E TOMADA DE DECISÃO</text>
+    <text x="140" y="298" font-size="8.5" font-weight="500" fill="#374151" text-anchor="middle">Estabilização do olhar na pista crítica</text>
+    <text x="140" y="312" font-size="8.5" font-weight="500" fill="#374151" text-anchor="middle">antes do acionamento final ou comando.</text>
+    <text x="140" y="330" font-size="8.5" font-weight="700" fill="#166534" text-anchor="middle">• Policiais de elite: fixação mais estável</text>
+    <text x="140" y="344" font-size="8.5" font-weight="700" fill="#DC2626" text-anchor="middle">• Policiais novatos: fixações dispersas e curtas</text>
+  </g>
+
+  <!-- Card 3: Desengajamento e Periferia (Direita) -->
+  <g transform="translate(610, 56)" filter="url(#sombra-card-svg)">
+    <rect x="0" y="0" width="270" height="375" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+    <rect x="0" y="0" width="270" height="34" rx="8" fill="#1E293B" />
+    <rect x="0" y="26" width="270" height="8" fill="#1E293B" />
+    <text x="135" y="22" font-size="11" font-weight="800" fill="#F8FAFC" text-anchor="middle">3. DESENGAJAMENTO (QUEBRA 360°)</text>
+
+    <!-- Cone de Abertura Periférica -->
+    <path d="M 135,210 L 30,80 A 130,130 0 0,1 240,80 Z" fill="url(#feixe-varredura)" />
+    <line x1="135" y1="210" x2="30" y2="80" stroke="#826C2B" stroke-width="1.5" stroke-dasharray="4,3" />
+    <line x1="135" y1="210" x2="240" y2="80" stroke="#826C2B" stroke-width="1.5" stroke-dasharray="4,3" />
+
+    <!-- Operador Ocular -->
+    <circle cx="135" cy="210" r="14" fill="#826C2B" />
+    <circle cx="135" cy="210" r="6" fill="#FFFFFF" />
+
+    <!-- Arcos Periféricos de Checagem -->
+    <path d="M 60,110 A 90,90 0 0,1 210,110" fill="none" stroke="#1995FF" stroke-width="2" stroke-dasharray="3,3" />
+    <text x="135" y="105" font-size="9" font-weight="800" fill="#1D4ED8" text-anchor="middle">AMPLIAÇÃO PERIFÉRICA A CADA 2-3s</text>
+
+    <!-- Badges de Protocolo -->
+    <rect x="10" y="240" width="250" height="38" rx="4" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+    <text x="135" y="256" font-size="9" font-weight="800" fill="#1E40AF" text-anchor="middle">RESPIRAÇÃO TÁTICA (4x4)</text>
+    <text x="135" y="270" font-size="8.5" font-weight="500" fill="#3B82F6" text-anchor="middle">Reduz frequência cardíaca e relaxa musculatura ocular</text>
+
+    <rect x="10" y="290" width="250" height="75" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+    <text x="135" y="309" font-size="9.5" font-weight="800" fill="#1E293B" text-anchor="middle">COMUNICAÇÃO ATIVA DA CANGA</text>
+    <text x="135" y="325" font-size="8.5" font-weight="500" fill="#64748B" text-anchor="middle">Falar em voz alta reativa áreas corticais,</text>
+    <text x="135" y="339" font-size="8.5" font-weight="500" fill="#64748B" text-anchor="middle">rompe a exclusão auditiva e devolve</text>
+    <text x="135" y="353" font-size="8.5" font-weight="700" fill="#826C2B" text-anchor="middle">a percepção de profundidade e flancos.</text>
+  </g>
+
+  <!-- Rodapé Técnico Doutrinário -->
+  <rect x="0" y="444" width="900" height="36" fill="#0F172A" />
+  <text x="20" y="466" font-size="11" font-weight="600" fill="#94A3B8">FONTES CIENTÍFICAS E DOUTRINÁRIAS: Vickers &amp; Lewinski (2012) • Force Science Institute • MTP 3.04.01/2020-CG da PMMG.</text>
+</svg>

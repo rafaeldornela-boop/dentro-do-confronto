@@ -1,0 +1,265 @@
+<svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" style="background:#F8F9FA; border-radius:12px; border:1px solid #CBD5E1; font-family:system-ui, sans-serif;">
+  
+    <defs>
+      <!-- Gradientes Institucionais PMMG -->
+      <linearGradient id="grad-pmmg-teto" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#FFFFFF" />
+        <stop offset="25%" stop-color="#F3EFE6" />
+        <stop offset="50%" stop-color="#826C2B" />
+        <stop offset="75%" stop-color="#F3EFE6" />
+        <stop offset="100%" stop-color="#FFFFFF" />
+      </linearGradient>
+
+      <!-- Giroflex LED Estroboscópico com Brilho Suave -->
+      <linearGradient id="giroflex-luz" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#FF1A1A" />
+        <stop offset="45%" stop-color="#FF5555" />
+        <stop offset="50%" stop-color="#FFFFFF" />
+        <stop offset="55%" stop-color="#3388FF" />
+        <stop offset="100%" stop-color="#0055FF" />
+      </linearGradient>
+
+      <!-- Feixes de Varredura / Cones de Visão Táticos -->
+      <radialGradient id="cone-visao-v1" cx="0%" cy="50%" r="100%">
+        <stop offset="0%" stop-color="#187731" stop-opacity="0.45" />
+        <stop offset="60%" stop-color="#187731" stop-opacity="0.15" />
+        <stop offset="100%" stop-color="#187731" stop-opacity="0.0" />
+      </radialGradient>
+
+      <radialGradient id="cone-visao-v2" cx="0%" cy="50%" r="100%">
+        <stop offset="0%" stop-color="#1995FF" stop-opacity="0.40" />
+        <stop offset="60%" stop-color="#1995FF" stop-opacity="0.12" />
+        <stop offset="100%" stop-color="#1995FF" stop-opacity="0.0" />
+      </radialGradient>
+
+      <radialGradient id="cone-alerta-vermelho" cx="0%" cy="50%" r="100%">
+        <stop offset="0%" stop-color="#AB2328" stop-opacity="0.50" />
+        <stop offset="70%" stop-color="#AB2328" stop-opacity="0.15" />
+        <stop offset="100%" stop-color="#AB2328" stop-opacity="0.0" />
+      </radialGradient>
+
+      <!-- Filtros de Sombra Suave Realista (Drop Shadow) -->
+      <filter id="sombra-veiculo" x="-15%" y="-15%" width="130%" height="130%">
+        <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.22" />
+      </filter>
+
+      <filter id="sombra-operador" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.30" />
+      </filter>
+
+      <!-- Marcadores de Setas Táticas -->
+      <marker id="seta-verde" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L7,3 z" fill="#187731" />
+      </marker>
+      <marker id="seta-vermelha" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L7,3 z" fill="#AB2328" />
+      </marker>
+      <marker id="seta-caqui" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L7,3 z" fill="#826C2B" />
+      </marker>
+      <marker id="seta-azul" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L7,3 z" fill="#1995FF" />
+      </marker>
+    </defs>
+    
+  <!-- Cabeçalho Institucional PMMG -->
+  <rect x="0" y="0" width="860" height="46" fill="#826C2B" />
+  <text x="20" y="29" font-size="13.5" font-weight="900" fill="#FFFFFF" letter-spacing="0.8">GEOMETRIA DA VOZ ÚNICA E COMUNICAÇÃO EM ECO NA GUARNIÇÃO (MTP 01 E 02)</text>
+  <text x="840" y="29" font-size="11" font-weight="700" fill="#F3EFE6" text-anchor="end">PLANTA TÁTICA • PMMG</text>
+
+  <!-- Pista / Teatro de Operações -->
+  <rect x="20" y="62" width="820" height="355" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+  <line x1="20" y1="135" x2="840" y2="135" stroke="#E2E8F0" stroke-width="2" stroke-dasharray="12,12" />
+  <line x1="20" y1="345" x2="840" y2="345" stroke="#E2E8F0" stroke-width="2" stroke-dasharray="12,12" />
+
+  
+    <g id="viatura-pmmg" transform="translate(45, 195) rotate(0)" filter="url(#sombra-veiculo)">
+      <!-- Chassi e Pneus sob os paralamas -->
+      <rect x="22" y="-5" width="28" height="8" rx="2" fill="#1A1A1A" />
+      <rect x="135" y="-5" width="28" height="8" rx="2" fill="#1A1A1A" />
+      <rect x="22" y="77" width="28" height="8" rx="2" fill="#1A1A1A" />
+      <rect x="135" y="77" width="28" height="8" rx="2" fill="#1A1A1A" />
+
+      <!-- Carroceria Curva da SUV (Branco Perolizado PMMG) -->
+      <path d="M 10,20 C 10,5 20,0 40,0 L 150,0 C 170,0 185,8 185,25 L 185,55 C 185,72 170,80 150,80 L 40,80 C 20,80 10,75 10,60 Z"
+            fill="#FBFBFC" stroke="#826C2B" stroke-width="2.5" />
+
+      <!-- Para-brisa Dianteiro Curvo Fumê -->
+      <path d="M 50,8 C 45,8 42,12 40,40 C 42,68 45,72 50,72 L 62,68 C 58,55 58,25 62,12 Z"
+            fill="#1E293B" opacity="0.88" />
+
+      <!-- Teto da Viatura com Faixa Caqui/Preta Institucional -->
+      <rect x="65" y="10" width="85" height="60" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+      <rect x="65" y="27" width="85" height="26" fill="#826C2B" />
+      <text x="107" y="45" font-family="system-ui, sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">PMMG</text>
+
+      <!-- Vidro Traseiro -->
+      <path d="M 152,14 L 160,18 C 163,30 163,50 160,62 L 152,66 Z" fill="#1E293B" opacity="0.85" />
+
+      <!-- Vidros Laterais -->
+      <rect x="68" y="4" width="78" height="4" rx="1" fill="#1E293B" opacity="0.75" />
+      <rect x="68" y="72" width="78" height="4" rx="1" fill="#1E293B" opacity="0.75" />
+
+      <!-- Barra de Giroflex Aerodinâmica LED -->
+      <rect x="88" y="18" width="14" height="44" rx="3" fill="url(#giroflex-luz)" stroke="#334155" stroke-width="1.2" />
+
+      <!-- Retrovisores Aerodinâmicos -->
+      <path d="M 54,-4 L 60,0 L 50,2 Z" fill="#826C2B" />
+      <path d="M 54,84 L 60,80 L 50,78 Z" fill="#826C2B" />
+
+      <!-- Rótulo Identificador Tático -->
+      <rect x="35" y="-28" width="115" height="20" rx="4" fill="#1E293B" opacity="0.9" />
+      <text x="92" y="-14" font-family="system-ui, sans-serif" font-size="10" font-weight="800" fill="#E2E8F0" text-anchor="middle">VP PMMG (ABRIGO)</text>
+    </g>
+    
+  
+    <g id="veiculo-suspeito" transform="translate(620, 195) rotate(0)" filter="url(#sombra-veiculo)">
+      <!-- Pneus -->
+      <rect x="20" y="-4" width="26" height="7" rx="2" fill="#111827" />
+      <rect x="125" y="-4" width="26" height="7" rx="2" fill="#111827" />
+      <rect x="20" y="72" width="26" height="7" rx="2" fill="#111827" />
+      <rect x="125" y="72" width="26" height="7" rx="2" fill="#111827" />
+
+      <!-- Carroceria Sedan Grafite -->
+      <path d="M 10,22 C 10,8 18,2 35,2 L 140,2 C 160,2 175,10 175,25 L 175,50 C 175,65 160,73 140,73 L 35,73 C 18,73 10,67 10,53 Z"
+            fill="#334155" stroke="#64748B" stroke-width="2" />
+
+      <!-- Para-brisa -->
+      <path d="M 45,10 C 40,10 38,15 36,37 C 38,60 40,65 45,65 L 56,62 C 52,50 52,25 56,13 Z"
+            fill="#0F172A" opacity="0.9" />
+
+      <!-- Teto -->
+      <rect x="58" y="11" width="75" height="53" rx="3" fill="#1E293B" stroke="#475569" stroke-width="1" />
+
+      <!-- Vidro Traseiro -->
+      <path d="M 136,14 L 144,18 C 147,28 147,47 144,57 L 136,61 Z" fill="#0F172A" opacity="0.9" />
+
+      <!-- Lanternas Traseiras de Alerta -->
+      <rect x="172" y="6" width="3" height="14" rx="1" fill="#EF4444" />
+      <rect x="172" y="55" width="3" height="14" rx="1" fill="#EF4444" />
+
+      <!-- Rótulo Identificador -->
+      <rect x="30" y="-26" width="120" height="20" rx="4" fill="#0F172A" opacity="0.9" />
+      <text x="90" y="-12" font-family="system-ui, sans-serif" font-size="10" font-weight="800" fill="#F87171" text-anchor="middle">ABORDADO / VEÍCULO</text>
+    </g>
+    
+  
+    <g id="cota-metrica">
+      <line x1="355" y1="295" x2="610" y2="245" stroke="#826C2B" stroke-width="1.8" stroke-dasharray="4,4"
+            marker-start="url(#seta-caqui)" marker-end="url(#seta-caqui)" />
+      <rect x="434.5" y="258.0" width="96" height="22" rx="4" fill="#FFFFFF" stroke="#826C2B" stroke-width="1.2" />
+      <text x="482.5" y="273.0" font-family="system-ui, sans-serif" font-size="10" font-weight="900" fill="#826C2B" text-anchor="middle">5 A 7 METROS</text>
+    </g>
+    
+  
+    <g id="operador-segurança-(silêncio)" transform="translate(310, 120) rotate(14)">
+      
+        <!-- Cone de Varredura / Setor de Tiro Esmaecido -->
+        <path d="M 46,25 L 260,-45 L 260,95 Z" fill="url(#cone-visao-v1)" opacity="0.85" />
+        <line x1="46" y1="25" x2="250" y2="25" stroke="#187731" stroke-width="1.8" stroke-dasharray="4,4"
+              marker-end="url(#seta-verde)" opacity="0.75" />
+        
+
+      <g filter="url(#sombra-operador)">
+        <!-- Braços estendidos em empunhadura dupla (Triângulo Isósceles Tático) -->
+        <!-- Braço Esquerdo -->
+        <path d="M 12,9 C 20,8 30,14 42,21" stroke="#A08F63" stroke-width="7" stroke-linecap="round" fill="none" />
+        <!-- Braço Direito -->
+        <path d="M 12,41 C 20,42 30,36 42,29" stroke="#A08F63" stroke-width="7" stroke-linecap="round" fill="none" />
+
+        <!-- Mãos e Luvas Táticas Pretas sobre a Arma -->
+        <circle cx="43" cy="23" r="4.5" fill="#111827" />
+        <circle cx="43" cy="27" r="4.5" fill="#111827" />
+
+        <!-- Pistola / Arma de Fogo com Cano e Ferrolho -->
+        <rect x="42" y="22.5" width="14" height="5" rx="1.5" fill="#1F2937" stroke="#000000" stroke-width="0.8" />
+
+        <!-- Ombros Anatômicos (Farda Cáqui PMMG) -->
+        <ellipse cx="10" cy="25" rx="14" ry="20" fill="#A08F63" stroke="#826C2B" stroke-width="1.5" />
+
+        <!-- Colete Balístico Modular Preto com Placas Evidentes -->
+        <rect x="0" y="11" width="18" height="28" rx="4" fill="#111827" stroke="#374151" stroke-width="1.2" />
+        <line x1="5" y1="16" x2="15" y2="16" stroke="#374151" stroke-width="1" />
+        <line x1="5" y1="21" x2="15" y2="21" stroke="#374151" stroke-width="1" />
+        <line x1="5" y1="26" x2="15" y2="26" stroke="#374151" stroke-width="1" />
+        <line x1="5" y1="31" x2="15" y2="31" stroke="#374151" stroke-width="1" />
+
+        <!-- Cabeça com Boné/Cobertura Cáqui PMMG e Aba Direcionada -->
+        <circle cx="9" cy="25" r="7.5" fill="#826C2B" />
+        <path d="M 14,20 C 18,22 18,28 14,30 Z" fill="#A08F63" stroke="#826C2B" stroke-width="1" />
+      </g>
+
+      <!-- Badge de Identificação da Função -->
+      <rect x="-35" y="42" width="90" height="18" rx="3" fill="#0F172A" opacity="0.92" />
+      <text x="10" y="54" font-family="system-ui, sans-serif" font-size="9" font-weight="800" fill="#F8FAFC" text-anchor="middle">SEGURANÇA (SILÊNCIO)</text>
+    </g>
+    
+  
+    <g id="operador-contato-(voz-única)" transform="translate(290, 275) rotate(-14)">
+      
+        <!-- Cone de Varredura / Setor de Tiro Esmaecido -->
+        <path d="M 46,25 L 260,-45 L 260,95 Z" fill="url(#cone-visao-v2)" opacity="0.85" />
+        <line x1="46" y1="25" x2="250" y2="25" stroke="#1995FF" stroke-width="1.8" stroke-dasharray="4,4"
+              marker-end="url(#seta-azul)" opacity="0.75" />
+        
+
+      <g filter="url(#sombra-operador)">
+        <!-- Braços estendidos em empunhadura dupla (Triângulo Isósceles Tático) -->
+        <!-- Braço Esquerdo -->
+        <path d="M 12,9 C 20,8 30,14 42,21" stroke="#A08F63" stroke-width="7" stroke-linecap="round" fill="none" />
+        <!-- Braço Direito -->
+        <path d="M 12,41 C 20,42 30,36 42,29" stroke="#A08F63" stroke-width="7" stroke-linecap="round" fill="none" />
+
+        <!-- Mãos e Luvas Táticas Pretas sobre a Arma -->
+        <circle cx="43" cy="23" r="4.5" fill="#111827" />
+        <circle cx="43" cy="27" r="4.5" fill="#111827" />
+
+        <!-- Pistola / Arma de Fogo com Cano e Ferrolho -->
+        <rect x="42" y="22.5" width="14" height="5" rx="1.5" fill="#1F2937" stroke="#000000" stroke-width="0.8" />
+
+        <!-- Ombros Anatômicos (Farda Cáqui PMMG) -->
+        <ellipse cx="10" cy="25" rx="14" ry="20" fill="#A08F63" stroke="#826C2B" stroke-width="1.5" />
+
+        <!-- Colete Balístico Modular Preto com Placas Evidentes -->
+        <rect x="0" y="11" width="18" height="28" rx="4" fill="#111827" stroke="#374151" stroke-width="1.2" />
+        <line x1="5" y1="16" x2="15" y2="16" stroke="#374151" stroke-width="1" />
+        <line x1="5" y1="21" x2="15" y2="21" stroke="#374151" stroke-width="1" />
+        <line x1="5" y1="26" x2="15" y2="26" stroke="#374151" stroke-width="1" />
+        <line x1="5" y1="31" x2="15" y2="31" stroke="#374151" stroke-width="1" />
+
+        <!-- Cabeça com Boné/Cobertura Cáqui PMMG e Aba Direcionada -->
+        <circle cx="9" cy="25" r="7.5" fill="#826C2B" />
+        <path d="M 14,20 C 18,22 18,28 14,30 Z" fill="#A08F63" stroke="#826C2B" stroke-width="1" />
+      </g>
+
+      <!-- Badge de Identificação da Função -->
+      <rect x="-35" y="42" width="90" height="18" rx="3" fill="#0F172A" opacity="0.92" />
+      <text x="10" y="54" font-family="system-ui, sans-serif" font-size="9" font-weight="800" fill="#F8FAFC" text-anchor="middle">CONTATO (VOZ ÚNICA)</text>
+    </g>
+    
+
+  <!-- Ondas Acústicas Direcionais do Policial de Contato (V2) -->
+  <path d="M 355,280 A 35,35 0 0,1 365,310" fill="none" stroke="#1995FF" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 370,272 A 50,50 0 0,1 382,316" fill="none" stroke="#1995FF" stroke-width="2.5" stroke-linecap="round" opacity="0.75" />
+  <path d="M 385,264 A 65,65 0 0,1 399,322" fill="none" stroke="#1995FF" stroke-width="2.5" stroke-linecap="round" opacity="0.5" />
+
+  <!-- Linha de Comunicação Interna Codificada (Eco Auditivo V1 <-> V2) -->
+  <line x1="320" y1="178" x2="305" y2="268" stroke="#826C2B" stroke-width="2" stroke-dasharray="4,4" />
+  <rect x="195" y="208" width="190" height="38" rx="6" fill="#FAF8F2" stroke="#826C2B" stroke-width="1.5" />
+  <text x="290" y="224" font-size="9.5" font-weight="900" fill="#826C2B" text-anchor="middle">ALERTA INTERNO &amp; ECO AUDITIVO</text>
+  <text x="290" y="238" font-size="9" font-weight="700" fill="#141B4D" text-anchor="middle">"ARMA 12H!" ➔ "CIENTE, 12H!"</text>
+
+  <!-- Callout Box V1 -->
+  <rect x="420" y="74" width="395" height="46" rx="6" fill="#F0FDF4" stroke="#187731" stroke-width="1.5" />
+  <text x="432" y="93" font-size="10.5" font-weight="900" fill="#14532D">OPERADOR DE SEGURANÇA (COBERTURA):</text>
+  <text x="432" y="109" font-size="10" font-weight="600" fill="#166534">Zero comandos ao abordado • Varredura 360° • Alerta curto interno</text>
+
+  <!-- Callout Box V2 -->
+  <rect x="420" y="358" width="395" height="46" rx="6" fill="#EFF6FF" stroke="#1995FF" stroke-width="1.5" />
+  <text x="432" y="377" font-size="10.5" font-weight="900" fill="#1E3A8A">OPERADOR DE CONTATO (VOZ ÚNICA):</text>
+  <text x="432" y="393" font-size="10" font-weight="600" fill="#1D4ED8">Exclusividade de comando externo • Olhar nas mãos • 1 ordem por vez</text>
+
+  <!-- Rodapé Técnico -->
+  <rect x="0" y="432" width="860" height="38" fill="#0F172A" />
+  <text x="20" y="455" font-size="11" font-weight="700" fill="#E2E8F0">DOUTRINA PMMG: A sobreposição de vozes gera paralisia cognitiva no suspeito e perda de vigilância de perímetro.</text>
+</svg>

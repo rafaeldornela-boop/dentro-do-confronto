@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <rect width="800" height="450" rx="12" fill="#0F172A"/>
+  <text x="400" y="38" fill="#B89053" font-family="system-ui, sans-serif" font-size="20" font-weight="800" text-anchor="middle">RESPIRAÇÃO TÁTICA EM QUATRO TEMPOS (BOX BREATHING 4x4x4x4)</text>
+  <text x="400" y="62" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Restauração do Tônus Vagal e Quebra do Sequestro da Amígdala sob Estresse Letal</text>
+
+  <g transform="translate(260, 105)">
+    <rect width="280" height="240" rx="12" fill="#1E293B" stroke="#B89053" stroke-width="3"/>
+
+    <path d="M 20 20 L 260 20" stroke="#3B82F6" stroke-width="5" stroke-linecap="round"/>
+    <polygon points="265,20 250,13 250,27" fill="#3B82F6"/>
+    <text x="140" y="-8" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="middle">1. INSPIRAR PELO NARIZ (4s)</text>
+
+    <path d="M 260 20 L 260 220" stroke="#EAB308" stroke-width="5" stroke-linecap="round"/>
+    <polygon points="260,225 253,210 267,210" fill="#EAB308"/>
+    <text x="315" y="125" fill="#FDE047" font-family="system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="start">2. RETER COM</text>
+    <text x="315" y="143" fill="#FDE047" font-family="system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="start">PULMÃO CHEIO (4s)</text>
+
+    <path d="M 260 220 L 20 220" stroke="#22C55E" stroke-width="5" stroke-linecap="round"/>
+    <polygon points="15,220 30,227 30,213" fill="#22C55E"/>
+    <text x="140" y="258" fill="#4ADE80" font-family="system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="middle">3. EXPIRAR PELA BOCA (4s)</text>
+
+    <path d="M 20 220 L 20 20" stroke="#A855F7" stroke-width="5" stroke-linecap="round"/>
+    <polygon points="20,15 27,30 13,30" fill="#A855F7"/>
+    <text x="-40" y="125" fill="#C084FC" font-family="system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="end">4. RETER EM APNEIA</text>
+    <text x="-40" y="143" fill="#C084FC" font-family="system-ui, sans-serif" font-size="13" font-weight="800" text-anchor="end">SEM AR (4s)</text>
+
+    <circle cx="140" cy="120" r="48" fill="#0F172A" stroke="#B89053" stroke-width="2"/>
+    <text x="140" y="112" fill="#B89053" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">CICLO</text>
+    <text x="140" y="130" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="16" font-weight="900" text-anchor="middle">4 x 4 x 4 x 4</text>
+  </g>
+
+  <rect x="60" y="380" width="680" height="50" rx="8" fill="#1E293B"/>
+  <text x="400" y="402" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Efeito Fisiológico Comprovado: 3 a 4 ciclos reduzem a frequência cardíaca e recuperam a visão periférica e auditiva.</text>
+  <text x="400" y="420" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Transição do Estado Vermelho/Preto para o Estado Laranja funcional atrás de abrigo seguro.</text>
+</svg>

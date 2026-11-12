@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <!-- Filtro de sombra suave -->
+    <filter id="card-shadow" x="-6%" y="-6%" width="112%" height="116%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+    <!-- Gradiente do cabeçalho institucional -->
+    <linearGradient id="header-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#141B4D"/>
+      <stop offset="60%" stop-color="#1E2A6B"/>
+      <stop offset="100%" stop-color="#826C2B"/>
+    </linearGradient>
+    <!-- Marcadores de seta de fluxo -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#826C2B"/>
+    </marker>
+  </defs>
+
+  <!-- Fundo Geral Claro Institucional -->
+  <rect width="960" height="480" rx="12" fill="#F4F5F7"/>
+  <rect x="1" y="1" width="958" height="478" rx="11" fill="none" stroke="#D1D5DB" stroke-width="1.5"/>
+
+  <!-- Cabeçalho Institucional -->
+  <rect x="20" y="18" width="920" height="64" rx="8" fill="url(#header-grad)"/>
+  <rect x="20" y="78" width="920" height="4" fill="#B89053"/>
+  <text x="480" y="44" fill="#FFFFFF" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="17" font-weight="800" text-anchor="middle" letter-spacing="0.05em">CICLO DE DEBRIEFING OPERACIONAL EM CINCO ETAPAS</text>
+  <text x="480" y="65" fill="#E0D7C3" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="500" text-anchor="middle">Metodologia Pós-Ação — Fase 4 da Intervenção Policial (MTP 3.04.01 e Diretriz Geral)</text>
+
+  <!-- Linha conectora de fluxo entre as etapas -->
+  <path d="M 172 235 L 788 235" stroke="#C4B58C" stroke-width="3" stroke-dasharray="6,4" fill="none"/>
+
+  <!-- ================= ETAPA 1 ================= -->
+  <g transform="translate(24, 102)" filter="url(#card-shadow)">
+    <rect width="172" height="268" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.2"/>
+    <!-- Topo Cáqui -->
+    <path d="M 0 8 Q 0 0 8 0 L 164 0 Q 172 0 172 8 L 172 44 L 0 44 Z" fill="#826C2B"/>
+    <text x="86" y="24" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">ETAPA 1</text>
+    <text x="86" y="38" fill="#F3EAD3" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">5 a 10 min</text>
+    
+    <!-- Subtítulo -->
+    <rect x="12" y="54" width="148" height="26" rx="4" fill="#F4F1E8"/>
+    <text x="86" y="71" fill="#826C2B" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">ESTABILIZAÇÃO</text>
+    
+    <!-- Lista de Ações -->
+    <text x="16" y="104" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Descompressão</text>
+    <text x="24" y="120" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Respiração 4x4x4x4</text>
+    <text x="16" y="142" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Hidratação</text>
+    <text x="24" y="158" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Queda adrenérgica</text>
+    <text x="16" y="180" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Varredura física</text>
+    <text x="24" y="196" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Checagem de lesões</text>
+
+    <!-- Rodapé do Card -->
+    <rect x="10" y="222" width="152" height="34" rx="4" fill="#FAF8F2" stroke="#E5DECE" stroke-width="1"/>
+    <text x="86" y="237" fill="#826C2B" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700" text-anchor="middle">Foco Fisiológico</text>
+    <text x="86" y="249" fill="#4B5563" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Recuperação cognitiva</text>
+  </g>
+
+  <!-- Indicador Seta 1->2 -->
+  <circle cx="202" cy="235" r="10" fill="#826C2B"/>
+  <path d="M 199 231 L 205 235 L 199 239" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- ================= ETAPA 2 ================= -->
+  <g transform="translate(210, 102)" filter="url(#card-shadow)">
+    <rect width="172" height="268" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.2"/>
+    <!-- Topo Ouro/Cáqui -->
+    <path d="M 0 8 Q 0 0 8 0 L 164 0 Q 172 0 172 8 L 172 44 L 0 44 Z" fill="#9E7D3B"/>
+    <text x="86" y="24" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">ETAPA 2</text>
+    <text x="86" y="38" fill="#FBF3DB" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">10 a 20 min</text>
+    
+    <!-- Subtítulo -->
+    <rect x="12" y="54" width="148" height="26" rx="4" fill="#FAF6EC"/>
+    <text x="86" y="71" fill="#9E7D3B" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">RECONSTITUIÇÃO</text>
+    
+    <!-- Lista de Ações -->
+    <text x="16" y="104" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Linha cronológica</text>
+    <text x="24" y="120" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Despacho ao desfecho</text>
+    <text x="16" y="142" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Ângulos de visão</text>
+    <text x="24" y="158" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">O que cada um viu</text>
+    <text x="16" y="180" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Dados objetivos</text>
+    <text x="24" y="196" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Sem juízo de valor</text>
+
+    <!-- Rodapé do Card -->
+    <rect x="10" y="222" width="152" height="34" rx="4" fill="#FAF6EC" stroke="#EBDCBA" stroke-width="1"/>
+    <text x="86" y="237" fill="#9E7D3B" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700" text-anchor="middle">Foco Factual</text>
+    <text x="86" y="249" fill="#4B5563" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Cronologia precisa</text>
+  </g>
+
+  <!-- Indicador Seta 2->3 -->
+  <circle cx="388" cy="235" r="10" fill="#141B4D"/>
+  <path d="M 385 231 L 391 235 L 385 239" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- ================= ETAPA 3 ================= -->
+  <g transform="translate(394, 102)" filter="url(#card-shadow)">
+    <rect width="172" height="268" rx="8" fill="#FFFFFF" stroke="#141B4D" stroke-width="1.8"/>
+    <!-- Topo Navy Destaque Central -->
+    <path d="M 0 8 Q 0 0 8 0 L 164 0 Q 172 0 172 8 L 172 44 L 0 44 Z" fill="#141B4D"/>
+    <text x="86" y="24" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">ETAPA 3 (CENTRAL)</text>
+    <text x="86" y="38" fill="#D2D9F7" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">15 a 25 min</text>
+    
+    <!-- Subtítulo -->
+    <rect x="12" y="54" width="148" height="26" rx="4" fill="#EEF2FA"/>
+    <text x="86" y="71" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">ANÁLISE TÁTICA</text>
+    
+    <!-- Lista de Ações -->
+    <text x="16" y="104" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Confronto com MTP</text>
+    <text x="24" y="120" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Planejado vs. executado</text>
+    <text x="16" y="142" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Contato / Cobertura</text>
+    <text x="24" y="158" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Abrigos e cano seguro</text>
+    <text x="16" y="180" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Uso da força</text>
+    <text x="24" y="196" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Legalidade e gradação</text>
+
+    <!-- Rodapé do Card -->
+    <rect x="10" y="222" width="152" height="34" rx="4" fill="#EEF2FA" stroke="#CAD5EE" stroke-width="1"/>
+    <text x="86" y="237" fill="#141B4D" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700" text-anchor="middle">Foco Procedimental</text>
+    <text x="86" y="249" fill="#4B5563" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Causa-raiz e doutrina</text>
+  </g>
+
+  <!-- Indicador Seta 3->4 -->
+  <circle cx="572" cy="235" r="10" fill="#1E2A6B"/>
+  <path d="M 569 231 L 575 235 L 569 239" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- ================= ETAPA 4 ================= -->
+  <g transform="translate(578, 102)" filter="url(#card-shadow)">
+    <rect width="172" height="268" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.2"/>
+    <!-- Topo Navy Médio -->
+    <path d="M 0 8 Q 0 0 8 0 L 164 0 Q 172 0 172 8 L 172 44 L 0 44 Z" fill="#1E2A6B"/>
+    <text x="86" y="24" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">ETAPA 4</text>
+    <text x="86" y="38" fill="#D7DEFC" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">10 a 15 min</text>
+    
+    <!-- Subtítulo -->
+    <rect x="12" y="54" width="148" height="26" rx="4" fill="#F0F3FC"/>
+    <text x="86" y="71" fill="#1E2A6B" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">REGISTRO JURÍDICO</text>
+    
+    <!-- Lista de Ações -->
+    <text x="16" y="104" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• REDS Consubstanciado</text>
+    <text x="24" y="120" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Descrição biomecânica</text>
+    <text x="16" y="142" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Formulário RIUF</text>
+    <text x="24" y="158" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Justificativa técnica</text>
+    <text x="16" y="180" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Cadeia de custódia</text>
+    <text x="24" y="196" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Apreensão e perícia</text>
+
+    <!-- Rodapé do Card -->
+    <rect x="10" y="222" width="152" height="34" rx="4" fill="#F0F3FC" stroke="#CCD7F7" stroke-width="1"/>
+    <text x="86" y="237" fill="#1E2A6B" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700" text-anchor="middle">Foco Legal</text>
+    <text x="86" y="249" fill="#4B5563" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Materialidade técnica</text>
+  </g>
+
+  <!-- Indicador Seta 4->5 -->
+  <circle cx="756" cy="235" r="10" fill="#826C2B"/>
+  <path d="M 753 231 L 759 235 L 753 239" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- ================= ETAPA 5 ================= -->
+  <g transform="translate(762, 102)" filter="url(#card-shadow)">
+    <rect width="172" height="268" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.2"/>
+    <!-- Topo Cáqui Escuro -->
+    <path d="M 0 8 Q 0 0 8 0 L 164 0 Q 172 0 172 8 L 172 44 L 0 44 Z" fill="#6B571F"/>
+    <text x="86" y="24" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">ETAPA 5</text>
+    <text x="86" y="38" fill="#E8DEC3" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">5 a 10 min</text>
+    
+    <!-- Subtítulo -->
+    <rect x="12" y="54" width="148" height="26" rx="4" fill="#F5F2EB"/>
+    <text x="86" y="71" fill="#6B571F" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">SAÚDE &amp; COESÃO</text>
+    
+    <!-- Lista de Ações -->
+    <text x="16" y="104" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Síntese de acertos</text>
+    <text x="24" y="120" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Reconhecimento mútuo</text>
+    <text x="16" y="142" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Triagem psicológica</text>
+    <text x="24" y="158" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Sinais de estresse agudo</text>
+    <text x="16" y="180" fill="#141B4D" font-family="system-ui, sans-serif" font-size="11" font-weight="700">• Suporte de saúde</text>
+    <text x="24" y="196" fill="#4B5563" font-family="system-ui, sans-serif" font-size="10.5">Acionamento SAS/NAIS</text>
+
+    <!-- Rodapé do Card -->
+    <rect x="10" y="222" width="152" height="34" rx="4" fill="#F5F2EB" stroke="#DFD7C2" stroke-width="1"/>
+    <text x="86" y="237" fill="#6B571F" font-family="system-ui, sans-serif" font-size="9.5" font-weight="700" text-anchor="middle">Foco Humano</text>
+    <text x="86" y="249" fill="#4B5563" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Higidez e prontidão</text>
+  </g>
+
+  <!-- Rodapé Institucional: Axioma Doutrinário -->
+  <g transform="translate(24, 388)">
+    <rect width="910" height="74" rx="8" fill="#FFFFFF" stroke="#B89053" stroke-width="1.5" filter="url(#card-shadow)"/>
+    <rect x="0" y="0" width="8" height="74" rx="4" fill="#B89053"/>
+    <text x="24" y="28" fill="#141B4D" font-family="system-ui, sans-serif" font-size="12" font-weight="800" letter-spacing="0.04em">DIRETRIZ CENTRAL DOUTRINÁRIA PMMG:</text>
+    <text x="24" y="47" fill="#826C2B" font-family="system-ui, sans-serif" font-size="12" font-weight="700">"O debriefing analisa processos e procedimentos operacionais; não tem caráter punitivo nem busca culpados."</text>
+    <text x="24" y="64" fill="#6B7280" font-family="system-ui, sans-serif" font-size="10.5">Objetivo: identificar a causa-raiz da vulnerabilidade tática e ajustar a resposta da equipe para o próximo turno de serviço.</text>
+  </g>
+</svg>

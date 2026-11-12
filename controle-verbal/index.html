@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <base href="/dentro-do-confronto/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 2: Técnicas de Verbalização e Comunicação Operacional - Central de Treinamento Virtual PMMG</title>
+  
+<style>
+  /* ==========================================================
+     NAV BAR & FOOTER PADRÃO - CENTRAL DE TREINAMENTO VIRTUAL
+     ========================================================== */
+  .pmmg-top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    background: #0f172a;
+    border-bottom: 2px solid #b89053;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+  .pmmg-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .pmmg-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #b89053;
+    color: #0f172a !important;
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 7px 14px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .pmmg-back-btn:hover {
+    background: #d4a96a;
+    transform: translateY(-1px);
+  }
+  .pmmg-nav-badge {
+    background: rgba(255,255,255,0.08);
+    color: #e2e8f0;
+    font-size: 0.80rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border-left: 2px solid #b89053;
+    font-weight: 500;
+  }
+  .pmmg-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pmmg-tool-btn {
+    background: #1e293b;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+  }
+  .pmmg-tool-btn:hover {
+    background: #334155;
+    color: #fff;
+    border-color: #64748b;
+  }
+  .pmmg-reading-progress {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 3px;
+    background: #b89053;
+    width: 0%;
+    transition: width 0.1s ease;
+  }
+  .pmmg-footer-nav {
+    max-width: 1000px;
+    margin: 50px auto 30px auto;
+    padding: 24px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .pmmg-btn-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none !important;
+    transition: 0.2s;
+  }
+  .pmmg-btn-prev {
+    background: #e2e8f0;
+    color: #334155 !important;
+  }
+  .pmmg-btn-prev:hover {
+    background: #cbd5e1;
+    color: #0f172a !important;
+  }
+  .pmmg-btn-next {
+    background: #0f172a;
+    color: #f8fafc !important;
+    border: 1px solid #b89053;
+  }
+  .pmmg-btn-next:hover {
+    background: #1e293b;
+    border-color: #d4a96a;
+  }
+  .pmmg-btn-complete {
+    background: #166534;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.2s;
+  }
+  .pmmg-btn-complete:hover {
+    background: #15803d;
+  }
+
+  @media print {
+    .pmmg-top-nav, .pmmg-footer-nav {
+      display: none !important;
+    }
+  }
+</style>
+
+</head>
+<body style="margin: 0; padding: 0; background: #ffffff;">
+  
+<nav class="pmmg-top-nav">
+  <div class="pmmg-nav-left">
+    <a class="pmmg-back-btn" href="/dentro-do-confronto/">
+      <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>
+      Central de Instruções
+    </a>
+    <span class="pmmg-nav-badge">Trilha: Dentro do Confronto &nbsp;|&nbsp; <strong>Verbalização Operacional</strong></span>
+  </div>
+  <div class="pmmg-nav-actions">
+    <button class="pmmg-tool-btn" onclick="adjustFontSize(-1)" title="Diminuir Fonte">A-</button>
+    <button class="pmmg-tool-btn" onclick="adjustFontSize(1)" title="Aumentar Fonte">A+</button>
+    <button class="pmmg-tool-btn" onclick="window.print()" title="Imprimir Instrução / Salvar PDF">
+      <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/></svg>
+      Imprimir
+    </button>
+  </div>
+  <div class="pmmg-reading-progress" id="pmmgScrollProgress"></div>
+</nav>
+
+  <page>
+  <style>
+
+    /* =====================================================================
+       PIDF v1.3 — PMMG INSTRUCTIONAL DESIGN FRAMEWORK (CMS WISE / DomSanitizer)
+       ===================================================================== */
+    *, *::before, *::after {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    :root {
+        --cor-primaria:      #826C2B;
+        --cor-caqui:         #A08F63;
+        --cor-ouro:          #B89053;
+        --cor-navy:          #141B4D;
+        --cor-texto:         #222222;
+        --cor-texto-fraco:   #555555;
+        --cor-preto:         #000000;
+        --cor-branco:        #FFFFFF;
+        --cor-cinza:         #E4E4E4;
+        --cor-cinza-claro:   #F8F8F8;
+        --cor-cinza-escuro:  #777777;
+        --cor-info:          #1995FF;
+        --cor-alerta:        #FF5722;
+        --cor-seguranca:     #AB2328;
+        --cor-sucesso:       #187731;
+
+        --espaco-p:          8px;
+        --espaco-m:          16px;
+        --espaco-l:          24px;
+        --espaco-xl:         32px;
+
+        --raio-p:            4px;
+        --raio-m:            8px;
+        --raio-g:            12px;
+
+        --sombra-suave:      0 4px 12px rgba(0, 0, 0, 0.06);
+        --sombra-card:       0 6px 16px rgba(20, 27, 77, 0.08);
+        --largura-maxima:    1140px;
+        --transicao-padrao:  all 0.25s ease-in-out;
+    }
+
+    page {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        color: var(--cor-texto);
+        line-height: 1.65;
+        font-size: clamp(0.95rem, 0.88rem + 0.35vw, 1.05rem);
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .aula {
+        width: 100%;
+        max-width: var(--largura-maxima);
+        margin: 0 auto;
+        padding: clamp(12px, 2.5vw, 24px);
+    }
+
+    /* FATIAMENTO ATÔMICO EM SECTIONS (<= 600px) */
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.15rem;
+        padding: clamp(16px, 2.5vw, 28px) 0;
+        margin-bottom: 2rem;
+        width: 100%;
+        border-bottom: 1px solid var(--cor-cinza);
+    }
+
+    section:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    /* FULLSCREEN FIXES */
+    page.fullscreen, section.fullscreen, .aula.fullscreen {
+        padding: clamp(16px, 3vw, 32px) !important;
+        box-sizing: border-box;
+    }
+    .fullscreen iframe, .fullscreen video, .fullscreen .video-container {
+        pointer-events: auto !important;
+        z-index: 2147483647 !important;
+        position: relative;
+        max-height: 85vh;
+    }
+
+    /* TIPOGRAFIA */
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        line-height: 1.3;
+        color: var(--cor-navy);
+        font-weight: 800;
+    }
+
+    h1 {
+        position: relative;
+        font-size: clamp(1.4rem, 1.2rem + 1vw, 2.1rem);
+        color: var(--cor-navy);
+        padding-bottom: 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    h1::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 90px;
+        height: 4px;
+        background: var(--cor-primaria);
+        border-radius: 4px;
+    }
+
+    h2 {
+        font-size: clamp(1.15rem, 1.05rem + 0.6vw, 1.45rem);
+        color: var(--cor-primaria);
+        border-left: 5px solid var(--cor-primaria);
+        padding-left: 12px;
+        margin-top: 0.2rem;
+    }
+
+    h3 {
+        font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.22rem);
+        color: var(--cor-navy);
+    }
+
+    h4 {
+        font-size: 1.02rem;
+        color: var(--cor-primaria);
+    }
+
+    p {
+        margin: 0;
+        text-align: justify;
+        line-height: 1.65;
+    }
+
+    strong { font-weight: 700; color: var(--cor-navy); }
+    em { font-style: italic; }
+
+    .subtitulo {
+        font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.1rem);
+        color: var(--cor-caqui);
+        font-weight: 600;
+        margin-top: -0.25rem;
+    }
+
+    .data-atualizacao {
+        font-size: 0.82rem;
+        color: var(--cor-texto-fraco);
+        font-style: italic;
+        margin-bottom: 0.25rem;
+    }
+
+    /* PAINÉIS SEMÂNTICOS PIDF */
+    .painel {
+        position: relative;
+        padding: 1.15rem 1.35rem;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-left: 5px solid var(--cor-primaria);
+        border-radius: var(--raio-m);
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        margin: 0.4rem 0;
+    }
+
+    .painel::before {
+        display: block;
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    .painel.neutro { border-left-color: var(--cor-primaria); background: #FAF9F6; }
+    .painel.neutro::before { content: "INFORMAÇÃO OPERACIONAL"; color: var(--cor-primaria); }
+
+    .painel.seguranca { border-left-color: var(--cor-seguranca); background: #FFF6F6; }
+    .painel.seguranca::before { content: "ALERTA DE SEGURANÇA OPERACIONAL"; color: var(--cor-seguranca); }
+
+    .painel.doutrina { border-left-color: var(--cor-navy); background: #F6F8FC; }
+    .painel.doutrina::before { content: "FUNDAMENTAÇÃO DOUTRINÁRIA PMMG"; color: var(--cor-navy); }
+
+    .painel.instrutor { border-left-color: var(--cor-caqui); background: #FDFBF7; }
+    .painel.instrutor::before { content: "DICA TÁTICA DO INSTRUTOR"; color: var(--cor-primaria); }
+
+    .painel.erro { border-left-color: var(--cor-alerta); background: #FFF8F5; }
+    .painel.erro::before { content: "ERRO CRÍTICO A EVITAR"; color: var(--cor-alerta); }
+
+    .painel.observacao { border-left-color: var(--cor-info); background: #F5FAFF; }
+    .painel.observacao::before { content: "OBSERVAÇÃO TÉCNICA"; color: var(--cor-info); }
+
+    .painel.pratica { border-left-color: var(--cor-sucesso); background: #F5FAF6; }
+    .painel.pratica::before { content: "DRILL DE APLICAÇÃO PRÁTICA"; color: var(--cor-sucesso); }
+
+    .painel.importante { border-left-color: var(--cor-primaria); background: #FCFAF4; }
+    .painel.importante::before { content: "IMPORTANTE"; color: var(--cor-primaria); }
+
+    .painel.resumo { border-left-color: var(--cor-cinza-escuro); background: #FAFAFA; }
+    .painel.resumo::before { content: "SÍNTESE DA REGRA DE OURO"; color: var(--cor-cinza-escuro); }
+
+    /* PROCEDIMENTO NUMERADO */
+    .procedimento {
+        counter-reset: etapa;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        margin: 0.4rem 0;
+    }
+
+    .etapa {
+        counter-increment: etapa;
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .etapa::before {
+        content: counter(etapa);
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 50%;
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        font-size: 1rem;
+        flex-shrink: 0;
+        align-self: flex-start;
+        box-shadow: var(--sombra-suave);
+    }
+
+    .etapa-conteudo { flex: 1; min-width: 0; }
+    .etapa-conteudo h4 { margin: 0 0 0.25rem 0; color: var(--cor-navy); font-size: 1rem; }
+    .etapa-conteudo p { margin: 0; font-size: 0.95rem; text-align: left; }
+
+    /* FICHAS DE CARDS EMPILHADOS E TABELA CANÔNICA SEGURA (PIDF v1.3) */
+    .ficha-cards {
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        overflow: hidden;
+        background: #FFFFFF;
+        margin: 0.5rem 0;
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+    }
+
+    .ficha-cards header {
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        padding: 11px 16px;
+        font-weight: 800;
+        font-size: 0.94rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .ficha-cards-body {
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-comparativo {
+        background: #F8F9FA;
+        border: 1px solid #E2E8F0;
+        border-left: 5px solid var(--cor-primaria);
+        border-radius: 6px;
+        padding: 12px 14px;
+    }
+
+    .card-comparativo h4 {
+        margin: 0 0 6px 0;
+        font-size: 0.96rem;
+        font-weight: 800;
+        color: var(--cor-navy);
+    }
+
+    .card-comparativo p {
+        margin: 0 0 4px 0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: left !important;
+    }
+
+    .ficha {
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        background: #FFFFFF;
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        overflow: hidden;
+        margin: 0.4rem 0;
+    }
+
+    .ficha .titulo {
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        padding: 10px 16px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    .tabela-scroll {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        width: 100% !important;
+        table-layout: fixed !important;
+        border-collapse: collapse !important;
+        margin: 0 !important;
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 10px 12px;
+        border: 1px solid #E2E8F0;
+        text-align: left;
+        vertical-align: top;
+        word-break: break-word;
+    }
+
+    th {
+        background-color: #F4F1EA;
+        color: var(--cor-navy);
+        font-weight: 700;
+        border-bottom: 2px solid var(--cor-primaria);
+    }
+
+    tr:nth-child(even) td { background-color: #FAFAFA; }
+
+    /* MÍDIAS: IMAGENS E VÍDEOS */
+    .container-imagem {
+        display: block;
+        width: 100%;
+        max-width: 820px;
+        margin: 0.5rem auto;
+        border-radius: var(--raio-m);
+        border: 1px solid var(--cor-cinza);
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+        background: #F8F8F8;
+        text-align: center;
+    }
+
+    .container-imagem img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        max-height: 380px;
+        object-fit: contain;
+        cursor: zoom-in;
+        transition: transform 0.25s ease-in-out;
+    }
+
+    /* ZOOM NATIVO CSS (DOMSANITIZER-SAFE) - ENQUADRADO PERFEITAMENTE NA TELA */
+    .container-imagem img[tabindex="0"]:focus {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: min(92vw, 1100px);
+        max-height: 85vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        z-index: 99999;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.88);
+        cursor: zoom-out;
+        border-radius: var(--raio-p);
+        background: #FFFFFF;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 820px;
+        margin: 0.5rem auto;
+        aspect-ratio: 16 / 9;
+        background: #000000;
+        border-radius: var(--raio-m);
+        overflow: hidden;
+        box-shadow: var(--sombra-card);
+    }
+
+    .video-container video, .video-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+    }
+
+    .legenda-midia {
+        font-size: 0.82rem;
+        text-align: center;
+        color: var(--cor-texto-fraco);
+        margin: 0.25rem 0 0.5rem 0;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    /* EXPANSÍVEIS DE APROFUNDAMENTO TÉCNICO (DOMSANITIZER-SAFE) */
+    details.popup-aprofundamento {
+        width: 100%;
+        background: #FAF8F2;
+        border: 1px solid var(--cor-caqui);
+        border-radius: var(--raio-m);
+        margin: 0.5rem 0;
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+    }
+
+    details.popup-aprofundamento summary.btn-popup {
+        background: linear-gradient(135deg, #826C2B, #A08F63);
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 0.9rem;
+        padding: 0.8rem 1.15rem;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        user-select: none;
+    }
+
+    details.popup-aprofundamento summary.btn-popup::-webkit-details-marker { display: none; }
+
+    details.popup-aprofundamento summary.btn-popup::after {
+        content: "▼ EXPANDIR";
+        font-size: 0.74rem;
+        background: rgba(0, 0, 0, 0.25);
+        padding: 3px 8px;
+        border-radius: var(--raio-p);
+    }
+
+    details.popup-aprofundamento[open] summary.btn-popup::after {
+        content: "▲ RECOLHER";
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .conteudo-popup {
+        padding: 1.1rem 1.3rem;
+        background: #FFFFFF;
+        border-top: 1px solid var(--cor-caqui);
+    }
+
+    /* CARDS EM GRID FLUIDO */
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+        gap: 14px;
+        width: 100%;
+        margin: 0.4rem 0;
+    }
+
+    .card-nivel {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        padding: 14px 16px;
+        box-shadow: var(--sombra-suave);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .card-nivel.nivel-1 { border-left: 5px solid #826C2B; }
+    .card-nivel.nivel-2 { border-left: 5px solid #FF5722; }
+    .card-nivel.nivel-3 { border-left: 5px solid #AB2328; }
+
+    .card-item-header {
+        font-weight: 800;
+        font-size: 1rem;
+        color: var(--cor-primaria);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1px solid var(--cor-cinza);
+        padding-bottom: 6px;
+    }
+
+    .card-nivel p {
+        text-align: left;
+        font-size: 0.92rem;
+    }
+
+    .box-aviso-seguranca {
+        background: #FFF6F6;
+        border-left: 3px solid var(--cor-seguranca);
+        padding: 8px 10px;
+        border-radius: var(--raio-p);
+        font-size: 0.88rem;
+        line-height: 1.45;
+    }
+
+    /* QUIZ E INTERATIVIDADE CSS PURO */
+    .quiz-bloco {
+        background: #FDFCF9;
+        border: 2px solid var(--cor-caqui);
+        border-radius: var(--raio-m);
+        padding: 16px 20px;
+        margin: 0.5rem 0;
+    }
+
+    .quiz-pergunta {
+        font-weight: 700;
+        font-size: 0.98rem;
+        color: var(--cor-navy);
+        margin-bottom: 12px;
+    }
+
+    .quiz-opcoes {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .quiz-opcao-box {
+        display: block;
+        padding: 10px 14px;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-p);
+        cursor: pointer;
+        font-size: 0.92rem;
+        transition: var(--transicao-padrao);
+    }
+
+    .quiz-opcao-box:hover {
+        background: #FAF8F2;
+        border-color: var(--cor-caqui);
+    }
+
+    .quiz-opcao-box.correta {
+        border: 2px solid var(--cor-sucesso);
+        background: #F0FDF4;
+        font-weight: 700;
+    }
+
+    .feedback-correto {
+        margin-top: 10px;
+        padding: 10px 14px;
+        background: #DCFCE7;
+        border-left: 4px solid var(--cor-sucesso);
+        border-radius: var(--raio-p);
+        font-size: 0.9rem;
+        color: #14532D;
+    }
+
+    @media (max-width: 768px) {
+        .aula { padding: 12px; }
+        section { gap: 0.95rem; padding: 14px 0; margin-bottom: 1.5rem; }
+        .etapa { gap: 0.75rem; }
+        .etapa::before { width: 34px; height: 34px; min-width: 34px; font-size: 0.9rem; }
+        th, td { padding: 8px 10px; font-size: 0.84rem; }
+    }
+
+  
+    /* ALINHAMENTO JUSTIFICADO GLOBAL */
+    p, .painel, .card-comparativo, .ficha-cards-body, .card-nivel p, li, .quiz-pergunta, .quiz-opcao-box, .feedback-correto, .etapa-conteudo p, .box-aviso-seguranca {
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+    }
+
+    h1, h2, h3, h4 {
+        text-align: left;
+    }
+
+    .legenda-midia {
+        text-align: center;
+    }
+
+    .data-atualizacao {
+        text-align: right;
+    }
+
+    /* TOOLTIPS SEGUROS EM CSS PURO (DOMSANITIZER-SAFE) */
+    .tooltip-wrapper {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1.5px dotted var(--cor-ouro);
+        cursor: help;
+        font-weight: 600;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .tooltip-wrapper .tooltip-text {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--cor-navy);
+        color: #FFFFFF;
+        text-align: center;
+        padding: 6px 10px;
+        border-radius: var(--raio-p);
+        font-size: 0.78rem;
+        font-weight: 500;
+        line-height: 1.3;
+        white-space: nowrap;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        border-top: 2px solid var(--cor-ouro);
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+        pointer-events: none;
+    }
+
+    .tooltip-wrapper .tooltip-text::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: var(--cor-navy) transparent transparent transparent;
+    }
+
+    .tooltip-wrapper:hover .tooltip-text,
+    .tooltip-wrapper:focus .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* GABARITO INTERATIVO DO QUIZ (DOMSANITIZER-SAFE) */
+    .gabarito-detalhes {
+        margin-top: 12px;
+        border-radius: var(--raio-m);
+        overflow: hidden;
+    }
+
+    .gabarito-btn {
+        background: #F0EFE9;
+        border: 1px solid var(--cor-caqui);
+        color: var(--cor-navy);
+        padding: 10px 14px;
+        font-weight: 700;
+        font-size: 0.88rem;
+        cursor: pointer;
+        border-radius: var(--raio-m);
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: background 0.2s ease;
+    }
+
+    .gabarito-btn::-webkit-details-marker {
+        display: none;
+    }
+
+    .gabarito-btn:hover {
+        background: #E5E2D8;
+    }
+
+    .gabarito-detalhes[open] .gabarito-btn {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        background: var(--cor-caqui);
+        color: #FFFFFF;
+    }
+
+    .gabarito-detalhes .feedback-correto {
+        margin-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: none;
+    }
+
+  </style>
+
+  <div class="aula">
+    <!-- SLIDE 1: ABERTURA, BASE JURÍDICA ATUALIZADA E VIDEOAULA MASTER -->
+    <section>
+      <div class="data-atualizacao">Atualizado em: 03/11/2026</div>
+      <h1>Técnicas de Verbalização e Controle Verbal Operacional</h1>
+      <p class="subtitulo">Modulação da Força, Ordem Legal Imperativa, Ponto Crítico de Ruptura e Adaptação a Públicos Específicos (<abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 3.04.01 / Decreto nº 12.341/2024)</p>
+
+      <div class="painel doutrina">
+        <h3>1. A Verbalização no Eixo do Uso Diferenciado da Força</h3>
+        <p>Na doutrina da Polícia Militar de Minas Gerais (<strong><abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 3.04.01/2020-CG, Seção 6, item 6.1.1</strong>), a verbalização não é mero diálogo cotidiano, mas um instrumento técnico de intervenção policial presente em todos os níveis de força. Seu objetivo é obter a submissão voluntária à ordem legal, controlar a distância de reação e prevenir a escalada para o confronto físico ou letal.</p>
+      </div>
+
+      <div class="video-container">
+        <video controls preload="metadata" poster="imagem/blueprint_triangulacao_voz_unica.png">
+          <source src="video/videoaula_controle_verbal.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="legenda-midia">Vídeo 1 — Videoaula Instrucional em Motion Design Blueprint: Controle Verbal, Tríade <abbr class="tooltip-wrapper" tabindex="0">C.B.O.<span class="tooltip-text">Clareza, Brevidade e Objetividade</span></abbr>, Voz Única e Ponto Crítico de Ruptura. <em>(Fonte: Centro de Treinamento Policial — <abbr class="tooltip-wrapper" tabindex="0">CTP<span class="tooltip-text">Centro de Treinamento Profissional</span></abbr>/<abbr class="tooltip-wrapper" tabindex="0">PMMG<span class="tooltip-text">Polícia Militar de Minas Gerais</span></abbr>, 03/11/2026)</em></p>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">⚖️ Base Jurídica Atualizada</div>
+          <p>Regida pela <strong>Lei Federal nº 13.060 (22/12/2014)</strong>, pelo <strong>Decreto Federal nº 12.341 (23/12/2024)</strong> e pela <strong>Portaria Interministerial nº 4.226 (31/12/2010)</strong>: o emprego de força deve ser precedido de advertência verbal e oportunidade de acatamento, ressalvada a reação imediata em legítima defesa perante agressão letal iminente.</p>
+        </div>
+
+        <div class="card-nivel nivel-2">
+          <div class="card-item-header">🎯 Redução da Sobrecarga Neural</div>
+          <p>Sob estresse agudo, a capacidade de processamento auditivo do abordado sofre redução severa. Comandos curtos, imperativos e sequenciais diminuem a latência motora e eliminam ambiguidades interpretativas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: MÉTODO DOS 3 TEMPOS DE COMANDO & TRÍADE C.B.O. -->
+    <section>
+      <h2>O Método dos Três Tempos de Comando e a Tríade <abbr class="tooltip-wrapper" tabindex="0">C.B.O.<span class="tooltip-text">Clareza, Brevidade e Objetividade</span></abbr></h2>
+      <p>Para impor autoridade legal e controlar os movimentos do abordado (<strong><abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 3.04.01 e <abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 3.04.02</strong>), o comando verbal aplica a <strong>Tríade <abbr class="tooltip-wrapper" tabindex="0">C.B.O.<span class="tooltip-text">Clareza, Brevidade e Objetividade</span></abbr></strong> (<strong>C</strong>lareza no imperativo afirmativo, <strong>B</strong>revidade de 3 a 4 vocábulos e <strong>O</strong>bjetividade com um único verbo motor por vez) estruturada em três etapas:</p>
+
+      <div class="container-imagem">
+        <img src="imagem/dinamica_verbalizacao_3tempos.svg" alt="Esquema Blueprint do Método dos 3 Tempos e Tríade C.B.O." tabindex="0">
+      </div>
+      <p class="legenda-midia">Figura 1 — Estrutura Sequencial dos 3 Tempos de Comando e Ciclo Operacional <abbr class="tooltip-wrapper" tabindex="0">C.B.O.<span class="tooltip-text">Clareza, Brevidade e Objetividade</span></abbr> <em>(Fonte: Diagrama vetorial técnico baseado no <abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 3.04.01/2020-CG — <abbr class="tooltip-wrapper" tabindex="0">CTP<span class="tooltip-text">Centro de Treinamento Profissional</span></abbr>/<abbr class="tooltip-wrapper" tabindex="0">PMMG<span class="tooltip-text">Polícia Militar de Minas Gerais</span></abbr>)</em></p>
+
+      <div class="procedimento">
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>1º Tempo: Identificação Institucional</h4>
+            <p><strong>"POLÍCIA MILITAR!"</strong> — Define a investidura estatal imediata e afasta qualquer alegação jurídica de desconhecimento da autoridade pública.</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>2º Tempo: Ordem Direta e Singular (Regra de Um Comando por Vez)</h4>
+            <p><strong>"PARADO! COLOQUE AS MÃOS NA CABEÇA!"</strong> — Verbo de ação no imperativo afirmativo focado prioritariamente no controle visual das mãos. Emita a ordem e conceda <strong>pausa de 1 a 2 segundos</strong> para o cérebro do abordado processar e cumprir antes do próximo comando (<em>"Vire de costas!"</em> ➔ <em>"Afaste os pés!"</em>).</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>3º Tempo: Consequência Legal Imediata</h4>
+            <p><strong>"NÃO SE MOVA OU SERÁ CONTIDO!"</strong> — Advertência objetiva sobre o emprego legítimo e proporcional da força caso persista a desobediência, construindo prova testemunhal auditiva.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: BIOMECÂNICA DA VOZ, POSTURA E O ESTUDO DE MEHRABIAN -->
+    <section>
+      <h2>Postura Corporal, Biomecânica da Voz e Congruência de Mehrabian</h2>
+      <p>Acima de <strong>145 batimentos por minuto (bpm)</strong>, a descarga simpática contrai a glote (tornando a voz aguda ou trêmula) e provoca taquifemia (fala acelerada). O policial deve manter ancoragem postural e respiração diafragmática para preservar a congruência comunicativa:</p>
+
+      <div class="container-imagem">
+        <img src="imagem/dialogo_tenso.png" alt="Ilustração de postura tática defensiva e projeção vocal firme em abordagem noturna" tabindex="0">
+      </div>
+      <p class="legenda-midia">Figura 2 — Posicionamento em ângulo de segurança, foco luminoso nas mãos do abordado e projeção vocal controlada. <em>(Fonte: Ilustração tática gerada por IA sob diretrizes do <abbr class="tooltip-wrapper" tabindex="0">CTP<span class="tooltip-text">Centro de Treinamento Profissional</span></abbr>/<abbr class="tooltip-wrapper" tabindex="0">PMMG<span class="tooltip-text">Polícia Militar de Minas Gerais</span></abbr>)</em></p>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">📊 Contextualização Técnica: Albert Mehrabian (1971)</div>
+          <p>Na obra <em>Silent Messages</em> (1971), Mehrabian demonstrou que, diante de <strong>incongruência</strong> na expressão de atitudes e emoções, o receptor pondera <strong>55% a linguagem corporal/facial</strong>, <strong>38% o tom/modulação vocal</strong> e <strong>7% as palavras</strong>. Na abordagem policial, os 7% verbais são juridicamente insubstituíveis (pois definem a ordem legal), mas se a voz soar esganiçada ou a postura hesitante, o suspeito descartará a palavra e reagirá aos 93% não verbais.</p>
+        </div>
+
+        <div class="card-nivel nivel-2">
+          <div class="card-item-header">🛡️ Ancoragem Biomecânica e Base em 45°</div>
+          <p>Mantenha distância mínima de reação (5 a 7 metros em fundada suspeita), base em 45° protegendo o coldre, mãos livres acima da linha da cintura ou arma em pronta resposta (guarda baixa/sul) e olhar fixo nas mãos e linha de cintura do abordado.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: SINCRONISMO NA GUARNIÇÃO — VOZ ÚNICA E ECO AUDITIVO -->
+    <section>
+      <h2>Sincronismo na Guarnição: Princípio da Voz Única e Eco Auditivo</h2>
+      <p>A emissão de ordens simultâneas por múltiplos policiais (<em>"Cacofonia Operacional"</em>) gera bloqueio cognitivo no abordado e compromete a segurança de perímetro (<strong><abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 3.04.01 e <abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 3.04.02</strong>):</p>
+
+      <div class="container-imagem">
+        <img src="imagem/planta_tatica_voz_unica_pmmg.svg" alt="Planta tática vetorial da regra da voz única e comunicação em eco na guarnição" tabindex="0">
+      </div>
+      <p class="legenda-midia">Figura 3 — Divisão de setores táticos: Operador de Contato (Voz Única) e Operador de Segurança (Varredura 360° e Alerta Interno em Eco). <em>(Fonte: Diagrama vetorial técnico <abbr class="tooltip-wrapper" tabindex="0">CTP<span class="tooltip-text">Centro de Treinamento Profissional</span></abbr>/<abbr class="tooltip-wrapper" tabindex="0">PMMG<span class="tooltip-text">Polícia Militar de Minas Gerais</span></abbr>)</em></p>
+
+      <div class="ficha-cards">
+        <header>Protocolo de Sincronismo Comunicativo da Guarnição</header>
+        <div class="ficha-cards-body">
+          <div class="card-comparativo">
+            <h4>1. Exclusividade de Comando Externo (Policial de Contato)</h4>
+            <p>Apenas o <strong>Policial de Contato</strong> dirige ordens ao abordado. O <strong>Policial de Segurança (Cobertura)</strong> mantém silêncio externo absoluto, dedicando 100% da atenção à varredura 360°, mãos do suspeito e retaguarda.</p>
+          </div>
+          <div class="card-comparativo">
+            <h4>2. Alerta Interno de Perigo e Confirmação em Eco Auditivo</h4>
+            <p>Se o Segurança visualizar risco oculto, emite alerta interno curto e codificado: <strong>"ARMA ÀS 12 HORAS!"</strong> ou <strong>"RETROVISOR!"</strong>. Para vencer a exclusão auditiva, o Contato responde obrigatoriamente em eco: <strong>"CIENTE, 12 HORAS!"</strong>. Em troca de função: <strong>"ASSUMO O CONTATO!"</strong> ➔ <strong>"ASSUMO A SEGURANÇA!"</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ficha">
+        <div class="titulo">Matriz Comparativa: Comando Unificado vs. Sobreposição de Vozes</div>
+        <div class="tabela-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 24%;">Parâmetro Tático</th>
+                <th style="width: 38%;">Voz Única (Policial de Contato)</th>
+                <th style="width: 38%;">Vozes Simultâneas (Falha Crítica)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Processamento do Abordado</strong></td>
+                <td>Recepção unívoca da ordem, foco direcionado e execução motora previsível.</td>
+                <td>Sobrecarga cognitiva, paralisia decisória ou movimento involuntário brusco.</td>
+              </tr>
+              <tr>
+                <td><strong>Segurança da Cobertura</strong></td>
+                <td>Vigilância preservada sobre ângulos mortos, terceiros e linha de tiro limpa.</td>
+                <td>Estreitamento visual e perda de consciência situacional de retaguarda.</td>
+              </tr>
+              <tr>
+                <td><strong>Auditorias e Registro (COP/REDS)</strong></td>
+                <td>Demonstração técnica de controle, legalidade estrita e coordenação tática.</td>
+                <td>Evidência de descoordenação operacional e perda de comando da cena.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: VEDAÇÃO DO LOOP VERBAL E TRANSIÇÃO NO UDF -->
+    <section>
+      <h2>Vedação do Loop Verbal, Ponto Crítico de Ruptura e Pós-Contenção</h2>
+      <p>A verbalização possui limite tático objetivo. O policial jamais deve cair no <strong>Loop Verbal (Fixação Verbal Desmedida)</strong> — repetindo comandos infinitamente enquanto o suspeito ignora as ordens, fecha a distância ou prepara agressão:</p>
+
+      <div class="container-imagem">
+        <img src="imagem/blueprint_ponto_ruptura_udf.png" alt="Blueprint técnico da biomecânica da voz e do Ponto Crítico de Ruptura no Uso Diferenciado da Força" tabindex="0">
+      </div>
+      <p class="legenda-midia">Figura 4 — Linha de progressão verbal, limite de repetição (Ponto Crítico de Ruptura) e transição com deslocamento angular ("Saia do X"). <em>(Fonte: Ilustração em estilo Blueprint Técnico gerada por IA — <abbr class="tooltip-wrapper" tabindex="0">CTP<span class="tooltip-text">Centro de Treinamento Profissional</span></abbr>/<abbr class="tooltip-wrapper" tabindex="0">PMMG<span class="tooltip-text">Polícia Militar de Minas Gerais</span></abbr>)</em></p>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-2">
+          <div class="card-item-header">🔄 Descumprimento em Resistência Passiva (<abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 01)</div>
+          <p>Conforme o <strong><abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 3.04.01 (Seção 6.1.1, alínea "b")</strong>, se o abordado retardar o cumprimento sem esboçar agressão, repita literalmente a ordem de forma pausada e firme por <strong>2 a 3 vezes</strong>, advertindo sobre o crime de desobediência e o uso da força. Persistindo a recusa, encerre o ciclo argumentativo e aplique o controle de contato/físico proporcional.</p>
+        </div>
+
+        <div class="card-nivel nivel-3">
+          <div class="card-item-header">⚡ Ponto Crítico de Ruptura em Ameaça Letal</div>
+          <p>Se o indivíduo leva a mão à arma ou avança com instrumento letal rompendo a distância de segurança, <strong>cessa o diálogo prolongado</strong>. Emita a ordem única de sobrevivência (<em>"POLÍCIA! LARGUE A ARMA!"</em>, se houver tempo hábil) simultânea ao deslocamento lateral (<strong>"Saia do X"</strong>), busca de abrigo e resposta proporcional imediata (<abbr class="tooltip-wrapper" tabindex="0">IMPO<span class="tooltip-text">Infração de Menor Potencial Ofensivo</span></abbr>/<abbr class="tooltip-wrapper" tabindex="0">AINM<span class="tooltip-text">Arma de Incapacitação Não-Letal</span></abbr> ou força letal, conectando com o Módulo 1).</p>
+        </div>
+      </div>
+
+      <div class="painel seguranca">
+        <p><strong>VERBALIZAÇÃO NA CONTENÇÃO E PREVENÇÃO DE ASFIXIA POSICIONAL:</strong> A verbalização <strong>não cessa</strong> durante a imobilização física — continue comandando (<em>"Cesse a resistência! Relaxe o braço!"</em>) para gerar testemunho auditivo e garanta <strong>congruência biomecânica</strong> (nunca ordene <em>"mãos para trás"</em> se o braço do suspeito estiver travado sob o tórax dele). Após algemar, reduza o tom de voz, <strong>cesse imediatamente qualquer compressão dorsal/torácica</strong>, posicione o contido sentado ou em decúbito lateral e pergunte: <em>"Você consegue respirar normalmente? Está ferido?"</em>.</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: VERBALIZAÇÃO ADAPTADA A PÚBLICOS ESPECÍFICOS (POPs E MTP 01) -->
+    <section>
+      <h2>Verbalização Adaptada: Crise Mental, Álcool, Surdez e Estrangeiros</h2>
+      <p>O <strong><abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 3.04.01 (item 6.1.1)</strong> determina que o policial avalie se o descumprimento decorre de barreira cognitiva, sensorial, química ou linguística, aplicando os Procedimentos Operacionais Padrão específicos da <abbr class="tooltip-wrapper" tabindex="0">PMMG<span class="tooltip-text">Polícia Militar de Minas Gerais</span></abbr>:</p>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-3">
+          <div class="card-item-header">🧠 1. Pessoa em Surto Mental (<abbr class="tooltip-wrapper" tabindex="0">POP<span class="tooltip-text">Procedimento Operacional Padrão</span></abbr> 1.03.052/2025)</div>
+          <p>O paciente em crise psicótica ou suicida não responde à intimidação; gritos precipitam o ataque. Aplique os <strong>Quatro "Is"</strong>: <strong>I</strong>sole o perímetro (6 a 7m de reação / 15m de área); <strong>I</strong>nterrompa estímulos (desligue sirenes, giroflex e baixe o HT); <strong>I</strong>ndividualize a fala (um único policial em tom calmo e pausado: <em>"Meu nome é..., estou aqui para garantir sua segurança"</em>); e <strong>I</strong>nforme/acione apoio (<abbr class="tooltip-wrapper" tabindex="0">SAMU<span class="tooltip-text">Serviço de Atendimento Móvel de Urgência</span></abbr>/CBMMG/BOPE). <strong>Valide a emoção sem alimentar nem confrontar o delírio</strong> e conduza à rede de saúde (<abbr class="tooltip-wrapper" tabindex="0">RAPS<span class="tooltip-text">Rede de Atenção Psicossocial</span></abbr>).</p>
+        </div>
+
+        <div class="card-nivel nivel-2">
+          <div class="card-item-header">🍺 2. Álcool ou Substâncias Psicoativas (<abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 01)</div>
+          <p>A intoxicação reduz a velocidade de processamento neural e causa desinibição. Aplique a <strong>Técnica do Tom Descendente (Voz Âncora)</strong> — falando de forma mais grave e pausada para reduzir a exaltação —, utilize <em>Strip Phrases</em> (Judô Verbal: <em>"Compreendo sua posição, no entanto cumpra a ordem agora"</em>), afaste o abordado do <strong>"efeito plateia"</strong> e conceda segundos extras para a resposta motora.</p>
+        </div>
+
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">🧏 3. Pessoa Surda ou Deficiente Auditiva (<abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 01)</div>
+          <p>Ausência de resposta ao comando sonoro não configura desobediência imediata. Ao notar que o cidadão não ouve e não esboça agressão, <strong>não grite nem escale a força</strong>: posicione-se no <strong>campo visual frontal</strong> com o rosto iluminado (permitindo leitura labial), mantenha distância segura e utilize <strong>gestos demonstrativos lentos e claros</strong> indicando a posição das mãos. Após estabilizar, utilize escrita ou Libras.</p>
+        </div>
+
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">🌐 4. Estrangeiros e Refugiados (<abbr class="tooltip-wrapper" tabindex="0">POP<span class="tooltip-text">Procedimento Operacional Padrão</span></abbr> 1.03.057/2026)</div>
+          <p>Conforme a <strong>Lei nº 13.445/2017</strong> e o <strong><abbr class="tooltip-wrapper" tabindex="0">POP<span class="tooltip-text">Procedimento Operacional Padrão</span></abbr> 1.03.057/2026</strong>, <strong>jamais eleve o volume da voz</strong> tentando compensar barreira de idioma. Articule pausadamente usando vocábulos simples/cognatos aliados a gestos universais demonstrativos. Considere diferenças culturais (evitar contato visual pode indicar respeito) e, após conter riscos, utilize aplicativo de tradução móvel.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: ESTUDO DE CASO OPERACIONAL REAL & ERROS CRÍTICOS -->
+    <section>
+      <h2>Estudo de Caso Operacional e Erros Críticos de Verbalização</h2>
+      <p>Analise no registro operacional abaixo a aplicação prática do controle verbal: o militar mantém a distância de segurança, interrompe verbalmente a menção do abordado de levar a mão próxima à cintura e, após estabilizar o controle, explica tecnicamente o procedimento:</p>
+
+      <div class="video-container">
+        <video controls preload="metadata">
+          <source src="video/ocorrencia_real_verbalizacao.mp4" type="video/mp4">
+          <source src="video/casuistica_verbalizacao_abordagem.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="legenda-midia">Vídeo 2 — Intervenção Operacional Real: Controle verbal de mãos, manutenção de distância de reação e explicação técnica pós-estabilização. <em>(Fonte: Acervo Doutrinário Operacional <abbr class="tooltip-wrapper" tabindex="0">CTP<span class="tooltip-text">Centro de Treinamento Profissional</span></abbr>/<abbr class="tooltip-wrapper" tabindex="0">PMMG<span class="tooltip-text">Polícia Militar de Minas Gerais</span></abbr>, 03/11/2026)</em></p>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-3">
+          <div class="card-item-header">❌ Ordens Conflitantes ou Encavaladas</div>
+          <p>Emitir <em>"Não se mova!"</em> simultaneamente a <em>"Deite no chão!"</em> ou <em>"Desça do carro com as mãos para cima!"</em> gera erro motor involuntário.</p>
+          <div class="box-aviso-seguranca">
+            <strong>Conduta Correta:</strong> Fracione a ordem (1 verbo por etapa): 1º <em>"Parado!"</em> ➔ 2º <em>"Mãos na cabeça!"</em> ➔ 3º <em>"Vire de costas!"</em>.
+          </div>
+        </div>
+
+        <div class="card-nivel nivel-3">
+          <div class="card-item-header">❌ Provocações, Gírias e Debate de Ego</div>
+          <p>Discutir com o suspeito, apontar o dedo indicador na face ou usar termos pejorativos (<strong><abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 01, pág. 43–45</strong>) degrada a autoridade legal e contamina o registro em câmeras (COP).</p>
+          <div class="box-aviso-seguranca">
+            <strong>Conduta Correta:</strong> Tratamento formal, impessoal e firme. A autoridade decorre da lei e da postura tática, jamais da hostilidade verbal.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: FIXAÇÃO DE CONHECIMENTO SITUACIONAL (2 QUESTÕES) -->
+    <section>
+      <h2>Fixação de Conhecimento Situacional</h2>
+
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">Questão 1 (Sincronismo de Guarnição): Durante abordagem noturna a veículo suspeito, o Policial de Contato verbaliza na janela dianteira ordenando que o condutor mantenha as mãos no volante. Nesse instante, o Policial de Segurança (Cobertura) visualiza o passageiro do banco traseiro deslizando a mão em direção a um volume na cintura. Qual a conduta comunicativa correta do Policial de Segurança segundo a doutrina da <abbr class="tooltip-wrapper" tabindex="0">PMMG<span class="tooltip-text">Polícia Militar de Minas Gerais</span></abbr>?</div>
+        <div class="quiz-opcoes">
+          <div class="quiz-opcao-box">A) Passar a gritar ordens diretamente para o passageiro ao mesmo tempo em que o Contato comanda o motorista.</div>
+          <div class="quiz-opcao-box">B) Emitir alerta interno curto e específico ("Arma no banco traseiro! 12 horas!"), exigir confirmação em eco auditivo do parceiro e ajustar o ângulo de cobertura para resposta imediata.</div>
+          <div class="quiz-opcao-box">C) Permanecer em silêncio total para não interromper a fala do Policial de Contato.</div>
+          <div class="quiz-opcao-box">D) Efetuar disparo de advertência para o alto a fim de intimidar os ocupantes do veículo.</div>
+        </div>
+        <details class="gabarito-detalhes">
+          <summary class="gabarito-btn"><span>▶ Conferir Gabarito e Justificativa Doutrinária</span></summary>
+          <div class="feedback-correto">
+            <strong>Gabarito Doutrinário (Alternativa B):</strong> O Princípio da Voz Única veda que a cobertura dispute comandos externos com o Contato, mas exige comunicação interna imediata diante de ameaça letal oculta, seguida de confirmação em eco auditivo (<em>"Ciente!"</em>) e prontidão proporcional (<abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 3.04.01 e <abbr class="tooltip-wrapper" tabindex="0">MTP<span class="tooltip-text">Manual Técnico-Profissional</span></abbr> 3.04.04).
+          </div>
+        </details>
+      </div>
+
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">Questão 2 (Ponto Crítico de Ruptura e Públicos Específicos): Acionada para atender indivíduo portando barra de ferro em via pública, a guarnição constata que o homem apresenta discurso desconexo e alucinações persecutórias (surto de saúde mental), mantendo-se inicialmente a 8 metros. Qual o protocolo de verbalização aplicável e qual o limite caso ele avance repentinamente contra a equipe?</div>
+        <div class="quiz-opcoes">
+          <div class="quiz-opcao-box">A) Ligar a sirene intermitente, cercar o indivíduo a 2 metros e gritar ordens ríspidas em coro para forçar a rendição pelo choque sonoro.</div>
+          <div class="quiz-opcao-box">B) Concordar com as alucinações dizendo que também vê os perseguidores e repetir "larga a barra" indefinidamente mesmo se ele atacar a guarnição.</div>
+          <div class="quiz-opcao-box">C) Aplicar os 4 "Is" do <abbr class="tooltip-wrapper" tabindex="0">POP<span class="tooltip-text">Procedimento Operacional Padrão</span></abbr> 1.03.052/2025 (isolar a área, desligar sirene/giroflex, individualizar a fala em tom calmo sem confrontar nem alimentar o delírio e acionar apoio); contudo, se ele romper a distância de segurança em ataque iminente, configura-se o Ponto Crítico de Ruptura, exigindo manobra angular e contenção proporcional imediata (<abbr class="tooltip-wrapper" tabindex="0">IMPO<span class="tooltip-text">Infração de Menor Potencial Ofensivo</span></abbr>/<abbr class="tooltip-wrapper" tabindex="0">AINM<span class="tooltip-text">Arma de Incapacitação Não-Letal</span></abbr>).</div>
+          <div class="quiz-opcao-box">D) Retirar a guarnição do local sem adotar medidas de isolamento, pois trata-se de demanda exclusiva da saúde pública.</div>
+        </div>
+        <details class="gabarito-detalhes">
+          <summary class="gabarito-btn"><span>▶ Conferir Gabarito e Justificativa Doutrinária</span></summary>
+          <div class="feedback-correto">
+            <strong>Gabarito Doutrinário (Alternativa C):</strong> O <abbr class="tooltip-wrapper" tabindex="0">POP<span class="tooltip-text">Procedimento Operacional Padrão</span></abbr> 1.03.052/2025 determina a redução de estímulos estressores e diálogo individualizado calmo (4 "Is"). Entretanto, a doutrina veda o Loop Verbal passivo: se houver investida agressiva que rompa a zona de segurança, atinge-se o Ponto Crítico de Ruptura, impondo transição imediata na Escada do Uso Diferenciado da Força.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- SLIDE 9: REFERÊNCIAS BIBLIOGRÁFICAS E DOUTRINÁRIAS -->
+    <section>
+      <h2>Referências Bibliográficas e Doutrinárias</h2>
+      <p class="legenda-midia" style="text-align: left;">Normatização ABNT NBR 6023 — Ordenação Alfabética Rigorosa e Datas Verificadas (DD/MM/AAAA)</p>
+
+      <div class="painel doutrina">
+        <ul>
+          <li><strong>BRASIL.</strong> <em>Decreto Federal nº 12.341, de 23/12/2024</em>. Regulamenta a Lei nº 13.060, de 22/12/2014, para disciplinar o uso da força pelos profissionais de segurança pública. Brasília, DF: Presidência da República, 23/12/2024.</li>
+          <li><strong>BRASIL.</strong> <em>Lei Federal nº 10.216, de 06/04/2001</em>. Dispõe sobre a proteção e os direitos das pessoas portadoras de transtornos mentais e redireciona o modelo assistencial em saúde mental. Brasília, DF: Presidência da República, 06/04/2001.</li>
+          <li><strong>BRASIL.</strong> <em>Lei Federal nº 13.060, de 22/12/2014</em>. Disciplina o uso dos instrumentos de menor potencial ofensivo pelos agentes de segurança pública em todo o território nacional. Brasília, DF: Presidência da República, 22/12/2014.</li>
+          <li><strong>BRASIL.</strong> <em>Lei Federal nº 13.445, de 24/05/2017</em>. Institui a Lei de Migração. Brasília, DF: Presidência da República, 24/05/2017.</li>
+          <li><strong>BRASIL. Ministério da Justiça; Secretaria de Direitos Humanos.</strong> <em>Portaria Interministerial nº 4.226, de 31/12/2010</em>. Estabelece Diretrizes sobre o Uso da Força pelos Agentes de Segurança Pública. Brasília, DF: Diário Oficial da União, 31/12/2010.</li>
+          <li><strong>MEHRABIAN, Albert.</strong> <em>Silent Messages: Implicit Communication of Emotions and Attitudes</em>. 1. ed. Belmont, CA: Wadsworth Publishing Company, 01/01/1971.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar. Comando-Geral.</strong> <em>Diretriz de Segurança para o Emprego Operacional nº 3.02.007/2024-CG</em>. Belo Horizonte: QCG/PMMG, 15/03/2024.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar. Comando-Geral.</strong> <em>Manual Técnico-Profissional nº 3.04.01/2020-CG (MTP 01)</em>: Intervenção Policial, Processo de Comunicação e Uso da Força. Separata do BEPM nº 10, de 05/10/2020. Belo Horizonte: Academia de Polícia Militar, 05/10/2020.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar. Comando-Geral.</strong> <em>Manual Técnico-Profissional nº 3.04.02/2020-CG (MTP 02)</em>: Abordagem a Pessoas. Separata do BEPM nº 10, de 05/10/2020. Belo Horizonte: Academia de Polícia Militar, 05/10/2020.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar. Comando-Geral.</strong> <em>Procedimento Operacional Padrão nº 1.03.052/2025</em>: Abordagem Policial a Pessoa em Surto de Saúde Mental. Belo Horizonte: Estado-Maior da PMMG, 10/02/2025.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar. Comando-Geral.</strong> <em>Procedimento Operacional Padrão nº 1.03.057/2026</em>: Atendimento Policial a Migrantes, Refugiados, Apátridas e Diásporas. Belo Horizonte: Estado-Maior da PMMG, 12/01/2026.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</page>
+
+  
+<footer class="pmmg-footer-nav">
+  <a class='pmmg-btn-nav pmmg-btn-prev' href='/dentro-do-confronto/atencao-seletiva/'>← Módulo 1: Leitura da Ameaça</a>
+  <button id="completeModuleBtn" class="pmmg-btn-complete" onclick="markModuleCompleted('controle-verbal')">
+    Marcar como Concluído
+  </button>
+  <a class='pmmg-btn-nav pmmg-btn-next' href='/dentro-do-confronto/gestao-de-estresse/'>Módulo 3: Gestão do Estresse →</a>
+</footer>
+
+  
+<script>
+  window.addEventListener('scroll', function() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const bar = document.getElementById('pmmgScrollProgress');
+    if (bar) bar.style.width = Math.min(100, Math.max(0, scrolled)) + '%';
+  });
+
+  function adjustFontSize(delta) {
+    const root = document.querySelector('.aula') || document.querySelector('page') || document.body;
+    const current = parseFloat(window.getComputedStyle(root, null).getPropertyValue('font-size')) || 16;
+    const next = Math.max(12, Math.min(26, current + delta));
+    root.style.fontSize = next + 'px';
+  }
+
+  function markModuleCompleted(modKey) {
+    let completed = JSON.parse(localStorage.getItem('pmmg_confronto_completed') || '[]');
+    if (!completed.includes(modKey)) {
+      completed.push(modKey);
+      localStorage.setItem('pmmg_confronto_completed', JSON.stringify(completed));
+    }
+    const btn = document.getElementById('completeModuleBtn');
+    if (btn) {
+      btn.innerHTML = '✔ Concluído com Sucesso!';
+      btn.style.background = '#15803d';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const parts = window.location.pathname.replace(/\\/g, '/').split('/');
+    let modKey = parts[parts.length - 2] || 'modulo';
+    if (parts[parts.length - 1].includes('treinamento_intervencao')) {
+      modKey = 'intervencao-policial-p2';
+    }
+    let completed = JSON.parse(localStorage.getItem('pmmg_confronto_completed') || '[]');
+    const btn = document.getElementById('completeModuleBtn');
+    if (btn && completed.includes(modKey)) {
+      btn.innerHTML = '✔ Módulo Concluído';
+      btn.style.background = '#15803d';
+    }
+  });
+</script>
+
+</body>
+</html>

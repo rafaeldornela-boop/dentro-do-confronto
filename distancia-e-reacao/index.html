@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <base href="/dentro-do-confronto/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 7: Distância Reacionária, Regra dos 21 Pés e Espaço de Segurança - Central de Treinamento Virtual PMMG</title>
+  
+<style>
+  /* ==========================================================
+     NAV BAR & FOOTER PADRÃO - CENTRAL DE TREINAMENTO VIRTUAL
+     ========================================================== */
+  .pmmg-top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    background: #0f172a;
+    border-bottom: 2px solid #b89053;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+  .pmmg-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .pmmg-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #b89053;
+    color: #0f172a !important;
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 7px 14px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .pmmg-back-btn:hover {
+    background: #d4a96a;
+    transform: translateY(-1px);
+  }
+  .pmmg-nav-badge {
+    background: rgba(255,255,255,0.08);
+    color: #e2e8f0;
+    font-size: 0.80rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border-left: 2px solid #b89053;
+    font-weight: 500;
+  }
+  .pmmg-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pmmg-tool-btn {
+    background: #1e293b;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+  }
+  .pmmg-tool-btn:hover {
+    background: #334155;
+    color: #fff;
+    border-color: #64748b;
+  }
+  .pmmg-reading-progress {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 3px;
+    background: #b89053;
+    width: 0%;
+    transition: width 0.1s ease;
+  }
+  .pmmg-footer-nav {
+    max-width: 1000px;
+    margin: 50px auto 30px auto;
+    padding: 24px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .pmmg-btn-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none !important;
+    transition: 0.2s;
+  }
+  .pmmg-btn-prev {
+    background: #e2e8f0;
+    color: #334155 !important;
+  }
+  .pmmg-btn-prev:hover {
+    background: #cbd5e1;
+    color: #0f172a !important;
+  }
+  .pmmg-btn-next {
+    background: #0f172a;
+    color: #f8fafc !important;
+    border: 1px solid #b89053;
+  }
+  .pmmg-btn-next:hover {
+    background: #1e293b;
+    border-color: #d4a96a;
+  }
+  .pmmg-btn-complete {
+    background: #166534;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.2s;
+  }
+  .pmmg-btn-complete:hover {
+    background: #15803d;
+  }
+
+  @media print {
+    .pmmg-top-nav, .pmmg-footer-nav {
+      display: none !important;
+    }
+  }
+</style>
+
+</head>
+<body style="margin: 0; padding: 0; background: #ffffff;">
+  
+<nav class="pmmg-top-nav">
+  <div class="pmmg-nav-left">
+    <a class="pmmg-back-btn" href="/dentro-do-confronto/">
+      <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>
+      Central de Instruções
+    </a>
+    <span class="pmmg-nav-badge">Trilha: Dentro do Confronto &nbsp;|&nbsp; <strong>Distância e Hiato Reacionário</strong></span>
+  </div>
+  <div class="pmmg-nav-actions">
+    <button class="pmmg-tool-btn" onclick="adjustFontSize(-1)" title="Diminuir Fonte">A-</button>
+    <button class="pmmg-tool-btn" onclick="adjustFontSize(1)" title="Aumentar Fonte">A+</button>
+    <button class="pmmg-tool-btn" onclick="window.print()" title="Imprimir Instrução / Salvar PDF">
+      <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/></svg>
+      Imprimir
+    </button>
+  </div>
+  <div class="pmmg-reading-progress" id="pmmgScrollProgress"></div>
+</nav>
+
+  <page>
+  <style>
+
+    /* =====================================================================
+       PIDF v1.3 — PMMG INSTRUCTIONAL DESIGN FRAMEWORK (CMS WISE / DomSanitizer)
+       Módulo 4: Distância, Tempo e Reação na Abordagem Policial
+       ===================================================================== */
+    *, *::before, *::after {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    :root {
+        --cor-primaria:      #826C2B;
+        --cor-caqui:         #A08F63;
+        --cor-ouro:          #B89053;
+        --cor-navy:          #141B4D;
+        --cor-texto:         #222222;
+        --cor-texto-fraco:   #555555;
+        --cor-preto:         #000000;
+        --cor-branco:        #FFFFFF;
+        --cor-cinza:         #E4E4E4;
+        --cor-cinza-claro:   #F8F8F8;
+        --cor-cinza-escuro:  #777777;
+        --cor-info:          #1995FF;
+        --cor-alerta:        #FF5722;
+        --cor-seguranca:     #AB2328;
+        --cor-sucesso:       #187731;
+
+        --espaco-p:          8px;
+        --espaco-m:          16px;
+        --espaco-l:          24px;
+        --espaco-xl:         32px;
+
+        --raio-p:            4px;
+        --raio-m:            8px;
+        --raio-g:            12px;
+
+        --sombra-suave:      0 4px 12px rgba(0, 0, 0, 0.06);
+        --sombra-card:       0 6px 16px rgba(20, 27, 77, 0.08);
+        --largura-maxima:    1140px;
+        --transicao-padrao:  all 0.25s ease-in-out;
+    }
+
+    page {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        color: var(--cor-texto);
+        line-height: 1.65;
+        font-size: clamp(0.95rem, 0.88rem + 0.35vw, 1.05rem);
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .aula {
+        width: 100%;
+        max-width: var(--largura-maxima);
+        margin: 0 auto;
+        padding: clamp(12px, 2.5vw, 24px);
+    }
+
+    /* FATIAMENTO ATÔMICO EM SECTIONS (<= 600px) */
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.15rem;
+        padding: clamp(16px, 2.5vw, 28px) 0;
+        margin-bottom: 2rem;
+        width: 100%;
+        border-bottom: 1px solid var(--cor-cinza);
+    }
+
+    section:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    /* FULLSCREEN FIXES */
+    page.fullscreen, section.fullscreen, .aula.fullscreen {
+        padding: clamp(16px, 3vw, 32px) !important;
+        box-sizing: border-box;
+    }
+    .fullscreen iframe, .fullscreen video, .fullscreen .video-container {
+        pointer-events: auto !important;
+        z-index: 2147483647 !important;
+        position: relative;
+        max-height: 85vh;
+    }
+
+    /* TIPOGRAFIA */
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        line-height: 1.3;
+        color: var(--cor-navy);
+        font-weight: 800;
+    }
+
+    h1 {
+        position: relative;
+        font-size: clamp(1.4rem, 1.2rem + 1vw, 2.1rem);
+        color: var(--cor-navy);
+        padding-bottom: 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    h1::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 90px;
+        height: 4px;
+        background: var(--cor-primaria);
+        border-radius: 4px;
+    }
+
+    h2 {
+        font-size: clamp(1.15rem, 1.05rem + 0.6vw, 1.45rem);
+        color: var(--cor-primaria);
+        border-left: 5px solid var(--cor-primaria);
+        padding-left: 12px;
+        margin-top: 0.2rem;
+    }
+
+    h3 {
+        font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.22rem);
+        color: var(--cor-navy);
+    }
+
+    h4 {
+        font-size: 1.02rem;
+        color: var(--cor-primaria);
+    }
+
+    p {
+        margin: 0;
+        text-align: justify;
+        line-height: 1.65;
+    }
+
+    strong { font-weight: 700; color: var(--cor-navy); }
+    em { font-style: italic; }
+
+    .subtitulo {
+        font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.1rem);
+        color: var(--cor-caqui);
+        font-weight: 600;
+        margin-top: -0.25rem;
+    }
+
+    /* PAINÉIS SEMÂNTICOS PIDF */
+    .painel {
+        position: relative;
+        padding: 1.15rem 1.35rem;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-left: 5px solid var(--cor-primaria);
+        border-radius: var(--raio-m);
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        margin: 0.4rem 0;
+    }
+
+    .painel::before {
+        display: block;
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    .painel.neutro { border-left-color: var(--cor-primaria); background: #FAF9F6; }
+    .painel.neutro::before { content: "INFORMAÇÃO OPERACIONAL"; color: var(--cor-primaria); }
+
+    .painel.seguranca { border-left-color: var(--cor-seguranca); background: #FFF6F6; }
+    .painel.seguranca::before { content: "ALERTA DE SEGURANÇA OPERACIONAL"; color: var(--cor-seguranca); }
+
+    .painel.doutrina { border-left-color: var(--cor-navy); background: #F6F8FC; }
+    .painel.doutrina::before { content: "FUNDAMENTAÇÃO DOUTRINÁRIA PMMG"; color: var(--cor-navy); }
+
+    .painel.instrutor { border-left-color: var(--cor-caqui); background: #FDFBF7; }
+    .painel.instrutor::before { content: "DICA TÁTICA DO INSTRUTOR"; color: var(--cor-primaria); }
+
+    .painel.erro { border-left-color: var(--cor-alerta); background: #FFF8F5; }
+    .painel.erro::before { content: "ERRO CRÍTICO A EVITAR"; color: var(--cor-alerta); }
+
+    /* PROCEDIMENTO NUMERADO */
+    .procedimento {
+        counter-reset: etapa;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        margin: 0.4rem 0;
+    }
+
+    .etapa {
+        counter-increment: etapa;
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .etapa::before {
+        content: counter(etapa);
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        border-radius: 50%;
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        font-size: 0.95rem;
+        flex-shrink: 0;
+        align-self: flex-start;
+        box-shadow: var(--sombra-suave);
+    }
+
+    .etapa-conteudo { flex: 1; min-width: 0; }
+    .etapa-conteudo h4 { margin: 0 0 0.25rem 0; color: var(--cor-navy); font-size: 1rem; }
+    .etapa-conteudo p { margin: 0; font-size: 0.95rem; }
+
+    /* FAÇA / NÃO FAÇA */
+    .faca-nao {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 14px;
+        margin: 0.4rem 0;
+        width: 100%;
+    }
+
+    .faca {
+        border: 1px solid #C3E6CB;
+        border-top: 5px solid var(--cor-sucesso);
+        background: #F8FDF9;
+        padding: 14px 16px;
+        border-radius: var(--raio-m);
+    }
+    .faca h4 { color: var(--cor-sucesso); margin-bottom: 0.5rem; font-size: 0.98rem; }
+
+    .nao-faca {
+        border: 1px solid #F5C6CB;
+        border-top: 5px solid var(--cor-seguranca);
+        background: #FFF9F9;
+        padding: 14px 16px;
+        border-radius: var(--raio-m);
+    }
+    .nao-faca h4 { color: var(--cor-seguranca); margin-bottom: 0.5rem; font-size: 0.98rem; }
+
+    .faca ul, .nao-faca ul { margin: 0; padding-left: 1.2rem; }
+    .faca li, .nao-faca li { margin-bottom: 0.4rem; font-size: 0.92rem; line-height: 1.5; }
+
+    /* CARDS EM GRADE (SUBSTITUTO OFICIAL DE TABELAS) */
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 14px;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .card-nivel {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        padding: 14px 16px;
+        box-shadow: var(--sombra-suave);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .card-nivel.nivel-1 { border-left: 5px solid #EAB308; }
+    .card-nivel.nivel-2 { border-left: 5px solid #FF5722; }
+    .card-nivel.nivel-3 { border-left: 5px solid #DC2626; }
+    .card-nivel.nivel-sucesso { border-left: 5px solid var(--cor-sucesso); }
+    .card-nivel.nivel-doutrina { border-left: 5px solid var(--cor-navy); }
+
+    .card-item-header {
+        font-weight: 800;
+        font-size: 0.98rem;
+        color: var(--cor-navy);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1px solid #F1F5F9;
+        padding-bottom: 4px;
+    }
+
+    /* CICLO ICDA EM CARDS SEQUENCIAIS */
+    .ciclo-icda-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+        gap: 12px;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .ciclo-card {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        padding: 12px 14px;
+        box-shadow: var(--sombra-suave);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        border-top: 4px solid var(--cor-primaria);
+    }
+
+    .ciclo-card-numero {
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        color: var(--cor-primaria);
+        text-transform: uppercase;
+    }
+
+    .ciclo-card-fase {
+        font-size: 0.98rem;
+        font-weight: 800;
+        color: var(--cor-navy);
+    }
+
+    .ciclo-card-tempo {
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: var(--cor-seguranca);
+        background: #FFF1F2;
+        padding: 2px 6px;
+        border-radius: var(--raio-p);
+        display: inline-block;
+        width: fit-content;
+    }
+
+    .ciclo-card-desc {
+        font-size: 0.88rem;
+        color: var(--cor-texto-fraco);
+        line-height: 1.45;
+        margin: 0;
+    }
+
+    /* MÍDIAS: IMAGENS E VÍDEOS (SEM ZOOM EM TELA CHEIA) */
+    .container-imagem {
+        display: block;
+        width: 100%;
+        max-width: 860px;
+        margin: 0.5rem auto;
+        border-radius: var(--raio-m);
+        border: 1px solid var(--cor-cinza);
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+        background: #FFFFFF;
+    }
+
+    .container-imagem img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 520px;
+        object-fit: contain;
+        cursor: default;
+        transition: transform 0.25s ease;
+    }
+
+    /* DESTAQUE CONTIDO AO RECEBER FOCO (SEM SAIR DO FLUXO DA PÁGINA) */
+    .container-imagem img[tabindex="0"]:focus {
+        outline: 3px solid var(--cor-primaria);
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 860px;
+        margin: 0.5rem auto;
+        aspect-ratio: 16 / 9;
+        background: #000000;
+        border-radius: var(--raio-m);
+        overflow: hidden;
+        box-shadow: var(--sombra-card);
+    }
+
+    .video-container video, .video-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+        object-fit: contain;
+    }
+
+    .legenda-midia {
+        font-size: 0.82rem;
+        text-align: center;
+        color: var(--cor-texto-fraco);
+        margin: 0.25rem 0 0.5rem 0;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    /* QUIZ INTERATIVO COM GABARITO EXPANSÍVEL (SEM JS) */
+    .quiz-bloco {
+        background: #FDFCF9;
+        border: 1px solid var(--cor-caqui);
+        border-radius: var(--raio-m);
+        padding: 16px 20px;
+        margin: 0.6rem 0;
+    }
+
+    .quiz-pergunta {
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--cor-navy);
+        margin-bottom: 12px;
+    }
+
+    .quiz-opcoes {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .quiz-opcao-box {
+        display: block;
+        padding: 10px 14px;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-p);
+        font-size: 0.94rem;
+        transition: var(--transicao-padrao);
+    }
+
+    /* GABARITO EXPANSÍVEL */
+    details.quiz-gabarito {
+        margin-top: 14px;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-caqui);
+        border-radius: var(--raio-m);
+        overflow: hidden;
+    }
+
+    details.quiz-gabarito summary.btn-gabarito {
+        background: #FAF8F2;
+        color: var(--cor-primaria);
+        font-weight: 700;
+        font-size: 0.92rem;
+        padding: 10px 14px;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+        border-bottom: 1px solid transparent;
+        transition: var(--transicao-padrao);
+    }
+
+    details.quiz-gabarito summary.btn-gabarito::-webkit-details-marker { display: none; }
+
+    details.quiz-gabarito summary.btn-gabarito::after {
+        content: "▼ CONFERIR GABARITO E JUSTIFICATIVA";
+        font-size: 0.74rem;
+        font-weight: 800;
+        color: var(--cor-primaria);
+    }
+
+    details.quiz-gabarito[open] summary.btn-gabarito::after {
+        content: "▲ OCULTAR GABARITO";
+    }
+
+    details.quiz-gabarito[open] summary.btn-gabarito {
+        border-bottom-color: var(--cor-cinza);
+    }
+
+    .gabarito-conteudo {
+        padding: 14px 16px;
+        background: #F8FDF9;
+        border-left: 4px solid var(--cor-sucesso);
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+
+    .gabarito-conteudo p {
+        margin-bottom: 0.5rem;
+    }
+
+    .gabarito-conteudo p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* RESPONSIVIDADE MOBILE */
+    @media (max-width: 768px) {
+        .aula { padding: 12px; }
+        section { gap: 0.95rem; padding: 14px 0; margin-bottom: 1.5rem; }
+        .etapa { gap: 0.75rem; }
+        .etapa::before { width: 32px; height: 32px; min-width: 32px; font-size: 0.88rem; }
+        .faca-nao { grid-template-columns: 1fr; }
+        .ciclo-icda-cards { grid-template-columns: 1fr; }
+    }
+
+    /* IMPRESSÃO / PDF */
+    @media print {
+        page, .aula { padding: 0 !important; max-width: 100% !important; font-size: 10pt !important; }
+        section { page-break-after: always; break-after: page; border-bottom: none; }
+        .painel, .procedimento, .card-nivel { page-break-inside: avoid; break-inside: avoid; }
+        video { display: none !important; }
+        details.quiz-gabarito { display: block !important; }
+        details.quiz-gabarito summary { display: none !important; }
+    }
+
+  </style>
+
+  <div class="aula">
+    <!-- SLIDE 1: ABERTURA & PRINCÍPIO OPERACIONAL -->
+    <section>
+      <h1>Distância, Tempo e Reação na Abordagem</h1>
+      <p class="subtitulo">Gerenciamento Espaço-Temporal, Hiato Reacionário e Evasão Angular da Linha de Ataque (MTP 3.04.01 e 3.04.02)</p>
+
+      <div class="painel doutrina">
+        <h3>Princípio Operacional: Distância é Tempo de Resposta</h3>
+        <p>No confronto policial, o espaço físico entre a guarnição e o abordado converte-se diretamente em tempo cognitivo e biomecânico para perceber a ameaça, decidir a resposta e acionar os meios defensivos proporcionais (MTP 3.04.01). A redução de distância sem controle tático reduz a margem de reação do policial.</p>
+      </div>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">Mais Distância = Margem Temporal Favorável</div>
+          <p>Permite processar intenções hostis, realizar comando verbal imperativo, acionar a cobertura da guarnição e selecionar alternativas táticas proporcionais.</p>
+        </div>
+
+        <div class="card-nivel nivel-3">
+          <div class="card-item-header">Menos Distância = Zona de Engajamento Imediato</div>
+          <p>Posiciona o policial no raio de ação direta do agressor, onde uma investida com lâmina ou tentativa de arrebatamento de arma consome frações de segundo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: O EXPERIMENTO DOS 21 PÉS (TUELLER) -->
+    <section>
+      <h2>O Experimento dos 21 Pés e a Cinética da Ameaça</h2>
+      <p>Em 1983, o Tenente Dennis Tueller mensurou a dinâmica temporal entre o avanço de um indivíduo com arma branca e a reação armada de um operador:</p>
+
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube-nocookie.com/embed/bQcMt5PM6VM" 
+          title="Demonstração Prática da Regra de Tueller (Tueller Drill em Câmera Lenta - Faca vs Pistola)" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="legenda-midia">Vídeo 1 — Demonstração Prática da Regra de Tueller (Tueller Drill) em Câmera Lenta: Velocidade do Ataque com Arma Branca vs. Tempo de Saque e Reação Armada. <em>(Fonte: HavocWorks / Análise Doutrinária Dennis Tueller)</em></p>
+
+      <div class="painel seguranca">
+        <p><strong>ALERTA DE SEGURANÇA:</strong> A uma distância <strong>inferior a 6,4 metros (~21 pés / 7 metros)</strong>, um agressor em corrida frontal pode atingir o policial militar antes que este conclua o saque, enquadramento e disparos defensivos eficazes.</p>
+      </div>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-2">
+          <div class="card-item-header">O Experimento Tueller (1983)</div>
+          <p>Um indivíduo motivado percorre 6,4 metros em aproximadamente <strong>1,5 a 1,7 segundo</strong> — tempo equivalente ou inferior ao necessário para o policial perceber o ataque e sacar do coldre sob surpresa.</p>
+        </div>
+
+        <div class="card-nivel nivel-3">
+          <div class="card-item-header">A Distância Não é Garantia Absoluta</div>
+          <p>A marca dos 21 pés não constitui barreira física. Coldres de retenção Nível II/III da PMMG demandam entre 1,8s e 2,2s sob estresse agudo. Além disso, disparos isolados não interrompem a movimentação do agressor instantaneamente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: INFOGRÁFICO DOUTRINÁRIO OFICIAL (FIGURA 1) -->
+    <section>
+      <h2>Mapeamento Espaço-Temporal da Ameaça</h2>
+      <p>A correlação visual entre distância física e tempo de resposta demonstra a necessidade de preservar espaço durante a intervenção:</p>
+
+      <div class="container-imagem">
+        <img src="imagem/foto_distancia.png" alt="Infográfico Doutrinário Oficial das Distâncias Táticas e Regra de Tueller" tabindex="0">
+      </div>
+      <p class="legenda-midia">Figura 1 — Correlação de Distâncias Táticas, Zonas de Perigo e Tempos de Reação. <em>(Fonte: Centro de Treinamento Profissional — CTP/PMMG / Dennis Tueller)</em></p>
+
+      <div class="painel instrutor">
+        <p><strong>DIRETRIZ DO MTP 3.04.02:</strong> Estabeleça a distância de segurança primária de <strong>5 a 7 metros</strong> antes de iniciar comandos verbais ou procedimentos de busca. Havendo suspeita de porte de arma branca, amplie a margem para além de 7 metros e posicione anteparo físico.</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: A MANOBRA TÁTICA "SAIA DO X" (PROCEDIMENTO E GEOMETRIA) -->
+    <section>
+      <h2>A Manobra Tática "Saia do X" (Evasão Angular 45°)</h2>
+      <p>Permanecer estático ou recuar em linha reta diante de investida com arma branca resulta em alcance do agressor. O operador deve quebrar a linha reta de avanço do atacante:</p>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-3">
+          <div class="card-item-header">Recuo em Linha Reta: Desvantagem Biomecânica</div>
+          <p>A velocidade média de corrida frontal humana é de aproximadamente <strong>4,5 m/s</strong>, enquanto a velocidade de recuo de costas é de apenas <strong>1,5 m/s</strong>, com risco de queda. Recuar em linha reta mantém o policial na rota direta da lâmina.</p>
+        </div>
+
+        <div class="card-nivel nivel-sucesso">
+          <div class="card-item-header">Evasão Angular 45°: Quebra de Trajetória</div>
+          <p>O deslocamento diagonal força o agressor a frear e reorientar a passada, gerando uma janela de ganho temporal de <strong>+0,8s a 1,2s</strong> para saque e busca de abrigo.</p>
+        </div>
+      </div>
+
+      <div class="procedimento">
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>1º Passo: Evasão Angular Imediata</h4>
+            <p>Desloque-se na diagonal a 45° para fora da linha reta de avanço do agressor, quebrando o vetor de ataque frontal.</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>2º Passo: Interposição de Barreira Física</h4>
+            <p>Interponha a viatura policial (bloco do motor), postes, muretas ou desníveis de terreno entre você e o agressor para bloquear o avanço direto.</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>3º Passo: Resposta Armada Proporcional</h4>
+            <p>Execute o saque durante a movimentação; mantida a ameaça letal iminente e frustrado o comando verbal, empregue a força letal em legítima defesa (Art. 25 do Código Penal).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: ANÁLISE DE CASO REAL EM VÍDEO -->
+    <section>
+      <h2>Análise de Caso Real: Investida com Arma Branca em Curta Distância</h2>
+      <p>Assista ao registro operacional gravado por câmera policial e observe a velocidade com que a distância física é percorrida pelo agressor:</p>
+
+      <div class="video-container">
+        <video controls preload="metadata" poster="imagem/foto_distancia.png">
+          <source src="video/casuistica_distancia_tueller.mp4" type="video/mp4">
+          Seu navegador não suporta a reprodução deste vídeo.
+        </video>
+      </div>
+      <p class="legenda-midia">Vídeo 2 — Registro Operacional de Ataque com Arma Branca em Curta Distância e Resposta Armada. <em>(Fonte: Acervo Operacional CTP/PMMG)</em></p>
+
+      <div class="painel doutrina">
+        <h3>Debriefing Operacional do Caso</h3>
+        <p>A investida ocorreu em <strong>menos de 2 segundos</strong>. A curta distância inicial exigiu reação motora imediata. Caso o policial tivesse recuado de costas em linha reta, teria sido alcançado antes da conclusão do disparo defensivo.</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: O HIATO REACIONÁRIO (BLUEPRINT DEMONSTRATIVO & DADOS EM HTML/CSS) -->
+    <section>
+      <h2>O Hiato Reacionário e a Geometria Temporal</h2>
+      <p>O policial militar atua em desvantagem temporal contra quem inicia a agressão armada, em razão do tempo biológico e biomecânico de processamento neurológico:</p>
+
+      <!-- IMAGEM BLUEPRINT TÉCNICO: GEOMETRIA TEMPORAL E MANOBRA SAIA DO X -->
+      <div class="container-imagem">
+        <img src="imagem/blueprint_tatico_distancia.jpg" alt="Planta Técnica Blueprint: Posição Inicial no Ponto X e Vetor de Saída a 45° da Área de Perigo" tabindex="0">
+      </div>
+      <p class="legenda-midia">Figura 2 — Planta Técnica Blueprint: Posição Inicial no Ponto "X" (Eixo Retilíneo de Perigo), Vetor de Saída a 45° e Evasão da Área de Agressão. <em>(Fonte: Centro de Treinamento Profissional — CTP/PMMG)</em></p>
+
+      <!-- DADOS TÉCNICOS E MÉTRICAS ESTRUTURADOS DIRETAMENTE EM HTML E CSS -->
+      <div class="cards-container">
+        <div class="card-nivel nivel-3">
+          <div class="card-item-header">Agressor • Dados de Ação (Iniciativa)</div>
+          <p><strong>Tempo inicial de partida:</strong> 0,00 segundo (decisão prévia tomada).</p>
+          <p><strong>Velocidade de corrida frontal:</strong> ~4,3 a 4,8 m/s (~16 km/h em arrancada).</p>
+          <p><strong>Distância percorrida em 1,5s:</strong> 6,4 metros (21 pés lineares).</p>
+        </div>
+
+        <div class="card-nivel nivel-sucesso">
+          <div class="card-item-header">Policial Militar • Dados de Reação Defensiva</div>
+          <p><strong>Latência neural compulsória:</strong> 1,30s a 1,70s (percepção, decisão e acionamento).</p>
+          <p><strong>Tempo de saque (coldre Nível II/III):</strong> 1,50s a 2,00s sob estresse agudo.</p>
+          <p><strong>Ganho temporal da quebra a 45°:</strong> +0,80s a 1,20s (desaceleração forçada do agressor).</p>
+        </div>
+      </div>
+
+      <p>Detalhamento cronométrico das 4 fases neurais do Ciclo Decisório (MTP 3.04.01):</p>
+
+      <!-- CICLO ICDA EM CARDS SEQUENCIAIS (HTML/CSS PURO) -->
+      <div class="ciclo-icda-cards">
+        <div class="ciclo-card">
+          <span class="ciclo-card-numero">Fase 1</span>
+          <div class="ciclo-card-fase">Identificar</div>
+          <div class="ciclo-card-tempo">~0,20s a 0,30s</div>
+          <p class="ciclo-card-desc">Detecção visual da movimentação hostil ou extração da lâmina pelo suspeito.</p>
+        </div>
+
+        <div class="ciclo-card">
+          <span class="ciclo-card-numero">Fase 2</span>
+          <div class="ciclo-card-fase">Certificar</div>
+          <div class="ciclo-card-tempo">~0,30s a 0,50s</div>
+          <p class="ciclo-card-desc">Processamento cerebral: confirmação de que o estímulo é um ataque letal real.</p>
+        </div>
+
+        <div class="ciclo-card">
+          <span class="ciclo-card-numero">Fase 3</span>
+          <div class="ciclo-card-fase">Decidir</div>
+          <div class="ciclo-card-tempo">~0,25s a 0,40s</div>
+          <p class="ciclo-card-desc">Seleção da conduta motora: quebrar o eixo, sacar a arma e buscar abrigo.</p>
+        </div>
+
+        <div class="ciclo-card">
+          <span class="ciclo-card-numero">Fase 4</span>
+          <div class="ciclo-card-fase">Agir</div>
+          <div class="ciclo-card-tempo">~0,30s a 0,50s</div>
+          <p class="ciclo-card-desc">Transmissão neuromuscular motora: movimentação física, saque e disparo.</p>
+        </div>
+      </div>
+
+      <div class="painel neutro">
+        <p><strong>SÍNTESE TEMPORAL:</strong> Enquanto o militar consome de <strong>1,05s a 1,70s</strong> para processar e iniciar a resposta, o atacante percorre de 5 a 6 metros em direção à guarnição.</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: O RISCO DA APROXIMAÇÃO AUTOMÁTICA -->
+    <section>
+      <h2>O Risco da Aproximação Automática</h2>
+      <p>Em abordagens de rotina, policiais frequentemente perdem a vantagem da distância por inércia ou comodismo:</p>
+
+      <div class="faca-nao">
+        <div class="nao-faca">
+          <h4>Condutas Inadequadas (Erros Críticos)</h4>
+          <ul>
+            <li>Aproximar-se espontaneamente do abordado para conferir documentos ou ouvi-lo falar.</li>
+            <li>Encurtar a distância antes de verificar visualmente a linha da cintura e as mãos do suspeito.</li>
+            <li>Posicionar-se colado ao indivíduo, bloqueando a linha de visada e o ângulo de proteção do Policial de Cobertura (V1).</li>
+          </ul>
+        </div>
+
+        <div class="faca">
+          <h4>Condutas Recomendadas (Padrão PMMG)</h4>
+          <ul>
+            <li>Manter distância mínima de segurança de 5 a 7 metros com comandos verbais claros e objetivos.</li>
+            <li>Determinar que o abordado caminhe até o ponto de controle definido pelo policial militar.</li>
+            <li><strong>Regra do MTP 3.04.02:</strong> "Faça o abordado vir até o seu terreno de controle; não entre no raio de ação dele".</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: FIXAÇÃO DE CONHECIMENTO SITUACIONAL -->
+    <section>
+      <h2>Fixação de Conhecimento Situacional</h2>
+
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">Cenário Operacional: Durante intervenção em via pública, um indivíduo empunha um facão a cerca de 6 metros da guarnição. Ao receber ordem verbal para largar a arma, ele avança em corrida frontal contra o policial de contato. Qual deve ser a conduta tática primária imediata?</div>
+        
+        <div class="quiz-opcoes">
+          <div class="quiz-opcao-box">A) Permanecer na posição e tentar sacar a pistola para efetuar disparos antes do contato físico.</div>
+          <div class="quiz-opcao-box">B) Recuar em linha reta enquanto verbaliza para que o agressor cesse o avanço.</div>
+          <div class="quiz-opcao-box">C) Executar deslocamento angular a 45° ("Saia do X"), buscar anteparo físico/viatura e, persistindo a agressão letal iminente, empregar a força letal proporcional.</div>
+          <div class="quiz-opcao-box">D) Tentar conter o agressor com técnicas de desarme e defesa pessoal desarmada.</div>
+        </div>
+
+        <!-- GABARITO EXPANSÍVEL (SEM JS, OCULTO POR PADRÃO) -->
+        <details class="quiz-gabarito">
+          <summary class="btn-gabarito">Conferir gabarito e fundamentação técnica</summary>
+          <div class="gabarito-conteudo">
+            <p><strong>Alternativa Correta: C</strong></p>
+            <p><strong>Fundamentação Técnica (MTP 3.04.01 e 3.04.02):</strong> A distâncias inferiores a 7 metros, o recuo em marcha à ré apresenta desvantagem biomecânica de velocidade frente à corrida frontal do agressor. O deslocamento angular quebra a trajetória reta do ataque, impõe alteração de curso ao agressor e possibilita a interposição de barreira física ou emprego de arma de fogo em legítima defesa (Art. 25 do Código Penal).</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- SLIDE 9: REFERÊNCIAS BIBLIOGRÁFICAS E DOUTRINÁRIAS -->
+    <section>
+      <h2>Referências Bibliográficas e Doutrinárias</h2>
+      <p class="subtitulo">Normatização ABNT NBR 6023 — Ordenação Alfabética Rigorosa</p>
+
+      <div class="painel doutrina">
+        <ul>
+          <li><strong>FORCE SCIENCE INSTITUTE (FSI).</strong> <em>Studies on reaction time and edged-weapon attacks: evaluating the 21-foot rule</em>. Mankato, MN: Force Science Institute, 2018.</li>
+          <li><strong>LEWINSKI, William et al.</strong> The dynamic nature of shooting incidents: evaluating reaction time and shooter movement. <em>International Journal of Police Science & Management</em>, v. 17, n. 2, p. 115-128, 2015.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar.</strong> <em>Manual Técnico-Profissional nº 3.04.01/2020-CG</em>: Intervenção Policial, Processo de Comunicação e Uso da Força. Belo Horizonte: Academia de Polícia Militar, 2020.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar.</strong> <em>Manual Técnico-Profissional nº 3.04.02/2020-CG</em>: Abordagem a Pessoas e Técnicas de Busca. Belo Horizonte: Academia de Polícia Militar, 2020.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar. Comando-Geral.</strong> <em>Diretriz de Segurança para o Emprego Operacional nº 3.02.007/2024-CG</em>. Belo Horizonte: PMMG, 2024.</li>
+          <li><strong>TUELLER, Dennis.</strong> How Close is Too Close? <em>SWAT Magazine</em>, v. 2, n. 1, p. 54-58, Mar. 1983.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</page>
+
+  
+<footer class="pmmg-footer-nav">
+  <a class='pmmg-btn-nav pmmg-btn-prev' href='/dentro-do-confronto/debriefing/'>← Módulo 6: Debriefing</a>
+  <button id="completeModuleBtn" class="pmmg-btn-complete" onclick="markModuleCompleted('distancia-e-reacao')">
+    Marcar como Concluído
+  </button>
+  <a class='pmmg-btn-nav pmmg-btn-next' href='/dentro-do-confronto/'>Concluir Trilha (Voltar ao Início) 🏁</a>
+</footer>
+
+  
+<script>
+  window.addEventListener('scroll', function() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const bar = document.getElementById('pmmgScrollProgress');
+    if (bar) bar.style.width = Math.min(100, Math.max(0, scrolled)) + '%';
+  });
+
+  function adjustFontSize(delta) {
+    const root = document.querySelector('.aula') || document.querySelector('page') || document.body;
+    const current = parseFloat(window.getComputedStyle(root, null).getPropertyValue('font-size')) || 16;
+    const next = Math.max(12, Math.min(26, current + delta));
+    root.style.fontSize = next + 'px';
+  }
+
+  function markModuleCompleted(modKey) {
+    let completed = JSON.parse(localStorage.getItem('pmmg_confronto_completed') || '[]');
+    if (!completed.includes(modKey)) {
+      completed.push(modKey);
+      localStorage.setItem('pmmg_confronto_completed', JSON.stringify(completed));
+    }
+    const btn = document.getElementById('completeModuleBtn');
+    if (btn) {
+      btn.innerHTML = '✔ Concluído com Sucesso!';
+      btn.style.background = '#15803d';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const parts = window.location.pathname.replace(/\\/g, '/').split('/');
+    let modKey = parts[parts.length - 2] || 'modulo';
+    if (parts[parts.length - 1].includes('treinamento_intervencao')) {
+      modKey = 'intervencao-policial-p2';
+    }
+    let completed = JSON.parse(localStorage.getItem('pmmg_confronto_completed') || '[]');
+    const btn = document.getElementById('completeModuleBtn');
+    if (btn && completed.includes(modKey)) {
+      btn.innerHTML = '✔ Módulo Concluído';
+      btn.style.background = '#15803d';
+    }
+  });
+</script>
+
+</body>
+</html>

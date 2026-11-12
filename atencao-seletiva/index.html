@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <base href="/dentro-do-confronto/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 1: Leitura da Ameaça e Cegueira Cognitiva - Central de Treinamento Virtual PMMG</title>
+  
+<style>
+  /* ==========================================================
+     NAV BAR & FOOTER PADRÃO - CENTRAL DE TREINAMENTO VIRTUAL
+     ========================================================== */
+  .pmmg-top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    background: #0f172a;
+    border-bottom: 2px solid #b89053;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+  .pmmg-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .pmmg-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #b89053;
+    color: #0f172a !important;
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 7px 14px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .pmmg-back-btn:hover {
+    background: #d4a96a;
+    transform: translateY(-1px);
+  }
+  .pmmg-nav-badge {
+    background: rgba(255,255,255,0.08);
+    color: #e2e8f0;
+    font-size: 0.80rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border-left: 2px solid #b89053;
+    font-weight: 500;
+  }
+  .pmmg-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pmmg-tool-btn {
+    background: #1e293b;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+  }
+  .pmmg-tool-btn:hover {
+    background: #334155;
+    color: #fff;
+    border-color: #64748b;
+  }
+  .pmmg-reading-progress {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 3px;
+    background: #b89053;
+    width: 0%;
+    transition: width 0.1s ease;
+  }
+  .pmmg-footer-nav {
+    max-width: 1000px;
+    margin: 50px auto 30px auto;
+    padding: 24px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .pmmg-btn-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none !important;
+    transition: 0.2s;
+  }
+  .pmmg-btn-prev {
+    background: #e2e8f0;
+    color: #334155 !important;
+  }
+  .pmmg-btn-prev:hover {
+    background: #cbd5e1;
+    color: #0f172a !important;
+  }
+  .pmmg-btn-next {
+    background: #0f172a;
+    color: #f8fafc !important;
+    border: 1px solid #b89053;
+  }
+  .pmmg-btn-next:hover {
+    background: #1e293b;
+    border-color: #d4a96a;
+  }
+  .pmmg-btn-complete {
+    background: #166534;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.2s;
+  }
+  .pmmg-btn-complete:hover {
+    background: #15803d;
+  }
+
+  @media print {
+    .pmmg-top-nav, .pmmg-footer-nav {
+      display: none !important;
+    }
+  }
+</style>
+
+</head>
+<body style="margin: 0; padding: 0; background: #ffffff;">
+  
+<nav class="pmmg-top-nav">
+  <div class="pmmg-nav-left">
+    <a class="pmmg-back-btn" href="/dentro-do-confronto/">
+      <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>
+      Central de Instruções
+    </a>
+    <span class="pmmg-nav-badge">Trilha: Dentro do Confronto &nbsp;|&nbsp; <strong>Leitura da Ameaça e Atenção Seletiva</strong></span>
+  </div>
+  <div class="pmmg-nav-actions">
+    <button class="pmmg-tool-btn" onclick="adjustFontSize(-1)" title="Diminuir Fonte">A-</button>
+    <button class="pmmg-tool-btn" onclick="adjustFontSize(1)" title="Aumentar Fonte">A+</button>
+    <button class="pmmg-tool-btn" onclick="window.print()" title="Imprimir Instrução / Salvar PDF">
+      <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/></svg>
+      Imprimir
+    </button>
+  </div>
+  <div class="pmmg-reading-progress" id="pmmgScrollProgress"></div>
+</nav>
+
+  <page>
+  <style>
+
+    /* =====================================================================
+       PIDF v1.3 — PMMG INSTRUCTIONAL DESIGN FRAMEWORK (CMS WISE / DomSanitizer)
+       ===================================================================== */
+    *, *::before, *::after {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    :root {
+        --cor-primaria:      #826C2B;
+        --cor-caqui:         #A08F63;
+        --cor-ouro:          #B89053;
+        --cor-navy:          #141B4D;
+        --cor-texto:         #222222;
+        --cor-texto-fraco:   #555555;
+        --cor-preto:         #000000;
+        --cor-branco:        #FFFFFF;
+        --cor-cinza:         #E4E4E4;
+        --cor-cinza-claro:   #F8F8F8;
+        --cor-cinza-escuro:  #777777;
+        --cor-info:          #1995FF;
+        --cor-alerta:        #FF5722;
+        --cor-seguranca:     #AB2328;
+        --cor-sucesso:       #187731;
+
+        --espaco-p:          8px;
+        --espaco-m:          16px;
+        --espaco-l:          24px;
+        --espaco-xl:         32px;
+
+        --raio-p:            4px;
+        --raio-m:            8px;
+        --raio-g:            12px;
+
+        --sombra-suave:      0 4px 12px rgba(0, 0, 0, 0.06);
+        --sombra-card:       0 6px 16px rgba(20, 27, 77, 0.08);
+        --largura-maxima:    1140px;
+        --transicao-padrao:  all 0.25s ease-in-out;
+    }
+
+    page {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        color: var(--cor-texto);
+        line-height: 1.65;
+        font-size: clamp(0.95rem, 0.88rem + 0.35vw, 1.05rem);
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .aula {
+        width: 100%;
+        max-width: var(--largura-maxima);
+        margin: 0 auto;
+        padding: clamp(12px, 2.5vw, 24px);
+    }
+
+    /* FATIAMENTO ATÔMICO EM SECTIONS (<= 600px) */
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.15rem;
+        padding: clamp(16px, 2.5vw, 28px) 0;
+        margin-bottom: 2rem;
+        width: 100%;
+        border-bottom: 1px solid var(--cor-cinza);
+    }
+
+    section:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    /* FULLSCREEN FIXES */
+    page.fullscreen, section.fullscreen, .aula.fullscreen {
+        padding: clamp(16px, 3vw, 32px) !important;
+        box-sizing: border-box;
+    }
+    .fullscreen iframe, .fullscreen video, .fullscreen .video-container {
+        pointer-events: auto !important;
+        z-index: 2147483647 !important;
+        position: relative;
+        max-height: 85vh;
+    }
+
+    /* TIPOGRAFIA */
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        line-height: 1.3;
+        color: var(--cor-navy);
+        font-weight: 800;
+    }
+
+    h1 {
+        position: relative;
+        font-size: clamp(1.4rem, 1.2rem + 1vw, 2.1rem);
+        color: var(--cor-navy);
+        padding-bottom: 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    h1::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 90px;
+        height: 4px;
+        background: var(--cor-primaria);
+        border-radius: 4px;
+    }
+
+    h2 {
+        font-size: clamp(1.15rem, 1.05rem + 0.6vw, 1.45rem);
+        color: var(--cor-primaria);
+        border-left: 5px solid var(--cor-primaria);
+        padding-left: 12px;
+        margin-top: 0.2rem;
+    }
+
+    h3 {
+        font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.22rem);
+        color: var(--cor-navy);
+    }
+
+    h4 {
+        font-size: 1.02rem;
+        color: var(--cor-primaria);
+    }
+
+    p {
+        margin: 0;
+        text-align: justify;
+        line-height: 1.65;
+    }
+
+    strong { font-weight: 700; color: var(--cor-navy); }
+    em { font-style: italic; }
+
+    .subtitulo {
+        font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.1rem);
+        color: var(--cor-caqui);
+        font-weight: 600;
+        margin-top: -0.25rem;
+    }
+
+    .data-atualizacao {
+        font-size: 0.82rem;
+        color: var(--cor-texto-fraco);
+        font-style: italic;
+        margin-bottom: 0.5rem;
+    }
+
+    /* PAINÉIS SEMÂNTICOS PIDF */
+    .painel {
+        position: relative;
+        padding: 1.15rem 1.35rem;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-left: 5px solid var(--cor-primaria);
+        border-radius: var(--raio-m);
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        margin: 0.4rem 0;
+    }
+
+    .painel::before {
+        display: block;
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    .painel.neutro { border-left-color: var(--cor-primaria); background: #FAF9F6; }
+    .painel.neutro::before { content: "INFORMAÇÃO OPERACIONAL"; color: var(--cor-primaria); }
+
+    .painel.seguranca { border-left-color: var(--cor-seguranca); background: #FFF6F6; }
+    .painel.seguranca::before { content: "ALERTA DE SEGURANÇA OPERACIONAL"; color: var(--cor-seguranca); }
+
+    .painel.doutrina { border-left-color: var(--cor-navy); background: #F6F8FC; }
+    .painel.doutrina::before { content: "FUNDAMENTAÇÃO DOUTRINÁRIA PMMG"; color: var(--cor-navy); }
+
+    .painel.instrutor { border-left-color: var(--cor-caqui); background: #FDFBF7; }
+    .painel.instrutor::before { content: "DICA TÁTICA DO INSTRUTOR"; color: var(--cor-primaria); }
+
+    .painel.erro { border-left-color: var(--cor-alerta); background: #FFF8F5; }
+    .painel.erro::before { content: "ERRO CRÍTICO A EVITAR"; color: var(--cor-alerta); }
+
+    .painel.observacao { border-left-color: var(--cor-info); background: #F5FAFF; }
+    .painel.observacao::before { content: "OBSERVAÇÃO TÉCNICA"; color: var(--cor-info); }
+
+    .painel.pratica { border-left-color: var(--cor-sucesso); background: #F5FAF6; }
+    .painel.pratica::before { content: "DRILL DE APLICAÇÃO PRÁTICA"; color: var(--cor-sucesso); }
+
+    .painel.importante { border-left-color: var(--cor-primaria); background: #FCFAF4; }
+    .painel.importante::before { content: "IMPORTANTE"; color: var(--cor-primaria); }
+
+    .painel.resumo { border-left-color: var(--cor-cinza-escuro); background: #FAFAFA; }
+    .painel.resumo::before { content: "SÍNTESE DA REGRA DE OURO"; color: var(--cor-cinza-escuro); }
+
+    /* PROCEDIMENTO NUMERADO */
+    .procedimento {
+        counter-reset: etapa;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        margin: 0.4rem 0;
+    }
+
+    .etapa {
+        counter-increment: etapa;
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .etapa::before {
+        content: counter(etapa);
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 50%;
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        font-size: 1rem;
+        flex-shrink: 0;
+        align-self: flex-start;
+        box-shadow: var(--sombra-suave);
+    }
+
+    .etapa-conteudo { flex: 1; min-width: 0; }
+    .etapa-conteudo h4 { margin: 0 0 0.25rem 0; color: var(--cor-navy); font-size: 1rem; }
+    .etapa-conteudo p { margin: 0; font-size: 0.95rem; }
+
+    /* CHECKLIST OPERACIONAL */
+    .check-operacional {
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        background: #FFFFFF;
+        border-left: 5px solid var(--cor-sucesso);
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        overflow: hidden;
+        margin: 0.4rem 0;
+    }
+
+    .check-operacional header {
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        padding: 10px 16px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        letter-spacing: 0.04em;
+    }
+
+    .check-operacional ul { list-style: none !important; margin: 0 !important; padding: 0 !important; }
+    .check-operacional li {
+        position: relative;
+        padding: 12px 16px 12px 46px !important;
+        border-top: 1px solid #ECECEC;
+        line-height: 1.5;
+        font-size: 0.95rem;
+        margin: 0 !important;
+    }
+    .check-operacional li:first-child { border-top: none; }
+    .check-operacional li::before {
+        content: "✓";
+        position: absolute;
+        left: 16px;
+        top: 12px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--cor-sucesso);
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+
+    /* FAÇA / NÃO FAÇA */
+    .faca-nao {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 14px;
+        margin: 0.4rem 0;
+        width: 100%;
+    }
+
+    .faca {
+        border: 1px solid #C3E6CB;
+        border-top: 5px solid var(--cor-sucesso);
+        background: #F8FDF9;
+        padding: 14px 16px;
+        border-radius: var(--raio-m);
+    }
+    .faca h4 { color: var(--cor-sucesso); margin-bottom: 0.5rem; font-size: 0.98rem; }
+
+    .nao-faca {
+        border: 1px solid #F5C6CB;
+        border-top: 5px solid var(--cor-seguranca);
+        background: #FFF9F9;
+        padding: 14px 16px;
+        border-radius: var(--raio-m);
+    }
+    .nao-faca h4 { color: var(--cor-seguranca); margin-bottom: 0.5rem; font-size: 0.98rem; }
+
+    .faca ul, .nao-faca ul { margin: 0; padding-left: 1.2rem; }
+    .faca li, .nao-faca li { margin-bottom: 0.4rem; font-size: 0.92rem; line-height: 1.5; }
+
+    /* FICHAS E TABELAS */
+    .ficha {
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        background: #FFFFFF;
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        overflow: hidden;
+        margin: 0.4rem 0;
+    }
+
+    .ficha .titulo {
+        background: var(--cor-navy);
+        color: #FFFFFF;
+        padding: 10px 16px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        letter-spacing: 0.05em;
+    }
+
+    .tabela-scroll {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.92rem;
+    }
+
+    th, td {
+        padding: 10px 12px;
+        border: 1px solid #E2E8F0;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        background-color: #F1EFEA;
+        color: var(--cor-navy);
+        font-weight: 700;
+    }
+
+    tr:nth-child(even) td { background-color: #FAFAFA; }
+
+    /* MÍDIAS: IMAGENS E VÍDEOS */
+    .container-imagem {
+        display: block;
+        width: 100%;
+        max-width: 820px;
+        margin: 0.5rem auto;
+        border-radius: var(--raio-m);
+        border: 1px solid var(--cor-cinza);
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+        background: #F8F8F8;
+    }
+
+    .container-imagem img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 480px;
+        object-fit: contain;
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+    }
+
+    /* ZOOM NATIVO CSS (DOMSANITIZER-SAFE) */
+    .container-imagem img[tabindex="0"]:focus {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.4);
+        max-width: 90vw;
+        max-height: 85vh;
+        z-index: 2147483647;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+        outline: 4px solid var(--cor-primaria);
+        background-color: #FFFFFF;
+        cursor: zoom-out;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 820px;
+        margin: 0.5rem auto;
+        aspect-ratio: 16 / 9;
+        background: #000000;
+        border-radius: var(--raio-m);
+        overflow: hidden;
+        box-shadow: var(--sombra-card);
+    }
+
+    .video-container video, .video-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+    }
+
+    .legenda-midia {
+        font-size: 0.82rem;
+        text-align: center;
+        color: var(--cor-texto-fraco);
+        margin: 0.25rem 0 0.5rem 0;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    /* EXPANSÍVEIS DE APROFUNDAMENTO TÉCNICO (DOMSANITIZER-SAFE) */
+    details.popup-aprofundamento {
+        width: 100%;
+        background: #FAF8F2;
+        border: 1px solid var(--cor-caqui);
+        border-radius: var(--raio-m);
+        margin: 0.6rem 0;
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+    }
+
+    details.popup-aprofundamento summary.btn-popup {
+        background: linear-gradient(135deg, #826C2B, #A08F63);
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 0.92rem;
+        padding: 0.85rem 1.15rem;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        user-select: none;
+    }
+
+    details.popup-aprofundamento summary.btn-popup::-webkit-details-marker { display: none; }
+
+    details.popup-aprofundamento summary.btn-popup::after {
+        content: "▼ EXPANDIR";
+        font-size: 0.74rem;
+        background: rgba(0, 0, 0, 0.25);
+        padding: 3px 8px;
+        border-radius: var(--raio-p);
+    }
+
+    details.popup-aprofundamento[open] summary.btn-popup::after {
+        content: "▲ RECOLHER";
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .conteudo-popup {
+        padding: 1.15rem 1.35rem;
+        background: #FFFFFF;
+        border-top: 1px solid var(--cor-caqui);
+    }
+
+    /* CARDS EM GRID FLUIDO */
+    .grid-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+        gap: 12px;
+        width: 100%;
+        margin: 0.4rem 0;
+    }
+
+    .card-item {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        padding: 14px;
+        box-shadow: var(--sombra-suave);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .card-item-header {
+        font-weight: 800;
+        font-size: 0.94rem;
+        color: var(--cor-navy);
+        border-bottom: 2px solid var(--cor-cinza);
+        padding-bottom: 4px;
+        margin-bottom: 4px;
+    }
+
+    .badge-regra {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: var(--raio-p);
+        font-size: 0.74rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+    .badge-regra.ouro { background: #FEF9C3; color: #854D0E; }
+    .badge-regra.vermelho { background: #FEE2E2; color: #991B1B; }
+    .badge-regra.azul { background: #DBEAFE; color: #1E40AF; }
+    .badge-regra.verde { background: #DCFCE7; color: #166534; }
+
+    /* QUIZ INTERATIVO PURO CSS (DomSanitizer Safe - Zero JS) */
+    .quiz-container {
+        background: #FDFCF9;
+        border: 2px solid var(--cor-caqui);
+        border-radius: var(--raio-m);
+        padding: 18px 20px;
+        margin: 0.6rem 0;
+    }
+
+    .quiz-pergunta {
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--cor-navy);
+        margin-bottom: 14px;
+        line-height: 1.5;
+    }
+
+    .quiz-input {
+        display: none !important;
+    }
+
+    .quiz-opcao-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 14px;
+        background: #FFFFFF;
+        border: 1.5px solid var(--cor-cinza);
+        border-radius: var(--raio-p);
+        cursor: pointer;
+        font-size: 0.94rem;
+        transition: var(--transicao-padrao);
+        margin-bottom: 8px;
+        user-select: none;
+    }
+
+    .quiz-opcao-item:hover {
+        background: #FAF8F2;
+        border-color: var(--cor-caqui);
+    }
+
+    .quiz-letra {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--cor-cinza-claro);
+        color: var(--cor-navy);
+        font-weight: 800;
+        font-size: 0.88rem;
+        flex-shrink: 0;
+        transition: var(--transicao-padrao);
+    }
+
+    .quiz-texto {
+        flex: 1;
+        line-height: 1.4;
+    }
+
+    .quiz-status-icon {
+        display: none;
+        font-weight: 900;
+        font-size: 1.1rem;
+    }
+
+    /* Comportamento de clique para Alternativas Incorretas */
+    #quiz_opt_a:checked ~ .opt-a,
+    #quiz_opt_b:checked ~ .opt-b,
+    #quiz_opt_d:checked ~ .opt-d {
+        border-color: var(--cor-alerta);
+        background: #FFF5F2;
+    }
+    #quiz_opt_a:checked ~ .opt-a .quiz-letra,
+    #quiz_opt_b:checked ~ .opt-b .quiz-letra,
+    #quiz_opt_d:checked ~ .opt-d .quiz-letra {
+        background: var(--cor-alerta);
+        color: #FFFFFF;
+    }
+    #quiz_opt_a:checked ~ .opt-a .status-incorreto,
+    #quiz_opt_b:checked ~ .opt-b .status-incorreto,
+    #quiz_opt_d:checked ~ .opt-d .status-incorreto {
+        display: block;
+        color: var(--cor-alerta);
+    }
+
+    /* Comportamento de clique para Alternativa Correta (C) */
+    #quiz_opt_c:checked ~ .opt-c {
+        border-color: var(--cor-sucesso);
+        background: #F0FDF4;
+        font-weight: 700;
+    }
+    #quiz_opt_c:checked ~ .opt-c .quiz-letra {
+        background: var(--cor-sucesso);
+        color: #FFFFFF;
+    }
+    #quiz_opt_c:checked ~ .opt-c .status-correto {
+        display: block;
+        color: var(--cor-sucesso);
+    }
+
+    /* Revelação de Feedbacks Dinâmicos */
+    .quiz-feedback-box {
+        display: none;
+        margin-top: 14px;
+        padding: 12px 16px;
+        border-radius: var(--raio-p);
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
+    .quiz-feedback-box.correto {
+        background: #DCFCE7;
+        border-left: 4px solid var(--cor-sucesso);
+        color: #14532D;
+    }
+    .quiz-feedback-box.incorreto {
+        background: #FEE2E2;
+        border-left: 4px solid var(--cor-alerta);
+        color: #7F1D1D;
+    }
+    .quiz-feedback-header {
+        font-weight: 800;
+        margin-bottom: 4px;
+    }
+
+    #quiz_opt_c:checked ~ .quiz-feedback-wrapper .fb-correto {
+        display: block;
+    }
+    #quiz_opt_a:checked ~ .quiz-feedback-wrapper .fb-a {
+        display: block;
+    }
+    #quiz_opt_b:checked ~ .quiz-feedback-wrapper .fb-b {
+        display: block;
+    }
+    #quiz_opt_d:checked ~ .quiz-feedback-wrapper .fb-d {
+        display: block;
+    }
+
+    /* Fluxo Contínuo / Pipeline Cognitivo */
+    .fluxo-etapas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+        width: 100%;
+        margin: 0.6rem 0;
+    }
+    .fluxo-etapa-card {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-top: 4px solid var(--cor-ouro);
+        border-radius: var(--raio-m);
+        padding: 12px 14px;
+        box-shadow: var(--sombra-suave);
+    }
+    .fluxo-num {
+        display: inline-block;
+        background: var(--cor-caqui);
+        color: #FFFFFF;
+        font-size: 0.76rem;
+        font-weight: 800;
+        padding: 2px 7px;
+        border-radius: var(--raio-p);
+        margin-bottom: 6px;
+    }
+    .fluxo-titulo {
+        font-weight: 800;
+        font-size: 0.95rem;
+        color: var(--cor-navy);
+        margin-bottom: 4px;
+    }
+    .fluxo-desc {
+        font-size: 0.86rem;
+        color: var(--cor-texto-fraco);
+        line-height: 1.4;
+    }
+
+    /* CARROSSEL CSS PURO */
+    .carrossel-container {
+        width: 100%;
+        overflow-x: auto;
+        display: flex;
+        gap: 14px;
+        scroll-snap-type: x mandatory;
+        padding: 10px 0;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .carrossel-slide {
+        flex: 0 0 min(100%, 360px);
+        scroll-snap-align: center;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        overflow: hidden;
+        box-shadow: var(--sombra-suave);
+    }
+
+    .carrossel-slide img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .carrossel-slide-corpo {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+
+    /* RODAPÉ DOUTRINÁRIO ABNT */
+    .referencias-box {
+        background: #F8F9FA;
+        border-left: 4px solid var(--cor-navy);
+        padding: 14px 18px;
+        border-radius: var(--raio-p);
+        font-size: 0.88rem;
+    }
+    .referencias-box ul {
+        margin: 0;
+        padding-left: 1.2rem;
+    }
+    .referencias-box li {
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+
+    /* RESPONSIVIDADE MOBILE */
+    @media (max-width: 768px) {
+        .aula { padding: 12px; }
+        section { gap: 0.95rem; padding: 14px 0; margin-bottom: 1.5rem; }
+        .etapa { gap: 0.75rem; }
+        .etapa::before { width: 34px; height: 34px; min-width: 34px; font-size: 0.9rem; }
+        .ficha thead th, .ficha tbody td { padding: 8px 10px; font-size: 0.86rem; }
+        .faca-nao { grid-template-columns: 1fr; }
+    }
+
+    /* IMPRESSÃO / PDF */
+    @media print {
+        page, .aula { padding: 0 !important; max-width: 100% !important; font-size: 10pt !important; }
+        section { page-break-after: always; break-after: page; border-bottom: none; }
+        .painel, .ficha, .procedimento, .check-operacional { page-break-inside: avoid; break-inside: avoid; }
+        details.popup-aprofundamento { display: block !important; }
+        details.popup-aprofundamento summary { display: none !important; }
+        .conteudo-popup { display: block !important; padding: 0 !important; }
+        video, audio { display: none !important; }
+    }
+
+    /* Refinamentos PIDF v1.3 - Containers Semânticos */
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 14px;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .card-nivel {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        padding: 14px 16px;
+        box-shadow: var(--sombra-suave);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .card-nivel.nivel-1 { border-left: 5px solid #EAB308; }
+    .card-nivel.nivel-2 { border-left: 5px solid #FF5722; }
+    .card-nivel.nivel-3 { border-left: 5px solid #DC2626; }
+
+    .card-item-header {
+        font-family: var(--fonte-titulos);
+        font-weight: 800;
+        font-size: 1.05rem;
+        color: var(--cor-primaria);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .box-aviso-erro {
+        background: #FFF8F5;
+        border-left: 3px solid var(--cor-alerta);
+        padding: 8px 10px;
+        border-radius: var(--raio-p);
+        font-size: 0.88rem;
+        line-height: 1.4;
+    }
+
+    .box-aviso-seguranca {
+        background: #FFF6F6;
+        border-left: 3px solid var(--cor-seguranca);
+        padding: 8px 10px;
+        border-radius: var(--raio-p);
+        font-size: 0.88rem;
+        line-height: 1.4;
+    }
+
+    .box-saiba-mais {
+        background: #F0F9FF;
+        border-left: 4px solid var(--cor-destaque);
+        padding: 12px 14px;
+        border-radius: var(--raio-p);
+        margin: 0.6rem 0;
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
+
+    
+
+    .transicao-bloco {
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--cor-texto-mutado);
+        margin: 0.5rem 0 0.3rem 0;
+    }
+
+    .btn-acao-destaque {
+        display: inline-block;
+        background: var(--cor-seguranca);
+        color: #FFFFFF;
+        font-weight: 800;
+        padding: 12px 28px;
+        text-decoration: none;
+        border-radius: var(--raio-m);
+        letter-spacing: 0.05em;
+        transition: var(--transicao-padrao);
+        border: none;
+        text-align: center;
+    }
+    .btn-acao-destaque:hover {
+        background: #801216;
+        transform: translateY(-2px);
+    }
+
+    .carrossel-item-imagem {
+        flex: 0 0 calc(50% - 12px);
+        min-width: 260px;
+        scroll-snap-align: start;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        padding: 8px;
+        box-shadow: var(--sombra-suave);
+    }
+    @media (max-width: 600px) {
+        .carrossel-item-imagem {
+            flex: 0 0 85%;
+        }
+    }
+
+  </style>
+
+    <div class="aula">
+    <!-- SLIDE 1: ABERTURA & EIXO INTEGRADOR -->
+    <section>
+      <h1>Atenção Seletiva e Leitura da Ameaça</h1>
+      <p class="subtitulo">Diagnóstico Situacional, Filtros Cognitivos e Doutrina de Intervenção Policial Militar (MTP 01/02)</p>
+
+      <div class="painel doutrina">
+        <h3>🎯 Eixo Integrador: A Conexão Cognitivo-Tática</h3>
+        <p>No teatro operacional, o policial militar atua sob constante sobrecarga de estímulos visuais, sonoros e espaciais. A capacidade de processamento neural é finita (Kahneman, 1973). A preservação da vida e a eficácia operacional dependem da integração técnica entre dois processos complementares:</p>
+      </div>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">🧠 1. Atenção Seletiva (O Filtro Cognitivo)</div>
+          <p>Mecanismo neurofisiológico interno de triagem sensorial. Permite ao militar <strong>filtrar o ruído irrelevante do ambiente</strong> e focar seus recursos cognitivos nas pistas que apresentam relevância tática imediata.</p>
+        </div>
+
+        <div class="card-nivel nivel-2">
+          <div class="card-item-header">👁️ 2. Leitura da Ameaça (A Competência Tática)</div>
+          <p>Aplicação técnico-operacional do filtro atencional. Consiste em <strong>inspecionar e interpretar atitudes, sinais biomecânicos e conformações anatômicas</strong> (mãos, cintura, linha de visão) que denunciam agressão, fuga ou emboscada.</p>
+        </div>
+      </div>
+
+      <p class="transicao-bloco">Andamento sequencial do ciclo perceptual no confronto:</p>
+      <div class="fluxo-etapas">
+        <div class="fluxo-etapa-card">
+          <span class="fluxo-num">ETAPA 1</span>
+          <div class="fluxo-titulo">Consciência Ampla</div>
+          <div class="fluxo-desc">Varredura panorâmica do ambiente: abrigos balísticos, rotas de aproximação e presença de terceiros.</div>
+        </div>
+
+        <div class="fluxo-etapa-card">
+          <span class="fluxo-num">ETAPA 2</span>
+          <div class="fluxo-titulo">Filtro Seletivo</div>
+          <div class="fluxo-desc">Triagem atencional: priorização imediata do indivíduo ou ponto que apresenta risco potencial.</div>
+        </div>
+
+        <div class="fluxo-etapa-card">
+          <span class="fluxo-num">ETAPA 3</span>
+          <div class="fluxo-titulo">Leitura da Ameaça</div>
+          <div class="fluxo-desc">Inspeção detalhada de micro-sinais: mãos, cintura, tensão muscular e direção do olhar.</div>
+        </div>
+
+        <div class="fluxo-etapa-card">
+          <span class="fluxo-num">ETAPA 4</span>
+          <div class="fluxo-titulo">Decisão e Resposta</div>
+          <div class="fluxo-desc">Emprego proporcional e legal da doutrina: verbalização de comando, enquadramento de abrigo ou força.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: FISIOLOGIA SOB TENSÃO & VISÃO EM TÚNEL -->
+    <section>
+      <h2>Atenção Seletiva vs. Visão em Túnel sob Tensão</h2>
+      <p>Em situações de confronto armado iminente, a descarga simpática altera drasticamente o processamento sensorial do militar. A resposta fisiológica pode manifestar-se de duas formas:</p>
+
+      <div class="container-imagem">
+        <img src="imagem/foco_ameaca_dinamica.png" alt="Comparativo Operacional: Atenção Seletiva vs Visão em Túnel" tabindex="0">
+      </div>
+      <p class="legenda-midia">Figura 1 — Comparativo Operacional: Atenção Seletiva (foco na ameaça armada com consciência situacional) vs. Visão em Túnel (fixação no ruído dramático e perda da ameaça real). <em>(Fonte: Centro de Treinamento Profissional — CTP / PMMG)</em></p>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">✅ Atenção Seletiva Funcional (Estado Treinado)</div>
+          <p>O operador foca prioritariamente no ponto crítico de letalidade (a mão que acessa uma arma), mas mantém a percepção espacial ativa para monitorar o parceiro, transeuntes e abrigos balísticos.</p>
+        </div>
+
+        <div class="card-nivel nivel-3">
+          <div class="card-item-header">⚠️ Visão em Túnel Involuntária (Efeito Adrenérgico)</div>
+          <p>Estreitamento involuntário do campo visual em até 70% e exclusão auditiva. O cérebro colapsa no estímulo de maior impacto sensorial (ex.: indivíduo desarmado aos gritos), gerando cegueira para o atirador real oculto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: LIMITAÇÕES COGNITIVAS NO CONFRONTO -->
+    <section>
+      <h2>Fatores e Limitações Cognitivas no Confronto</h2>
+      <p>Pesquisas do Force Science Institute e a doutrina do MTP 01 identificam três limitações perceptuais que afetam a tomada de decisão policial:</p>
+
+      <div class="procedimento">
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>1. Cegueira por Desatenção</h4>
+            <p>Ocorrência de falha no registro de um estímulo visual crítico porque a capacidade cognitiva está integralmente alocada em tarefa secundária (ex.: manusear rádio comunicador ou prancheta e não registrar o saque da arma do suspeito).</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>2. Cegueira de Mudança</h4>
+            <p>Incapacidade do sistema visual de perceber alterações discretas no cenário entre intervalos de observação (ex.: o indivíduo que repousava a mão na perna agora apoia os dedos na empunhadura de uma lâmina sob a vestimenta).</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>3. Fixação Cognitiva (Viés de Confirmação)</h4>
+            <p>Interpretação da cena orientada por expectativa pré-concebida (ex.: classificar a ocorrência previamente como ocorrência de rotina ou trote e negligenciar sinais evidentes de emboscada).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: PISTAS BIOMECÂNICAS E PRÉ-AGRESSÃO -->
+    <section>
+      <h2>Leitura da Ameaça na Prática: Pistas Biomecânicas</h2>
+      <p>Ações agressivas contra policiais são precedidas por indicadores físicos e comportamentais. O militar treinado reconhece esses sinais antes do disparo:</p>
+
+      <div class="carrossel-container">
+        <div class="carrossel-item-imagem">
+          <div class="container-imagem">
+            <img src="imagem/sinais_pre_agressao_tensao_muscular.png" alt="Tensão muscular e postura corporal agressiva" tabindex="0">
+          </div>
+          <p class="legenda-midia">1. Tensão muscular, mandíbula travada e fixação visual de confronto. <em>(Fonte: MTP 01 / Doutrina PMMG)</em></p>
+        </div>
+
+        <div class="carrossel-item-imagem">
+          <div class="container-imagem">
+            <img src="imagem/suspeitomaonobolso.png" alt="Mãos ocultas e retenção de volume na cintura" tabindex="0">
+          </div>
+          <p class="legenda-midia">2. Mãos no bolso ou cintura: o risco letal concentra-se prioritariamente nas mãos. <em>(Fonte: MTP 02 / PMMG)</em></p>
+        </div>
+
+        <div class="carrossel-item-imagem">
+          <div class="container-imagem">
+            <img src="imagem/pre_fuga.png" alt="Olhares evasivos e posicionamento para fuga ou emboscada" tabindex="0">
+          </div>
+          <p class="legenda-midia">3. Varredura de testemunhas e postura angular preparatória de fuga ou saque. <em>(Fonte: Force Science Institute)</em></p>
+        </div>
+      </div>
+
+      <p class="transicao-bloco">Diretriz operacional de segurança:</p>
+      <div class="painel importante">
+        <p><strong>Fundamento Doutrinário:</strong> As mãos constituem o ponto de maior risco letal imediato, enquanto a linha de visão indica a intenção de ação ou fuga. O policial militar deve manter vigilância ininterrupta sobre as mãos do abordado e emitir ordens diretas para sua exibição imediata.</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: A GEOMETRIA DA CANGA -->
+    <section>
+      <h2>Doutrina PMMG de Intervenção: A Geometria da Canga</h2>
+      <p>Como a capacidade cognitiva individual é limitada diante da alta tensão, a doutrina da PMMG estabelece a divisão sistemática de papéis na canga operacional (MTP 01 e MTP 02):</p>
+
+      <div class="container-imagem">
+        <img src="imagem/geometria_canga_setores.svg" alt="Geometria Tática da Canga: Contato e Cobertura no Triângulo Defensivo" tabindex="0">
+      </div>
+      <p class="legenda-midia">Figura 2 — Geometria Tática da Canga, Triângulo Defensivo e Linha Livre de Fogo Cruzado. <em>(Fonte: MTP 3.04.01/2020-CG — PMMG)</em></p>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">👮 Policial de Contato (12h)</div>
+          <p>Conduz o diálogo tático, emite as ordens verbais de comando e realiza a busca pessoal. Seu foco atencional é necessariamente estreito e direcionado ao indivíduo abordado.</p>
+        </div>
+
+        <div class="card-nivel nivel-2">
+          <div class="card-item-header">🛡️ Policial de Cobertura (360°)</div>
+          <p>Posiciona-se no vértice do triângulo defensivo com arma em pronto-baixo/abrigo. Sua atribuição exclusiva é a segurança perimétrica 360°, monitorando flancos e retaguarda sem intervir na busca física.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: TREINAMENTO OCULAR & QUIET EYE -->
+    <section>
+      <h2>Treinamento Ocular Tático: Varredura e "Quiet Eye"</h2>
+      <p>Pesquisas neurofisiológicas de Vickers & Lewinski (2012) comprovam que policiais de alta performance realizam fixações oculares controladas antes da tomada de decisão e do disparo:</p>
+
+      <div class="container-imagem">
+        <img src="imagem/dinamica_varredura_quiet_eye.svg" alt="Dinâmica de Varredura Visual e Foco Ocular Quiet Eye" tabindex="0">
+      </div>
+      <p class="legenda-midia">Figura 3 — Padrão Sacádico em Z, Fixação Ocular Estável ("Quiet Eye") e Desengajamento Periférico. <em>(Fonte: Vickers & Lewinski, 2012 / Force Science Institute)</em></p>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">👁️ Varredura Visual em Z (Leque Tático)</div>
+          <p><strong>Mecanismo Fisiológico:</strong> Movimento sacádico voluntário entre face, linha de mãos/cintura e base corporal.</p>
+          <div class="box-aviso-seguranca">
+            <strong>Aplicação na Rua:</strong> Percorra ativamente os eixos de perigo a cada 100-200ms; não fixe os olhos de forma estática no tronco do abordado.
+          </div>
+        </div>
+
+        <div class="card-nivel nivel-2">
+          <div class="card-item-header">🎯 Fixação "Quiet Eye" (350-500ms)</div>
+          <p><strong>Mecanismo Fisiológico:</strong> Estabilização foveal sobre o ponto crítico de letalidade antes do comando ou engajamento motor.</p>
+          <div class="box-aviso-seguranca">
+            <strong>Aplicação na Rua:</strong> Proporciona discriminação visual precisa entre uma arma e um objeto inofensivo, reduzindo erros de disparo em até 40%.
+          </div>
+        </div>
+
+        <div class="card-nivel nivel-3">
+          <div class="card-item-header">🗣️ Comunicação Ativa & Respiração (4x4)</div>
+          <p><strong>Mecanismo Fisiológico:</strong> Reativação cortical da linguagem e estímulo vagal para desacelerar os batimentos cardíacos.</p>
+          <div class="box-aviso-seguranca">
+            <strong>Aplicação na Rua:</strong> Repasse informações da retaguarda em voz clara e utilize respiração compassada para preservar o campo visual periférico.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: FIXAÇÃO DE CONHECIMENTO -->
+    <section>
+      <h2>Fixação de Conhecimento Doutrinário</h2>
+
+      <div class="quiz-container">
+        <div class="quiz-pergunta">
+          <strong>Cenário Operacional:</strong> Durante a abordagem a dois indivíduos em atitude suspeita, o Policial de Contato inicia a busca pessoal no primeiro abordado. Nesse momento, o segundo indivíduo move repentinamente a mão em direção ao bolso traseiro da calça. Qual deve ser a conduta doutrinária imediata do Policial de Cobertura?
+        </div>
+
+        <!-- Inputs de Rádio (Zero Scripts, 100% CSS Puro) -->
+        <input type="radio" name="pergunta_canga" id="quiz_opt_a" class="quiz-input">
+        <input type="radio" name="pergunta_canga" id="quiz_opt_b" class="quiz-input">
+        <input type="radio" name="pergunta_canga" id="quiz_opt_c" class="quiz-input">
+        <input type="radio" name="pergunta_canga" id="quiz_opt_d" class="quiz-input">
+
+        <!-- Alternativa A -->
+        <label for="quiz_opt_a" class="quiz-opcao-item opt-a">
+          <span class="quiz-letra">A</span>
+          <span class="quiz-texto">Avançar para realizar busca física concomitante no segundo suspeito, com objetivo de acelerar o encerramento da intervenção.</span>
+          <span class="quiz-status-icon status-incorreto">✕</span>
+        </label>
+
+        <!-- Alternativa B -->
+        <label for="quiz_opt_b" class="quiz-opcao-item opt-b">
+          <span class="quiz-letra">B</span>
+          <span class="quiz-texto">Aguardar a manifestação do parceiro, uma vez que a verbalização e as ordens cabem exclusivamente ao Policial de Contato.</span>
+          <span class="quiz-status-icon status-incorreto">✕</span>
+        </label>
+
+        <!-- Alternativa C (Correta) -->
+        <label for="quiz_opt_c" class="quiz-opcao-item opt-c">
+          <span class="quiz-letra">C</span>
+          <span class="quiz-texto">Enquadrar o suspeito a partir de posição de abrigo/pronto, emitir comando verbal enérgico de exibição imediata das mãos e alertar o Contato.</span>
+          <span class="quiz-status-icon status-correto">✓</span>
+        </label>
+
+        <!-- Alternativa D -->
+        <label for="quiz_opt_d" class="quiz-opcao-item opt-d">
+          <span class="quiz-letra">D</span>
+          <span class="quiz-texto">Desviar a atenção do segundo suspeito para verificar se o parceiro necessita de apoio manual na contenção do primeiro abordado.</span>
+          <span class="quiz-status-icon status-incorreto">✕</span>
+        </label>
+
+        <!-- Feedbacks Dinâmicos acionados exclusivamente via CSS :checked -->
+        <div class="quiz-feedback-wrapper">
+          <div class="quiz-feedback-box correto fb-correto">
+            <div class="quiz-feedback-header">✓ Resposta Correta — Alternativa C</div>
+            <p><strong>Fundamentação Doutrinária (MTP 01 e MTP 02):</strong> A atribuição funcional precípua da Cobertura é a proteção perimétrica e a antecipação de ameaças aos olhos do Contato. Diante do sinal biomecânico de pré-agressão (mão na linha de cintura), a Cobertura enquadra a ameaça a partir do ângulo de segurança, emite ordem de comando imediata e alerta a guarnição, resguardando a integridade física da canga.</p>
+          </div>
+
+          <div class="quiz-feedback-box incorreto fb-a">
+            <div class="quiz-feedback-header">✕ Conduta Incorreta — Alternativa A</div>
+            <p>Conforme o MTP 02, o Policial de Cobertura não realiza busca pessoal simultânea. Esse erro tático anula a vigilância 360°, induz a visão em túnel de ambos os policiais e expõe a equipe a ataques nos flancos e na retaguarda.</p>
+          </div>
+
+          <div class="quiz-feedback-box incorreto fb-b">
+            <div class="quiz-feedback-header">✕ Conduta Incorreta — Alternativa B</div>
+            <p>Embora o Contato conduza a interlocução rotineira, diante de sinal iminente de agressão a Cobertura tem o dever de agir e verbalizar ordens táticas imediatas de interrupção da ação hostil.</p>
+          </div>
+
+          <div class="quiz-feedback-box incorreto fb-d">
+            <div class="quiz-feedback-header">✕ Conduta Incorreta — Alternativa D</div>
+            <p>Abandonar a vigilância do segundo indivíduo viola o princípio da segurança mútua da canga e cria uma janela letal de oportunidade para o agressor sacar uma arma sem resistência.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: REFERÊNCIAS BIBLIOGRÁFICAS -->
+    <section>
+      <h2>Referências Bibliográficas e Doutrinárias</h2>
+
+      <div class="painel doutrina">
+        <ul>
+          <li><strong>COOPER, Jeff.</strong> <em>Principles of Personal Defense</em>. Boulder, CO: Paladin Press, 1989.</li>
+          <li><strong>FORCE SCIENCE INSTITUTE (FSI).</strong> Research and training publications on officer attention, scan patterns, and inattentional blindness. Chicago: FSI, 2020.</li>
+          <li><strong>GROSSMAN, Dave; CHRISTENSEN, Loren W.</strong> <em>On Combat: The Psychology and Physiology of Deadly Conflict in War and in Peace</em>. 3. ed. Millstadt, IL: Warrior Science Publications, 2008.</li>
+          <li><strong>KAHNEMAN, Daniel.</strong> <em>Attention and Effort</em>. Englewood Cliffs, NJ: Prentice-Hall, 1973.</li>
+          <li><strong>LEWINSKI, William et al.</strong> The dynamic nature of shooting incidents: evaluating reaction time and shooter movement. <em>International Journal of Police Science &amp; Management</em>, v. 17, n. 2, p. 115-128, 2015.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar.</strong> <em>Manual Técnico-Profissional nº 3.04.01/2020-CG</em>: Intervenção Policial, Processo de Comunicação e Uso da Força. Belo Horizonte: Academia de Polícia Militar, 2020.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar.</strong> <em>Manual Técnico-Profissional nº 3.04.02/2020-CG</em>: Tática Policial, Abordagem e Técnicas de Busca. Belo Horizonte: Academia de Polícia Militar, 2020.</li>
+          <li><strong>SCHMIDT, Richard A.; LEE, Timothy D.</strong> <em>Aprendizagem e Performance Motora: dos princípios à aplicação</em>. 5. ed. Porto Alegre: Artmed, 2016.</li>
+          <li><strong>SIDDLE, Bruce K.</strong> <em>Sharpening the Warrior's Edge: The Psychology &amp; Science of Training</em>. Belleville, IL: PPCT Research Publications, 1995.</li>
+          <li><strong>VICKERS, Joan N.; LEWINSKI, William.</strong> Performing under pressure: Gaze control, decision making and shooting performance of elite and rookie police officers. <em>Human Movement Science</em>, v. 31, p. 101-117, 2012.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</page>
+  
+<footer class="pmmg-footer-nav">
+  <a class='pmmg-btn-nav pmmg-btn-prev' href='/dentro-do-confronto/'>← Início da Trilha</a>
+  <button id="completeModuleBtn" class="pmmg-btn-complete" onclick="markModuleCompleted('atencao-seletiva')">
+    Marcar como Concluído
+  </button>
+  <a class='pmmg-btn-nav pmmg-btn-next' href='/dentro-do-confronto/controle-verbal/'>Módulo 2: Técnicas de Verbalização →</a>
+</footer>
+
+  
+<script>
+  window.addEventListener('scroll', function() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const bar = document.getElementById('pmmgScrollProgress');
+    if (bar) bar.style.width = Math.min(100, Math.max(0, scrolled)) + '%';
+  });
+
+  function adjustFontSize(delta) {
+    const root = document.querySelector('.aula') || document.querySelector('page') || document.body;
+    const current = parseFloat(window.getComputedStyle(root, null).getPropertyValue('font-size')) || 16;
+    const next = Math.max(12, Math.min(26, current + delta));
+    root.style.fontSize = next + 'px';
+  }
+
+  function markModuleCompleted(modKey) {
+    let completed = JSON.parse(localStorage.getItem('pmmg_confronto_completed') || '[]');
+    if (!completed.includes(modKey)) {
+      completed.push(modKey);
+      localStorage.setItem('pmmg_confronto_completed', JSON.stringify(completed));
+    }
+    const btn = document.getElementById('completeModuleBtn');
+    if (btn) {
+      btn.innerHTML = '✔ Concluído com Sucesso!';
+      btn.style.background = '#15803d';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const parts = window.location.pathname.replace(/\\/g, '/').split('/');
+    let modKey = parts[parts.length - 2] || 'modulo';
+    if (parts[parts.length - 1].includes('treinamento_intervencao')) {
+      modKey = 'intervencao-policial-p2';
+    }
+    let completed = JSON.parse(localStorage.getItem('pmmg_confronto_completed') || '[]');
+    const btn = document.getElementById('completeModuleBtn');
+    if (btn && completed.includes(modKey)) {
+      btn.innerHTML = '✔ Módulo Concluído';
+      btn.style.background = '#15803d';
+    }
+  });
+</script>
+
+</body>
+</html>

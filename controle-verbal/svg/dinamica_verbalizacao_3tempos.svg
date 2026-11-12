@@ -1,0 +1,111 @@
+<svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" style="background:#F8F9FA; border-radius:12px; border:1px solid #CBD5E1; font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <pattern id="grid-bp" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#E2E8F0" stroke-width="0.8"/>
+    </pattern>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="hdr-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#826C2B"/>
+      <stop offset="100%" stop-color="#A08F63"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="480" fill="url(#grid-bp)"/>
+
+  <!-- Cabeçalho Institucional PMMG -->
+  <rect x="0" y="0" width="900" height="52" fill="#141B4D"/>
+  <rect x="0" y="48" width="900" height="4" fill="#826C2B"/>
+  <text x="24" y="31" fill="#FFFFFF" font-size="15" font-weight="900" letter-spacing="0.8">MÉTODO DOS 3 TEMPOS DE COMANDO &amp; TRÍADE C.B.O. (MTP 3.04.01 / PMMG)</text>
+  <text x="876" y="31" fill="#E2E8F0" font-size="11" font-weight="700" text-anchor="end">BLUEPRINT OPERACIONAL • CTP</text>
+
+  <!-- Subtítulo técnico -->
+  <text x="450" y="80" fill="#334155" font-size="13" font-weight="700" text-anchor="middle">Sequência cronológica imperativa para romper a hesitação, reduzir a sobrecarga neural e vincular a consequência legal</text>
+
+  <!-- CARD 1: 1º TEMPO -->
+  <g transform="translate(32, 100)" filter="url(#card-shadow)">
+    <rect width="256" height="245" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="256" height="42" rx="10" fill="#141B4D"/>
+    <rect y="32" width="256" height="10" fill="#141B4D"/>
+    <text x="128" y="26" fill="#FFFFFF" font-size="13" font-weight="900" text-anchor="middle" letter-spacing="0.5">1º TEMPO • IDENTIFICAÇÃO</text>
+    
+    <rect x="18" y="56" width="110" height="22" rx="4" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+    <text x="73" y="71" fill="#1D4ED8" font-size="10" font-weight="800" text-anchor="middle">AUTORIDADE LEGAL</text>
+
+    <text x="18" y="98" fill="#334155" font-size="12" font-weight="600">Define a investidura estatal</text>
+    <text x="18" y="115" fill="#334155" font-size="12" font-weight="600">e elimina alegação de dúvida.</text>
+
+    <rect x="18" y="132" width="220" height="52" rx="8" fill="#F8FAFC" stroke="#141B4D" stroke-width="2"/>
+    <text x="128" y="163" fill="#141B4D" font-size="16" font-weight="900" text-anchor="middle">"POLÍCIA MILITAR!"</text>
+
+    <text x="18" y="208" fill="#64748B" font-size="11" font-weight="700">• Projeção vocal diafragmática</text>
+    <text x="18" y="225" fill="#64748B" font-size="11" font-weight="700">• Tom grave, firme e audível</text>
+  </g>
+
+  <!-- Seta Conectora 1 -> 2 -->
+  <g transform="translate(294, 210)">
+    <line x1="0" y1="12" x2="20" y2="12" stroke="#826C2B" stroke-width="3"/>
+    <polygon points="18,4 30,12 18,20" fill="#826C2B"/>
+  </g>
+
+  <!-- CARD 2: 2º TEMPO -->
+  <g transform="translate(322, 100)" filter="url(#card-shadow)">
+    <rect width="256" height="245" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="256" height="42" rx="10" fill="#826C2B"/>
+    <rect y="32" width="256" height="10" fill="#826C2B"/>
+    <text x="128" y="26" fill="#FFFFFF" font-size="13" font-weight="900" text-anchor="middle" letter-spacing="0.5">2º TEMPO • ORDEM DIRETA</text>
+    
+    <rect x="18" y="56" width="135" height="22" rx="4" fill="#FEF9C3" stroke="#FDE047" stroke-width="1"/>
+    <text x="85" y="71" fill="#854D0E" font-size="10" font-weight="800" text-anchor="middle">CONTROLE MOTOR (C.B.O.)</text>
+
+    <text x="18" y="98" fill="#334155" font-size="12" font-weight="600">Verbo único no imperativo</text>
+    <text x="18" y="115" fill="#334155" font-size="12" font-weight="600">afirmativo (3 a 4 vocábulos).</text>
+
+    <rect x="18" y="132" width="220" height="52" rx="8" fill="#FFFBEB" stroke="#826C2B" stroke-width="2"/>
+    <text x="128" y="155" fill="#826C2B" font-size="14" font-weight="900" text-anchor="middle">"PARADO! COLOQUE AS</text>
+    <text x="128" y="174" fill="#826C2B" font-size="14" font-weight="900" text-anchor="middle">MÃOS NA CABEÇA!"</text>
+
+    <text x="18" y="208" fill="#64748B" font-size="11" font-weight="700">• 1 comando motor por etapa</text>
+    <text x="18" y="225" fill="#64748B" font-size="11" font-weight="700">• Pausa de 1 a 2s para execução</text>
+  </g>
+
+  <!-- Seta Conectora 2 -> 3 -->
+  <g transform="translate(584, 210)">
+    <line x1="0" y1="12" x2="20" y2="12" stroke="#826C2B" stroke-width="3"/>
+    <polygon points="18,4 30,12 18,20" fill="#826C2B"/>
+  </g>
+
+  <!-- CARD 3: 3º TEMPO -->
+  <g transform="translate(612, 100)" filter="url(#card-shadow)">
+    <rect width="256" height="245" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="256" height="42" rx="10" fill="#AB2328"/>
+    <rect y="32" width="256" height="10" fill="#AB2328"/>
+    <text x="128" y="26" fill="#FFFFFF" font-size="13" font-weight="900" text-anchor="middle" letter-spacing="0.5">3º TEMPO • CONSEQUÊNCIA</text>
+    
+    <rect x="18" y="56" width="145" height="22" rx="4" fill="#FEE2E2" stroke="#FECACA" stroke-width="1"/>
+    <text x="90" y="71" fill="#991B1B" font-size="10" font-weight="800" text-anchor="middle">ADVERTÊNCIA LEGAL (UDF)</text>
+
+    <text x="18" y="98" fill="#334155" font-size="12" font-weight="600">Vincula a desobediência ao</text>
+    <text x="18" y="115" fill="#334155" font-size="12" font-weight="600">emprego legítimo da força.</text>
+
+    <rect x="18" y="132" width="220" height="52" rx="8" fill="#FEF2F2" stroke="#AB2328" stroke-width="2"/>
+    <text x="128" y="155" fill="#991B1B" font-size="13.5" font-weight="900" text-anchor="middle">"NÃO SE MOVA OU</text>
+    <text x="128" y="174" fill="#991B1B" font-size="13.5" font-weight="900" text-anchor="middle">SERÁ CONTIDO!"</text>
+
+    <text x="18" y="208" fill="#64748B" font-size="11" font-weight="700">• Vedado o loop verbal infinito</text>
+    <text x="18" y="225" fill="#64748B" font-size="11" font-weight="700">• Prepara testemunho auditivo</text>
+  </g>
+
+  <!-- Barra Inferior: Tríade C.B.O. e Ciclo de Execução -->
+  <g transform="translate(32, 362)" filter="url(#card-shadow)">
+    <rect width="836" height="86" rx="10" fill="#FFFFFF" stroke="#826C2B" stroke-width="2"/>
+    <rect width="190" height="86" rx="8" fill="#826C2B"/>
+    <text x="95" y="38" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">TRÍADE C.B.O.</text>
+    <text x="95" y="58" fill="#F3EFE6" font-size="11" font-weight="700" text-anchor="middle">CONTROLE SOB ESTRESSE</text>
+
+    <text x="212" y="30" fill="#141B4D" font-size="13" font-weight="800">1. CLAREZA: Verbos diretos no imperativo • 2. BREVIDADE: 3 a 4 palavras • 3. OBJETIVIDADE: 1 ação por vez</text>
+    <line x1="212" y1="43" x2="812" y2="43" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="212" y="66" fill="#826C2B" font-size="12.5" font-weight="900">CICLO OPERACIONAL: EMITIR ORDEM ➔ PAUSAR (1 a 2s) ➔ AVALIAR MÃOS/CINTURA ➔ AVANÇAR OU ESCALAR UDF</text>
+  </g>
+</svg>

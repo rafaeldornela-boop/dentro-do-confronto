@@ -1,0 +1,72 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="icdaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141B4D"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <filter id="glow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="800" height="450" rx="12" fill="url(#icdaBg)"/>
+  <text x="400" y="40" fill="#B89053" font-family="system-ui, sans-serif" font-size="20" font-weight="800" text-anchor="middle" letter-spacing="1">CICLO DECISÓRIO ICDA — PROCESSO DE RESPOSTA PMMG</text>
+  <text x="400" y="64" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">O processo contínuo de tomada de decisão sob pressão operacional (MTP 01)</text>
+
+  <!-- Circuito em 4 blocos -->
+  <!-- 1. IDENTIFICAR -->
+  <g filter="url(#glow)">
+    <rect x="50" y="110" width="320" height="125" rx="8" fill="#1E3A8A" stroke="#3B82F6" stroke-width="2"/>
+    <circle cx="85" cy="145" r="22" fill="#3B82F6"/>
+    <text x="85" y="153" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="20" font-weight="900" text-anchor="middle">I</text>
+    <text x="120" y="142" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="17" font-weight="800">1. IDENTIFICAR</text>
+    <text x="120" y="162" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Percepção de estímulo</text>
+    <text x="70" y="195" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• Varredura visual de mãos, cintura e olhar</text>
+    <text x="70" y="215" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• Detecção de quebra de padrão ou ameaça</text>
+  </g>
+
+  <!-- Seta 1 -> 2 -->
+  <polygon points="425,172 413,165 413,179" fill="#B89053"/>
+
+  <!-- 2. CERTIFICAR -->
+  <g filter="url(#glow)">
+    <rect x="430" y="110" width="320" height="125" rx="8" fill="#854D0E" stroke="#EAB308" stroke-width="2"/>
+    <circle cx="465" cy="145" r="22" fill="#EAB308"/>
+    <text x="465" y="153" fill="#1E293B" font-family="system-ui, sans-serif" font-size="20" font-weight="900" text-anchor="middle">C</text>
+    <text x="500" y="142" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="17" font-weight="800">2. CERTIFICAR</text>
+    <text x="500" y="162" fill="#FDE047" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Processamento e Confirmação</text>
+    <text x="450" y="195" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• Separação entre fato observado e dedução</text>
+    <text x="450" y="215" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• Confirmação do estímulo (arma vs. celular)</text>
+  </g>
+
+  <!-- Seta 2 -> 3 -->
+  <polygon points="590,275 583,263 597,263" fill="#B89053"/>
+
+  <!-- 3. DECIDIR -->
+  <g filter="url(#glow)">
+    <rect x="430" y="280" width="320" height="125" rx="8" fill="#991B1B" stroke="#EF4444" stroke-width="2"/>
+    <circle cx="465" cy="315" r="22" fill="#EF4444"/>
+    <text x="465" y="323" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="20" font-weight="900" text-anchor="middle">D</text>
+    <text x="500" y="312" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="17" font-weight="800">3. DECIDIR</text>
+    <text x="500" y="332" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Seleção da Resposta Técnica</text>
+    <text x="450" y="365" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• Enquadramento no nível de uso da força</text>
+    <text x="450" y="385" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• Deslocamento e busca de abrigo</text>
+  </g>
+
+  <!-- Seta 3 -> 4 -->
+  <polygon points="375,342 387,335 387,349" fill="#B89053"/>
+
+  <!-- 4. AGIR -->
+  <g filter="url(#glow)">
+    <rect x="50" y="280" width="320" height="125" rx="8" fill="#14532D" stroke="#22C55E" stroke-width="2"/>
+    <circle cx="85" cy="315" r="22" fill="#22C55E"/>
+    <text x="85" y="323" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="20" font-weight="900" text-anchor="middle">A</text>
+    <text x="120" y="312" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="17" font-weight="800">4. AGIR</text>
+    <text x="120" y="332" fill="#86EFAC" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Execução e Comunicação</text>
+    <text x="70" y="365" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• Verbalização firme ou controle físico</text>
+    <text x="70" y="385" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12">• Disparo só com risco iminente de morte ou lesão grave</text>
+  </g>
+
+  <!-- Retorno 4 -> 1 -->
+  <polygon points="210,240 203,252 217,252" fill="#B89053"/>
+  <text x="245" y="262" fill="#B89053" font-family="system-ui, sans-serif" font-size="11" font-weight="700">REAVALIAÇÃO CONTÍNUA</text>
+</svg>

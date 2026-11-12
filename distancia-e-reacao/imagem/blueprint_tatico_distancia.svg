@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 850" width="100%" height="auto" style="background:#08182B; border-radius:8px; border:2px solid #1E4D7A; font-family:'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Grade Blueprint (Grid CAD) -->
+    <pattern id="grid-20" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#102E4C" stroke-width="0.8" />
+    </pattern>
+    <pattern id="grid-100" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#grid-20)" />
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#18436E" stroke-width="1.5" />
+    </pattern>
+
+    <!-- Marcadores Técnicos de Cota e Vetores -->
+    <marker id="seta-azul" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#38BDF8" />
+    </marker>
+    <marker id="seta-vermelha" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#EF4444" />
+    </marker>
+    <marker id="seta-verde-saida" markerWidth="10" markerHeight="10" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#22C55E" />
+    </marker>
+
+    <!-- Gradiente do Corredor de Perigo -->
+    <linearGradient id="grad-corredor-perigo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.25" />
+      <stop offset="85%" stop-color="#EF4444" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Gradiente Cone de Visada do Policial Evadido -->
+    <radialGradient id="cone-visada-policial" cx="0%" cy="50%" r="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.40" />
+      <stop offset="60%" stop-color="#38BDF8" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Fundo Prancheta Blueprint -->
+  <rect width="1600" height="850" fill="#08182B" />
+  <rect width="1600" height="850" fill="url(#grid-100)" />
+
+  <!-- Moldura Dupla de Desenho Técnico -->
+  <rect x="20" y="20" width="1560" height="810" fill="none" stroke="#38BDF8" stroke-width="2" />
+  <rect x="28" y="28" width="1544" height="794" fill="none" stroke="#18436E" stroke-width="1" stroke-dasharray="6,4" />
+
+  <!-- CABEÇALHO BLUEPRINT -->
+  <g id="cabecalho-cad">
+    <text x="45" y="60" font-size="15" font-weight="900" fill="#38BDF8" letter-spacing="1.5">PLANTA BIOMECÂNICA: EVASÃO DA ÁREA DE PERIGO (MANOBRA "SAIA DO X")</text>
+    <text x="1555" y="60" font-size="12" font-weight="700" fill="#93C5FD" text-anchor="end" letter-spacing="1">MTP 3.04.01 • REGRA DOS 21 PÉS (6,4m)</text>
+  </g>
+
+  <!-- COTA MÉTRICA PRINCIPAL: 6,4 METROS (21 FT) -->
+  <g id="cota-metrica" transform="translate(0, 85)">
+    <line x1="220" y1="20" x2="220" y2="70" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="4,3" />
+    <line x1="1080" y1="20" x2="1080" y2="70" stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="4,3" />
+    <line x1="225" y1="45" x2="1075" y2="45" stroke="#38BDF8" stroke-width="2" marker-start="url(#seta-azul)" marker-end="url(#seta-azul)" />
+
+    <rect x="580" y="28" width="180" height="34" rx="4" fill="#0C2A4A" stroke="#38BDF8" stroke-width="1.5" />
+    <text x="670" y="51" font-size="15" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">6,4 m  [21 PÉS]</text>
+  </g>
+
+  <!-- CORREDOR / ÁREA DE PERIGO (EIXO RETILÍNEO DO AGRESSOR) -->
+  <g id="area-de-perigo">
+    <!-- Faixa Sombreada de Risco do Eixo Retilíneo -->
+    <rect x="220" y="320" width="960" height="120" fill="url(#grad-corredor-perigo)" stroke="#EF4444" stroke-width="1" stroke-dasharray="6,4" />
+    
+    <!-- Linhas de Bordo e Eixo Central -->
+    <line x1="220" y1="380" x2="1160" y2="380" stroke="#EF4444" stroke-width="3" stroke-dasharray="10,6" marker-end="url(#seta-vermelha)" />
+    
+    <rect x="440" y="295" width="380" height="22" rx="3" fill="#450A0A" stroke="#EF4444" stroke-width="1" />
+    <text x="630" y="310" font-size="11" font-weight="900" fill="#FCA5A5" text-anchor="middle" letter-spacing="1">EIXO RETILÍNEO DO AGRESSOR • ÁREA DE PERIGO FATAL</text>
+  </g>
+
+  <!-- 1. SILHUETA CAD DO AGRESSOR COM FACA -->
+  <g id="agressor" transform="translate(180, 355)">
+    <!-- Centro e Eixos -->
+    <circle cx="25" cy="25" r="38" fill="none" stroke="#F87171" stroke-width="1" stroke-dasharray="4,4" opacity="0.6" />
+    <line x1="25" y1="-15" x2="25" y2="65" stroke="#F87171" stroke-width="0.8" opacity="0.5" />
+    <line x1="-15" y1="25" x2="65" y2="25" stroke="#F87171" stroke-width="0.8" opacity="0.5" />
+
+    <!-- Braço com Faca -->
+    <path d="M 25,12 L 54,18 L 74,22" fill="none" stroke="#FCA5A5" stroke-width="6" stroke-linecap="round" />
+    <polygon points="74,17 100,13 80,26" fill="#FFFFFF" stroke="#EF4444" stroke-width="1.2" />
+
+    <!-- Outro Braço -->
+    <path d="M 25,38 L 48,44 L 58,38" fill="none" stroke="#FCA5A5" stroke-width="6" stroke-linecap="round" />
+
+    <!-- Ombros e Torso -->
+    <ellipse cx="25" cy="25" rx="18" ry="24" fill="#7F1D1D" stroke="#EF4444" stroke-width="2" />
+    <circle cx="22" cy="25" r="9" fill="#1E293B" stroke="#EF4444" stroke-width="1.5" />
+
+    <!-- Badge Agressor -->
+    <rect x="-35" y="70" width="120" height="22" rx="3" fill="#450A0A" stroke="#EF4444" stroke-width="1.2" />
+    <text x="25" y="85" font-size="10.5" font-weight="900" fill="#FCA5A5" text-anchor="middle">AGRESSOR COM FACA</text>
+  </g>
+
+  <!-- 2. O PONTO "X" (ONDE O POLICIAL ESTAVA NO EIXO RETILÍNEO) -->
+  <g id="ponto-x-original" transform="translate(1080, 355)">
+    <!-- Retículo de Alvo Técnico -->
+    <circle cx="25" cy="25" r="42" fill="none" stroke="#EF4444" stroke-width="2" stroke-dasharray="4,4" />
+    <circle cx="25" cy="25" r="22" fill="rgba(239, 68, 68, 0.2)" stroke="#EF4444" stroke-width="1.5" />
+    <line x1="-25" y1="25" x2="75" y2="25" stroke="#EF4444" stroke-width="2" />
+    <line x1="25" y1="-25" x2="25" y2="75" stroke="#EF4444" stroke-width="2" />
+
+    <!-- Cruz Vermelha do "X" Marcando a Posição Crítica -->
+    <line x1="8" y1="8" x2="42" y2="42" stroke="#EF4444" stroke-width="6" stroke-linecap="round" />
+    <line x1="42" y1="8" x2="8" y2="42" stroke="#EF4444" stroke-width="6" stroke-linecap="round" />
+
+    <!-- Silhueta Fantasma do PM na Posição Inicial Estática -->
+    <ellipse cx="25" cy="25" rx="16" ry="20" fill="none" stroke="#FCA5A5" stroke-width="1.5" stroke-dasharray="3,3" />
+
+    <!-- Identificador do Ponto X -->
+    <rect x="-90" y="-38" width="230" height="26" rx="4" fill="#450A0A" stroke="#EF4444" stroke-width="1.5" />
+    <text x="25" y="-21" font-size="11" font-weight="900" fill="#FCA5A5" text-anchor="middle">POSIÇÃO INICIAL DO POLICIAL • NO "X"</text>
+    <text x="25" y="82" font-size="10" font-weight="800" fill="#EF4444" text-anchor="middle">ZONA CRÍTICA DE IMPACTO</text>
+  </g>
+
+  <!-- 3. O VETOR DE SAÍDA: PARTE DO "X" E SAI DO EIXO RETILÍNEO (A 45°) -->
+  <g id="vetor-saida-45">
+    <!-- Linha / Arco Vetorial Forte Verde partindo de (1105, 380) para (860, 580) -->
+    <path d="M 1105,380 L 870,580" fill="none" stroke="#22C55E" stroke-width="5" stroke-linecap="round" marker-end="url(#seta-verde-saida)" />
+    
+    <!-- Linha de Cota Angular de 45° -->
+    <path d="M 1045,380 A 60 60 0 0 1 1063,422" fill="none" stroke="#4ADE80" stroke-width="2" stroke-dasharray="3,3" />
+    <rect x="980" y="415" width="60" height="24" rx="3" fill="#052E16" stroke="#22C55E" stroke-width="1.2" />
+    <text x="1010" y="431" font-size="13" font-weight="900" fill="#4ADE80" text-anchor="middle">45°</text>
+
+    <!-- Placa de Identificação do Vetor de Saída -->
+    <rect x="880" y="465" width="260" height="28" rx="4" fill="#052E16" stroke="#22C55E" stroke-width="1.5" />
+    <text x="1010" y="483" font-size="11.5" font-weight="900" fill="#4ADE80" text-anchor="middle">VETOR DE SAÍDA DA ÁREA DE PERIGO</text>
+  </g>
+
+  <!-- 4. POLICIAL MILITAR PMMG NA POSIÇÃO EVADIDA (FORA DA ÁREA DE PERIGO) -->
+  <g id="policial-evadido" transform="translate(840, 560) rotate(-35)">
+    <!-- Cone de Visada apontado para o Agressor -->
+    <path d="M 45,25 L 420,-60 L 420,110 Z" fill="url(#cone-visada-policial)" />
+    <line x1="45" y1="25" x2="410" y2="25" stroke="#38BDF8" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#seta-azul)" />
+
+    <!-- Eixos CAD do PM -->
+    <circle cx="25" cy="25" r="36" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4,4" opacity="0.6" />
+    
+    <!-- Braços estendidos em empunhadura isósceles -->
+    <path d="M 16,10 L 36,18 L 50,22" fill="none" stroke="#38BDF8" stroke-width="6" stroke-linecap="round" />
+    <path d="M 16,40 L 36,32 L 50,28" fill="none" stroke="#38BDF8" stroke-width="6" stroke-linecap="round" />
+    <rect x="48" y="22.5" width="16" height="5" rx="1" fill="#FFFFFF" stroke="#08182B" stroke-width="1" />
+
+    <!-- Ombros e Torso CAD -->
+    <ellipse cx="16" cy="25" rx="17" ry="23" fill="#0C345B" stroke="#38BDF8" stroke-width="2" />
+    <rect x="3" y="11" width="19" height="28" rx="3" fill="#1E293B" stroke="#38BDF8" stroke-width="1" />
+    <circle cx="15" cy="25" r="8" fill="#38BDF8" />
+    <path d="M 21,20 L 26,25 L 21,30 Z" fill="#FFFFFF" />
+
+    <!-- Badge Policial Evadido -->
+    <rect x="-70" y="60" width="190" height="24" rx="3" fill="#052E16" stroke="#22C55E" stroke-width="1.5" />
+    <text x="25" y="76" font-size="10.5" font-weight="900" fill="#4ADE80" text-anchor="middle">PM FORA DA ÁREA DE PERIGO</text>
+  </g>
+
+  <!-- 5. VIATURA SUV PMMG (ANTEPARO TÁTICO / COBERTURA DO MOTOR) -->
+  <g id="viatura-pmmg" transform="translate(1080, 560) rotate(-20)">
+    <!-- Rodas -->
+    <rect x="20" y="-6" width="30" height="8" rx="2" fill="#1E293B" stroke="#38BDF8" stroke-width="1" />
+    <rect x="130" y="-6" width="30" height="8" rx="2" fill="#1E293B" stroke="#38BDF8" stroke-width="1" />
+    <rect x="20" y="74" width="30" height="8" rx="2" fill="#1E293B" stroke="#38BDF8" stroke-width="1" />
+    <rect x="130" y="74" width="30" height="8" rx="2" fill="#1E293B" stroke="#38BDF8" stroke-width="1" />
+
+    <!-- Carroceria SUV CAD -->
+    <path d="M 10,20 C 10,5 20,0 40,0 L 150,0 C 170,0 185,8 185,25 L 185,55 C 185,72 170,80 150,80 L 40,80 C 20,80 10,75 10,60 Z"
+          fill="#0B2644" stroke="#38BDF8" stroke-width="2" />
+
+    <!-- Para-brisa CAD -->
+    <path d="M 50,8 C 45,8 42,12 40,40 C 42,68 45,72 50,72 L 62,68 C 58,55 58,25 62,12 Z"
+          fill="#133D6B" stroke="#38BDF8" stroke-width="1.2" />
+
+    <!-- Teto com PMMG -->
+    <rect x="66" y="10" width="82" height="60" rx="3" fill="#0E3054" stroke="#38BDF8" stroke-width="1" />
+    <text x="107" y="45" font-size="13" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">PMMG</text>
+
+    <!-- Giroflex -->
+    <rect x="88" y="18" width="14" height="44" rx="2" fill="#38BDF8" stroke="#FFFFFF" stroke-width="1" />
+
+    <!-- Badge Viatura -->
+    <rect x="25" y="-28" width="140" height="20" rx="3" fill="#08182B" stroke="#38BDF8" stroke-width="1" />
+    <text x="95" y="-14" font-size="10" font-weight="900" fill="#38BDF8" text-anchor="middle">ANTEPARO / ABRIGO MOTOR</text>
+  </g>
+
+  <!-- 6. INÉRCIA DO AGRESSOR PASSANDO DIRETO PELO "X" VAZIO -->
+  <g id="inercia-frontal">
+    <line x1="1105" y1="380" x2="1280" y2="380" stroke="#F87171" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#seta-vermelha)" />
+    <text x="1200" y="365" font-size="10" font-weight="800" fill="#FCA5A5" text-anchor="middle">INÉRCIA FRONTAL (ALVO VAZIO)</text>
+  </g>
+
+  <!-- CARIMBO TÉCNICO OFICIAL CAD NO CANTO INFERIOR DIREITO -->
+  <g id="carimbo-cad" transform="translate(1230, 755)">
+    <rect x="0" y="0" width="335" height="68" fill="#061524" stroke="#38BDF8" stroke-width="1.5" />
+    <rect x="0" y="0" width="335" height="20" fill="#0D3052" />
+    <text x="167" y="14" font-size="10.5" font-weight="900" fill="#38BDF8" text-anchor="middle" letter-spacing="1">POLÍCIA MILITAR DE MINAS GERAIS • CTP</text>
+
+    <line x1="0" y1="44" x2="335" y2="44" stroke="#18436E" stroke-width="1" />
+    <line x1="167" y1="20" x2="167" y2="68" stroke="#18436E" stroke-width="1" />
+
+    <text x="10" y="34" font-size="9.5" font-weight="700" fill="#93C5FD">DISCIPLINA:</text>
+    <text x="75" y="34" font-size="9.5" font-weight="900" fill="#FFFFFF">TÉCNICA POLICIAL</text>
+
+    <text x="178" y="34" font-size="9.5" font-weight="700" fill="#93C5FD">ESCALA:</text>
+    <text x="228" y="34" font-size="9.5" font-weight="900" fill="#4ADE80">1:1 BIOMECÂNICA</text>
+
+    <text x="10" y="58" font-size="9" font-weight="700" fill="#93C5FD">REF: MTP 3.04.01</text>
+    <text x="178" y="58" font-size="9" font-weight="700" fill="#38BDF8">GEOMETRIA 'SAIA DO X'</text>
+  </g>
+</svg>

@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="background:#F4F6F9; border-radius:14px; font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <!-- Blueprint Grid -->
+    <pattern id="grid-pattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(20,27,77,0.06)" stroke-width="1"/>
+    </pattern>
+    <pattern id="grid-major" width="150" height="150" patternUnits="userSpaceOnUse">
+      <path d="M 150 0 L 0 0 0 150" fill="none" stroke="rgba(20,27,77,0.12)" stroke-width="1.5"/>
+    </pattern>
+    <!-- Gradients -->
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141B4D"/>
+      <stop offset="100%" stop-color="#0B102E"/>
+    </linearGradient>
+    <linearGradient id="grad-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B89053"/>
+      <stop offset="100%" stop-color="#826C2B"/>
+    </linearGradient>
+    <linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#AB2328"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="rgba(20,27,77,0.08)"/>
+    </filter>
+  </defs>
+
+  <!-- Background Grids -->
+  <rect width="1100" height="520" fill="#F4F6F9"/>
+  <rect width="1100" height="520" fill="url(#grid-pattern)"/>
+  <rect width="1100" height="520" fill="url(#grid-major)"/>
+
+  <!-- Blueprint Header Banner -->
+  <rect x="25" y="20" width="1050" height="56" rx="8" fill="url(#grad-blue)"/>
+  <rect x="25" y="72" width="1050" height="4" fill="#B89053"/>
+  <text x="50" y="55" fill="#FFFFFF" font-size="20" font-weight="900" letter-spacing="0.5">PMMG • PROTOCOLO DE RUPTURA OPERACIONAL: TRANSIÇÃO TÁTICA E SAÍDA DO EIXO</text>
+  <rect x="915" y="32" width="145" height="32" rx="6" fill="#AB2328"/>
+  <text x="987" y="53" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800" font-family="monospace">MTP 3.04.01</text>
+
+  <!-- Flow Connector Line -->
+  <path d="M 160 270 L 940 270" fill="none" stroke="#CBD5E1" stroke-width="6" stroke-dasharray="8 8"/>
+  <polygon points="950,270 932,260 932,280" fill="#AB2328"/>
+
+  <!-- PASSO 1: IDENTIFICAÇÃO DA AMEAÇA -->
+  <g transform="translate(45, 95)" filter="url(#card-shadow)">
+    <rect width="230" height="385" rx="12" fill="#FFFFFF" stroke="#141B4D" stroke-width="2"/>
+    <rect width="230" height="10" rx="4" fill="#141B4D"/>
+    <!-- Step Badge -->
+    <rect x="18" y="22" width="95" height="28" rx="6" fill="#141B4D"/>
+    <text x="65" y="41" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="900" font-family="monospace">PASSO 01</text>
+    <text x="18" y="80" fill="#141B4D" font-size="18" font-weight="900">Detecção do Gatilho</text>
+    <text x="18" y="102" fill="#826C2B" font-size="14" font-weight="700">Ameaça Iminente</text>
+    
+    <!-- Schematic Graphic -->
+    <rect x="18" y="118" width="194" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="115" cy="173" r="34" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+    <text x="115" y="168" text-anchor="middle" fill="#B91C1C" font-size="12" font-weight="800">AGRESSOR</text>
+    <text x="115" y="186" text-anchor="middle" fill="#7F1D1D" font-size="10" font-family="monospace">SAQUE / ARMA</text>
+    
+    <!-- Descriptive Text -->
+    <text x="18" y="252" fill="#334155" font-size="13" font-weight="500">
+      <tspan x="18" dy="0">• Abordado descumpre ordens</tspan>
+      <tspan x="18" dy="20">• Mão direciona-se à cintura</tspan>
+      <tspan x="18" dy="20">• Empunhadura de arma ou faca</tspan>
+      <tspan x="18" dy="20">• Encurtamento de distância</tspan>
+    </text>
+    <rect x="18" y="338" width="194" height="32" rx="6" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1"/>
+    <text x="115" y="358" text-anchor="middle" fill="#991B1B" font-size="11" font-weight="700">GATILHO DE RUPTURA</text>
+  </g>
+
+  <!-- PASSO 2: FIM DO LOOP VERBAL -->
+  <g transform="translate(305, 95)" filter="url(#card-shadow)">
+    <rect width="230" height="385" rx="12" fill="#FFFFFF" stroke="#826C2B" stroke-width="2"/>
+    <rect width="230" height="10" rx="4" fill="#826C2B"/>
+    <!-- Step Badge -->
+    <rect x="18" y="22" width="95" height="28" rx="6" fill="#826C2B"/>
+    <text x="65" y="41" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="900" font-family="monospace">PASSO 02</text>
+    <text x="18" y="80" fill="#141B4D" font-size="18" font-weight="900">Cessar Diálogo</text>
+    <text x="18" y="102" fill="#B45309" font-size="14" font-weight="700">Fim do Loop Verbal</text>
+    
+    <!-- Schematic Graphic -->
+    <rect x="18" y="118" width="194" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+    <circle cx="115" cy="173" r="34" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+    <line x1="90" y1="150" x2="140" y2="196" stroke="#DC2626" stroke-width="4"/>
+    <text x="115" y="170" text-anchor="middle" fill="#92400E" font-size="11" font-weight="800">PALAVRA</text>
+    <text x="115" y="186" text-anchor="middle" fill="#B45309" font-size="10" font-family="monospace">ESGOTADA</text>
+
+    <!-- Descriptive Text -->
+    <text x="18" y="252" fill="#334155" font-size="13" font-weight="500">
+      <tspan x="18" dy="0">• Interrupção imediata da fala</tspan>
+      <tspan x="18" dy="20">• Proibido insistir em comandos</tspan>
+      <tspan x="18" dy="20">• Foco cognitivo na reação física</tspan>
+      <tspan x="18" dy="20">• Preservação do ciclo de combate</tspan>
+    </text>
+    <rect x="18" y="338" width="194" height="32" rx="6" fill="#FEFCE8" stroke="#FDE047" stroke-width="1"/>
+    <text x="115" y="358" text-anchor="middle" fill="#854D0E" font-size="11" font-weight="700">ZERO HESITAÇÃO VERBAL</text>
+  </g>
+
+  <!-- PASSO 3: SAÍDA DO EIXO (SAIA DO X) -->
+  <g transform="translate(565, 95)" filter="url(#card-shadow)">
+    <rect width="230" height="385" rx="12" fill="#FFFFFF" stroke="#AB2328" stroke-width="2"/>
+    <rect width="230" height="10" rx="4" fill="#AB2328"/>
+    <!-- Step Badge -->
+    <rect x="18" y="22" width="95" height="28" rx="6" fill="#AB2328"/>
+    <text x="65" y="41" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="900" font-family="monospace">PASSO 03</text>
+    <text x="18" y="80" fill="#AB2328" font-size="18" font-weight="900">Manobra Angular</text>
+    <text x="18" y="102" fill="#141B4D" font-size="14" font-weight="700">"Saia do Eixo X"</text>
+    
+    <!-- Schematic Graphic -->
+    <rect x="18" y="118" width="194" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+    <line x1="40" y1="173" x2="190" y2="173" stroke="#DC2626" stroke-width="2" stroke-dasharray="4 4"/>
+    <text x="50" y="165" fill="#DC2626" font-size="11" font-weight="bold">EIXO DE FOGO</text>
+    <!-- Officer dodging -->
+    <circle cx="140" cy="138" r="18" fill="#141B4D" stroke="#B89053" stroke-width="2"/>
+    <text x="140" y="143" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="bold">PM</text>
+    <path d="M 80 173 Q 110 145 125 140" fill="none" stroke="#2563EB" stroke-width="3"/>
+    <polygon points="127,138 115,142 120,150" fill="#2563EB"/>
+
+    <!-- Descriptive Text -->
+    <text x="18" y="252" fill="#334155" font-size="13" font-weight="500">
+      <tspan x="18" dy="0">• Passo lateral / diagonal (45° a 90°)</tspan>
+      <tspan x="18" dy="20">• Quebra da linha de visada do alvo</tspan>
+      <tspan x="18" dy="20">• Força o agressor a reajustar mira</tspan>
+      <tspan x="18" dy="20">• Busca imediata de anteparo/abrigo</tspan>
+    </text>
+    <rect x="18" y="338" width="194" height="32" rx="6" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+    <text x="115" y="358" text-anchor="middle" fill="#1E40AF" font-size="11" font-weight="700">QUEBRA DO CICLO OODA</text>
+  </g>
+
+  <!-- PASSO 4: RESPOSTA PROPORCIONAL -->
+  <g transform="translate(825, 95)" filter="url(#card-shadow)">
+    <rect width="230" height="385" rx="12" fill="#FFFFFF" stroke="#166534" stroke-width="2"/>
+    <rect width="230" height="10" rx="4" fill="#166534"/>
+    <!-- Step Badge -->
+    <rect x="18" y="22" width="95" height="28" rx="6" fill="#166534"/>
+    <text x="65" y="41" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="900" font-family="monospace">PASSO 04</text>
+    <text x="18" y="80" fill="#141B4D" font-size="18" font-weight="900">Emprego da Força</text>
+    <text x="18" y="102" fill="#166534" font-size="14" font-weight="700">Resposta Proporcional</text>
+    
+    <!-- Schematic Graphic -->
+    <rect x="18" y="118" width="194" height="110" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect x="35" y="145" width="160" height="55" rx="6" fill="#166534"/>
+    <text x="115" y="168" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="900">IMPO / AINM OU</text>
+    <text x="115" y="188" text-anchor="middle" fill="#DCFCE7" font-size="12" font-weight="900">FORÇA LETAL</text>
+
+    <!-- Descriptive Text -->
+    <text x="18" y="252" fill="#334155" font-size="13" font-weight="500">
+      <tspan x="18" dy="0">• Transição imediata na Escada UDF</tspan>
+      <tspan x="18" dy="20">• Cessação imediata da agressão</tspan>
+      <tspan x="18" dy="20">• Verbalização pós-disparo (mãos)</tspan>
+      <tspan x="18" dy="20">• Proteção legal e socorro imediato</tspan>
+    </text>
+    <rect x="18" y="338" width="194" height="32" rx="6" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+    <text x="115" y="358" text-anchor="middle" fill="#14532D" font-size="11" font-weight="700">CONFORMIDADE ESTATAL</text>
+  </g>
+</svg>

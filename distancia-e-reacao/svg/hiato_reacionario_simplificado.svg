@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="100%" height="auto" style="background:#FFFFFF; border-radius:8px; border:1px solid #CBD5E1; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <marker id="seta-grafite" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#334155" />
+    </marker>
+    <marker id="seta-vermelha" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#B91C1C" />
+    </marker>
+    <marker id="seta-caqui" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#826C2B" />
+    </marker>
+  </defs>
+
+  <!-- Cabeçalho Institucional Limpo -->
+  <rect x="0" y="0" width="960" height="48" fill="#826C2B" />
+  <text x="24" y="30" font-size="16" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">O HIATO REACIONÁRIO NO CONFRONTO ARMADO</text>
+  <text x="936" y="30" font-size="13" font-weight="600" fill="#F3EFE6" text-anchor="end">MTP 3.04.01 • Fisiologia da Resposta Armada</text>
+
+  <!-- 1. FLUXO DO AGRESSOR (AÇÃO) -->
+  <g transform="translate(24, 68)">
+    <rect x="0" y="0" width="912" height="100" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5" />
+    
+    <!-- Rótulo Agressor -->
+    <rect x="16" y="16" width="160" height="32" rx="4" fill="#B91C1C" />
+    <text x="96" y="37" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">AGRESSOR (AÇÃO)</text>
+    
+    <!-- Descrição com fonte grande -->
+    <text x="195" y="38" font-size="18" font-weight="800" fill="#991B1B">Possui a iniciativa: a decisão do ataque já foi tomada.</text>
+    <text x="195" y="72" font-size="15" font-weight="600" fill="#475569">Tempo para iniciar a investida: <tspan font-weight="800" fill="#B91C1C">0,0 segundo</tspan> • Avanço imediato em direção ao policial.</text>
+
+    <!-- Seta do avanço -->
+    <line x1="680" y1="50" x2="890" y2="50" stroke="#B91C1C" stroke-width="3" marker-end="url(#seta-vermelha)" />
+  </g>
+
+  <!-- 2. BARRA COMPARATIVA CENTRAL (O HIATO / DESVANTAGEM TEMPORAL) -->
+  <g transform="translate(24, 184)">
+    <rect x="0" y="0" width="912" height="54" rx="6" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5" />
+    <text x="30" y="34" font-size="16" font-weight="800" fill="#1E293B">HIATO TEMPORAL (DESVANTAGEM):</text>
+    <text x="350" y="34" font-size="16" font-weight="700" fill="#826C2B">O policial consome entre <tspan font-weight="900" fill="#B91C1C">1,3s e 1,5s</tspan> apenas para iniciar a resposta.</text>
+    <text x="890" y="34" font-size="14" font-weight="700" fill="#475569" text-anchor="end">Deslocamento do agressor: ~5 a 6 metros</text>
+  </g>
+
+  <!-- 3. FLUXO DO POLICIAL (REAÇÃO / PROCESSO COGNITIVO) -->
+  <g transform="translate(24, 254)">
+    <rect x="0" y="0" width="912" height="145" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5" />
+
+    <!-- Rótulo Policial -->
+    <rect x="16" y="14" width="160" height="28" rx="4" fill="#141B4D" />
+    <text x="96" y="33" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">POLICIAL (REAÇÃO)</text>
+    <text x="195" y="33" font-size="14" font-weight="700" fill="#334155">Ciclo neural obrigatório de processamento sob surpresa:</text>
+
+    <!-- 3 Blocos com Fontes Grandes -->
+    <!-- Bloco 1: Identificação -->
+    <g transform="translate(16, 52)">
+      <rect x="0" y="0" width="280" height="74" rx="6" fill="#FFFFFF" stroke="#826C2B" stroke-width="1.5" />
+      <text x="14" y="26" font-size="15" font-weight="800" fill="#826C2B">1. PERCEPÇÃO VISUAL</text>
+      <text x="14" y="48" font-size="13" font-weight="600" fill="#334155">Detecção do movimento hostil</text>
+      <rect x="200" y="10" width="68" height="22" rx="3" fill="#FEF3C7" />
+      <text x="234" y="25" font-size="12" font-weight="800" fill="#92400E" text-anchor="middle">~0,30 s</text>
+    </g>
+
+    <!-- Seta 1 para 2 -->
+    <line x1="302" y1="89" x2="318" y2="89" stroke="#826C2B" stroke-width="2" marker-end="url(#seta-caqui)" />
+
+    <!-- Bloco 2: Decisão -->
+    <g transform="translate(324, 52)">
+      <rect x="0" y="0" width="280" height="74" rx="6" fill="#FFFFFF" stroke="#826C2B" stroke-width="1.5" />
+      <text x="14" y="26" font-size="15" font-weight="800" fill="#826C2B">2. DECISÃO TÁTICA</text>
+      <text x="14" y="48" font-size="13" font-weight="600" fill="#334155">Confirmação e escolha da conduta</text>
+      <rect x="200" y="10" width="68" height="22" rx="3" fill="#FEF3C7" />
+      <text x="234" y="25" font-size="12" font-weight="800" fill="#92400E" text-anchor="middle">~0,40 s</text>
+    </g>
+
+    <!-- Seta 2 para 3 -->
+    <line x1="610" y1="89" x2="626" y2="89" stroke="#826C2B" stroke-width="2" marker-end="url(#seta-caqui)" />
+
+    <!-- Bloco 3: Resposta Motora -->
+    <g transform="translate(632, 52)">
+      <rect x="0" y="0" width="265" height="74" rx="6" fill="#FFFFFF" stroke="#166534" stroke-width="1.5" />
+      <text x="14" y="26" font-size="15" font-weight="800" fill="#166534">3. RESPOSTA MOTORA</text>
+      <text x="14" y="48" font-size="13" font-weight="600" fill="#334155">Evasão, saque e acionamento</text>
+      <rect x="185" y="10" width="68" height="22" rx="3" fill="#DCFCE7" />
+      <text x="219" y="25" font-size="12" font-weight="800" fill="#166534" text-anchor="middle">~0,60 s</text>
+    </g>
+  </g>
+
+  <!-- Rodapé Institucional Técnico -->
+  <rect x="0" y="424" width="960" height="36" fill="#1E293B" />
+  <text x="24" y="447" font-size="12" font-weight="700" fill="#F8FAFC">REGRA FUNDAMENTAL: A ação precede a reação. Manter distância superior a 6 metros é pré-requisito para viabilizar a resposta defensiva armada.</text>
+  <text x="936" y="447" font-size="11" font-weight="600" fill="#94A3B8" text-anchor="end">Fonte: MTP 3.04.01/2020-CG / Force Science Institute</text>
+</svg>

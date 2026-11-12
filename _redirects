@@ -1,0 +1,17 @@
+# Netlify Redirects for Dentro do Confronto
+/distancia/*                  /distancia-e-reacao/:splat           301!
+/distancia                    /distancia-e-reacao/                 301!
+/debrifing/*                  /debriefing/:splat                   301!
+/debrifing                    /debriefing/                         301!
+/atencao-seletiva             /atencao-seletiva/                   301
+/controle-verbal              /controle-verbal/                    301
+/gestao-de-estresse           /gestao-de-estresse/                 301
+/intervencao-policial         /intervencao-policial/               301
+/neutralizacao-da-ameaca      /neutralizacao-da-ameaca/            301
+/debriefing                   /debriefing/                         301
+/distancia-e-reacao           /distancia-e-reacao/                 301
+/Atenção%20seletiva/*         /atencao-seletiva/:splat             301!
+/Controle%20verbal/*          /controle-verbal/:splat              301!
+/Gestão%20de%20estresse/*     /gestao-de-estresse/:splat           301!
+/Intervencao%20policial/*     /intervencao-policial/:splat         301!
+/Neutralizacao%20da%20ameaca/* /neutralizacao-da-ameaca/:splat    301!

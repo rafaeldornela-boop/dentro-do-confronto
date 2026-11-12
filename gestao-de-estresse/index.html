@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <base href="/dentro-do-confronto/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 3: Gestão do Estresse e Processamento Cognitivo - Central de Treinamento Virtual PMMG</title>
+  
+<style>
+  /* ==========================================================
+     NAV BAR & FOOTER PADRÃO - CENTRAL DE TREINAMENTO VIRTUAL
+     ========================================================== */
+  .pmmg-top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    background: #0f172a;
+    border-bottom: 2px solid #b89053;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+  .pmmg-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .pmmg-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #b89053;
+    color: #0f172a !important;
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 7px 14px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .pmmg-back-btn:hover {
+    background: #d4a96a;
+    transform: translateY(-1px);
+  }
+  .pmmg-nav-badge {
+    background: rgba(255,255,255,0.08);
+    color: #e2e8f0;
+    font-size: 0.80rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border-left: 2px solid #b89053;
+    font-weight: 500;
+  }
+  .pmmg-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pmmg-tool-btn {
+    background: #1e293b;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+  }
+  .pmmg-tool-btn:hover {
+    background: #334155;
+    color: #fff;
+    border-color: #64748b;
+  }
+  .pmmg-reading-progress {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 3px;
+    background: #b89053;
+    width: 0%;
+    transition: width 0.1s ease;
+  }
+  .pmmg-footer-nav {
+    max-width: 1000px;
+    margin: 50px auto 30px auto;
+    padding: 24px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .pmmg-btn-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none !important;
+    transition: 0.2s;
+  }
+  .pmmg-btn-prev {
+    background: #e2e8f0;
+    color: #334155 !important;
+  }
+  .pmmg-btn-prev:hover {
+    background: #cbd5e1;
+    color: #0f172a !important;
+  }
+  .pmmg-btn-next {
+    background: #0f172a;
+    color: #f8fafc !important;
+    border: 1px solid #b89053;
+  }
+  .pmmg-btn-next:hover {
+    background: #1e293b;
+    border-color: #d4a96a;
+  }
+  .pmmg-btn-complete {
+    background: #166534;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.2s;
+  }
+  .pmmg-btn-complete:hover {
+    background: #15803d;
+  }
+
+  @media print {
+    .pmmg-top-nav, .pmmg-footer-nav {
+      display: none !important;
+    }
+  }
+</style>
+
+</head>
+<body style="margin: 0; padding: 0; background: #ffffff;">
+  
+<nav class="pmmg-top-nav">
+  <div class="pmmg-nav-left">
+    <a class="pmmg-back-btn" href="/dentro-do-confronto/">
+      <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>
+      Central de Instruções
+    </a>
+    <span class="pmmg-nav-badge">Trilha: Dentro do Confronto &nbsp;|&nbsp; <strong>Fisiologia do Estresse em Combate</strong></span>
+  </div>
+  <div class="pmmg-nav-actions">
+    <button class="pmmg-tool-btn" onclick="adjustFontSize(-1)" title="Diminuir Fonte">A-</button>
+    <button class="pmmg-tool-btn" onclick="adjustFontSize(1)" title="Aumentar Fonte">A+</button>
+    <button class="pmmg-tool-btn" onclick="window.print()" title="Imprimir Instrução / Salvar PDF">
+      <svg width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/></svg>
+      Imprimir
+    </button>
+  </div>
+  <div class="pmmg-reading-progress" id="pmmgScrollProgress"></div>
+</nav>
+
+  <page>
+  <style>
+
+    /* =====================================================================
+       PIDF v1.3 — PMMG INSTRUCTIONAL DESIGN FRAMEWORK (CMS WISE / DomSanitizer)
+       MÓDULO: GESTÃO DE ESTRESSE NO COMBATE ARMADO (DENTRO DO CONFRONTO)
+       ===================================================================== */
+    *, *::before, *::after {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    :root {
+        --cor-primaria:      #826C2B;
+        --cor-caqui:         #A08F63;
+        --cor-ouro:          #B89053;
+        --cor-navy:          #141B4D;
+        --cor-texto:         #222222;
+        --cor-texto-fraco:   #555555;
+        --cor-preto:         #000000;
+        --cor-branco:        #FFFFFF;
+        --cor-cinza:         #E4E4E4;
+        --cor-cinza-claro:   #F8F8F8;
+        --cor-cinza-escuro:  #777777;
+        --cor-info:          #1995FF;
+        --cor-alerta:        #FF5722;
+        --cor-seguranca:     #AB2328;
+        --cor-sucesso:       #187731;
+
+        --espaco-p:          8px;
+        --espaco-m:          16px;
+        --espaco-l:          24px;
+        --espaco-xl:         32px;
+
+        --raio-p:            4px;
+        --raio-m:            8px;
+        --raio-g:            12px;
+
+        --sombra-suave:      0 4px 12px rgba(0, 0, 0, 0.06);
+        --sombra-card:       0 6px 16px rgba(20, 27, 77, 0.08);
+        --largura-maxima:    1140px;
+        --transicao-padrao:  all 0.25s ease-in-out;
+    }
+
+    page {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        color: var(--cor-texto);
+        line-height: 1.65;
+        font-size: clamp(0.95rem, 0.88rem + 0.35vw, 1.05rem);
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .aula {
+        width: 100%;
+        max-width: var(--largura-maxima);
+        margin: 0 auto;
+        padding: clamp(12px, 2.5vw, 24px);
+    }
+
+    /* FATIAMENTO ATÔMICO EM SECTIONS (<= 600px) */
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.15rem;
+        padding: clamp(16px, 2.5vw, 28px) 0;
+        margin-bottom: 2rem;
+        width: 100%;
+        border-bottom: 1px solid var(--cor-cinza);
+    }
+
+    section:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    /* TIPOGRAFIA */
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        line-height: 1.3;
+        color: var(--cor-navy);
+        font-weight: 800;
+        text-align: left;
+    }
+
+    h1 {
+        position: relative;
+        font-size: clamp(1.4rem, 1.2rem + 1vw, 2.1rem);
+        color: var(--cor-navy);
+        padding-bottom: 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    h1::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 90px;
+        height: 4px;
+        background: var(--cor-primaria);
+        border-radius: 4px;
+    }
+
+    h2 {
+        font-size: clamp(1.15rem, 1.05rem + 0.6vw, 1.45rem);
+        color: var(--cor-primaria);
+        border-left: 5px solid var(--cor-primaria);
+        padding-left: 12px;
+        margin-top: 0.2rem;
+    }
+
+    h3 {
+        font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.22rem);
+        color: var(--cor-navy);
+    }
+
+    h4 {
+        font-size: 1.02rem;
+        color: var(--cor-primaria);
+    }
+
+    p {
+        margin: 0;
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.65;
+    }
+
+    strong { font-weight: 700; color: var(--cor-navy); }
+    em { font-style: italic; }
+
+    .subtitulo {
+        font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.1rem);
+        color: var(--cor-caqui);
+        font-weight: 600;
+        margin-top: -0.25rem;
+    }
+
+    .data-atualizacao {
+        font-size: 0.82rem;
+        color: var(--cor-texto-fraco);
+        font-style: italic;
+        margin-bottom: 0.5rem;
+    }
+
+    /* LINHA DO TEMPO OPERACIONAL / FASES DO CONFRONTO */
+    .timeline-confronto {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+        gap: 10px;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .timeline-etapa {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-top: 4px solid var(--cor-primaria);
+        border-radius: var(--raio-m);
+        padding: 12px 14px;
+        box-shadow: var(--sombra-suave);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .timeline-etapa .fase-tag {
+        font-size: 0.72rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--cor-primaria);
+        letter-spacing: 0.05em;
+    }
+
+    .timeline-etapa h4 {
+        font-size: 0.94rem;
+        margin: 0;
+        color: var(--cor-navy);
+    }
+
+    .timeline-etapa p {
+        font-size: 0.86rem;
+        line-height: 1.45;
+        margin: 0;
+    }
+
+    /* PAINÉIS SEMÂNTICOS PIDF */
+    .painel {
+        position: relative;
+        padding: 1.15rem 1.35rem;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-left: 5px solid var(--cor-primaria);
+        border-radius: var(--raio-m);
+        box-shadow: var(--sombra-suave);
+        width: 100%;
+        margin: 0.4rem 0;
+        text-align: justify;
+    }
+
+    .painel::before {
+        display: block;
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    .painel.neutro { border-left-color: var(--cor-primaria); background: #FAF9F6; }
+    .painel.neutro::before { content: "INFORMAÇÃO OPERACIONAL"; color: var(--cor-primaria); }
+
+    .painel.seguranca { border-left-color: var(--cor-seguranca); background: #FFF6F6; }
+    .painel.seguranca::before { content: "ALERTA DE SEGURANÇA OPERACIONAL"; color: var(--cor-seguranca); }
+
+    .painel.doutrina { border-left-color: var(--cor-navy); background: #F6F8FC; }
+    .painel.doutrina::before { content: "FUNDAMENTAÇÃO DOUTRINÁRIA PMMG"; color: var(--cor-navy); }
+
+    .painel.instrutor { border-left-color: var(--cor-caqui); background: #FDFBF7; }
+    .painel.instrutor::before { content: "DICA TÁTICA DO INSTRUTOR"; color: var(--cor-primaria); }
+
+    .painel.erro { border-left-color: var(--cor-alerta); background: #FFF8F5; }
+    .painel.erro::before { content: "ERRO CRÍTICO A EVITAR"; color: var(--cor-alerta); }
+
+    .painel.observacao { border-left-color: var(--cor-info); background: #F5FAFF; }
+    .painel.observacao::before { content: "OBSERVAÇÃO TÉCNICA"; color: var(--cor-info); }
+
+    .painel.pratica { border-left-color: var(--cor-sucesso); background: #F5FAF6; }
+    .painel.pratica::before { content: "DRILL DE APLICAÇÃO PRÁTICA"; color: var(--cor-sucesso); }
+
+    .painel.importante { border-left-color: var(--cor-primaria); background: #FCFAF4; }
+    .painel.importante::before { content: "IMPORTANTE"; color: var(--cor-primaria); }
+
+    .painel.resumo { border-left-color: var(--cor-cinza-escuro); background: #FAFAFA; }
+    .painel.resumo::before { content: "SÍNTESE DA REGRA DE OURO"; color: var(--cor-cinza-escuro); }
+
+    /* PROCEDIMENTO NUMERADO */
+    .procedimento {
+        counter-reset: etapa;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        margin: 0.4rem 0;
+    }
+
+    .etapa {
+        counter-increment: etapa;
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .etapa::before {
+        content: counter(etapa);
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 50%;
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        font-size: 1rem;
+        flex-shrink: 0;
+        align-self: flex-start;
+        box-shadow: var(--sombra-suave);
+    }
+
+    .etapa-conteudo { flex: 1; min-width: 0; }
+    .etapa-conteudo h4 { margin: 0 0 0.25rem 0; color: var(--cor-navy); font-size: 1rem; }
+    .etapa-conteudo p { margin: 0; font-size: 0.95rem; }
+
+    /* CARDS EM GRID FLUIDO & NÍVEIS */
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+        gap: 14px;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .card-nivel {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-m);
+        padding: 14px 16px;
+        box-shadow: var(--sombra-suave);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .card-nivel.nivel-1 { border-left: 5px solid #EAB308; }
+    .card-nivel.nivel-2 { border-left: 5px solid #FF5722; }
+    .card-nivel.nivel-3 { border-left: 5px solid #DC2626; }
+
+    .card-item-header {
+        font-weight: 800;
+        font-size: 1.02rem;
+        color: var(--cor-primaria);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .box-saiba-mais {
+        background: #F0F9FF;
+        border-left: 4px solid var(--cor-info);
+        padding: 12px 14px;
+        border-radius: var(--raio-p);
+        margin: 0.6rem 0;
+        font-size: 0.92rem;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    /* MÍDIAS: IMAGENS E VÍDEOS */
+    .container-imagem {
+        display: block;
+        width: 100%;
+        max-width: 820px;
+        margin: 0.5rem auto;
+        border-radius: var(--raio-m);
+        border: 1px solid var(--cor-cinza);
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+        background: #F8F8F8;
+    }
+
+    .container-imagem img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 480px;
+        object-fit: contain;
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+    }
+
+    /* CONTAINER DEDICADO PARA INFOGRÁFICO VERTICAL (FIGURA 1 AMPLIADA) */
+    .container-infografico-vertical {
+        display: block;
+        width: 100%;
+        max-width: 720px;
+        margin: 0.8rem auto;
+        border-radius: var(--raio-m);
+        border: 1px solid var(--cor-cinza);
+        box-shadow: var(--sombra-card);
+        overflow: hidden;
+        background: #FFFFFF;
+    }
+
+    .container-infografico-vertical img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 850px;
+        object-fit: contain;
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+    }
+
+    /* ZOOM NATIVO CSS (DOMSANITIZER-SAFE) */
+    .container-imagem img[tabindex="0"]:focus,
+    .container-infografico-vertical img[tabindex="0"]:focus {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.15);
+        max-width: 95vw;
+        max-height: 92vh;
+        z-index: 2147483647;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+        outline: 4px solid var(--cor-primaria);
+        background-color: #FFFFFF;
+        cursor: zoom-out;
+    }
+
+    /* VÍDEO 16:9 HORIZONTAL */
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 820px;
+        margin: 0.5rem auto;
+        aspect-ratio: 16 / 9;
+        background: #000000;
+        border-radius: var(--raio-m);
+        overflow: hidden;
+        box-shadow: var(--sombra-card);
+    }
+
+    .video-container video, .video-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+    }
+
+    /* VÍDEO VERTICAL (CASUÍSTICA REAL 9:16) */
+    .video-container-vertical {
+        position: relative;
+        width: 100%;
+        max-width: 360px;
+        margin: 0.8rem auto;
+        aspect-ratio: 9 / 16;
+        background: #000000;
+        border-radius: var(--raio-m);
+        overflow: hidden;
+        box-shadow: var(--sombra-card);
+    }
+
+    .video-container-vertical video {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+        object-fit: cover;
+    }
+
+    .legenda-midia {
+        font-size: 0.82rem;
+        text-align: center;
+        color: var(--cor-texto-fraco);
+        margin: 0.25rem 0 0.5rem 0;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    /* CARDS COMPARATIVOS (SUBSTITUINDO TABELAS) */
+    .ficha-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 14px;
+        width: 100%;
+        margin: 0.6rem 0;
+    }
+
+    .card-comparativo {
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-top: 4px solid var(--cor-navy);
+        border-radius: var(--raio-m);
+        padding: 14px 16px;
+        box-shadow: var(--sombra-suave);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .card-comparativo-header {
+        font-weight: 800;
+        font-size: 0.98rem;
+        color: var(--cor-navy);
+        border-bottom: 2px solid var(--cor-cinza);
+        padding-bottom: 6px;
+    }
+
+    .card-comparativo p {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    /* QUIZ E GABARITO INTERATIVO CSS PURO */
+    .quiz-bloco {
+        background: #FDFCF9;
+        border: 2px solid var(--cor-caqui);
+        border-radius: var(--raio-m);
+        padding: 18px 20px;
+        margin: 0.6rem 0;
+    }
+
+    .quiz-pergunta {
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--cor-navy);
+        margin-bottom: 14px;
+        text-align: justify;
+    }
+
+    .quiz-opcoes {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .quiz-opcao-box {
+        display: block;
+        padding: 12px 16px;
+        background: #FFFFFF;
+        border: 1px solid var(--cor-cinza);
+        border-radius: var(--raio-p);
+        font-size: 0.94rem;
+        text-align: justify;
+        line-height: 1.5;
+        transition: var(--transicao-padrao);
+    }
+
+    .quiz-opcao-box:hover {
+        background: #FAF8F2;
+        border-color: var(--cor-caqui);
+    }
+
+    /* GABARITO EXPANSÍVEL (RECOLHIDO POR PADRÃO) */
+    details.gabarito-detalhes {
+        width: 100%;
+        margin-top: 14px;
+        border: 1px dashed var(--cor-caqui);
+        border-radius: var(--raio-m);
+        background: #FAF8F2;
+        overflow: hidden;
+    }
+
+    details.gabarito-detalhes summary.gabarito-btn {
+        padding: 12px 16px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        color: var(--cor-navy);
+        cursor: pointer;
+        user-select: none;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #F3EFE6;
+    }
+
+    details.gabarito-detalhes summary.gabarito-btn::-webkit-details-marker {
+        display: none;
+    }
+
+    details.gabarito-detalhes summary.gabarito-btn::after {
+        content: "▼ CLIQUE PARA CONFERIR GABARITO";
+        font-size: 0.74rem;
+        background: var(--cor-primaria);
+        color: #FFFFFF;
+        padding: 4px 10px;
+        border-radius: var(--raio-p);
+        font-weight: 700;
+        letter-spacing: 0.04em;
+    }
+
+    details.gabarito-detalhes[open] summary.gabarito-btn::after {
+        content: "▲ RECOLHER GABARITO";
+        background: var(--cor-navy);
+    }
+
+    .feedback-correto {
+        padding: 14px 16px;
+        background: #DCFCE7;
+        border-left: 4px solid var(--cor-sucesso);
+        font-size: 0.92rem;
+        color: #14532D;
+        text-align: justify;
+        line-height: 1.55;
+    }
+
+    /* EXPANSÍVEIS DE APROFUNDAMENTO TÉCNICO */
+    details.popup-aprofundamento {
+        width: 100%;
+        background: #FAF8F2;
+        border: 1px solid var(--cor-caqui);
+        border-radius: var(--raio-m);
+        margin: 0.6rem 0;
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+    }
+
+    details.popup-aprofundamento summary.btn-popup {
+        background: linear-gradient(135deg, #826C2B, #A08F63);
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 0.92rem;
+        padding: 0.85rem 1.15rem;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        user-select: none;
+    }
+
+    details.popup-aprofundamento summary.btn-popup::-webkit-details-marker { display: none; }
+
+    details.popup-aprofundamento summary.btn-popup::after {
+        content: "▼ EXPANDIR";
+        font-size: 0.74rem;
+        background: rgba(0, 0, 0, 0.25);
+        padding: 3px 8px;
+        border-radius: var(--raio-p);
+    }
+
+    details.popup-aprofundamento[open] summary.btn-popup::after {
+        content: "▲ RECOLHER";
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .conteudo-popup {
+        padding: 1.15rem 1.35rem;
+        background: #FFFFFF;
+        border-top: 1px solid var(--cor-caqui);
+        text-align: justify;
+    }
+
+    /* RODAPÉ DOUTRINÁRIO ABNT */
+    .referencias-box {
+        background: #F8F9FA;
+        border-left: 4px solid var(--cor-navy);
+        padding: 14px 18px;
+        border-radius: var(--raio-p);
+        font-size: 0.88rem;
+    }
+    .referencias-box ul {
+        margin: 0;
+        padding-left: 1.2rem;
+    }
+    .referencias-box li {
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    /* RESPONSIVIDADE MOBILE */
+    @media (max-width: 768px) {
+        .aula { padding: 12px; }
+        section { gap: 0.95rem; padding: 14px 0; margin-bottom: 1.5rem; }
+        .etapa { gap: 0.75rem; }
+        .etapa::before { width: 34px; height: 34px; min-width: 34px; font-size: 0.9rem; }
+        .video-container-vertical { max-width: 100%; aspect-ratio: 9 / 16; }
+        .container-infografico-vertical { max-width: 100%; }
+        .container-infografico-vertical img { max-height: 600px; }
+    }
+
+    /* IMPRESSÃO / PDF */
+    @media print {
+        page, .aula { padding: 0 !important; max-width: 100% !important; font-size: 10pt !important; }
+        section { page-break-after: always; break-after: page; border-bottom: none; }
+        .painel, .ficha-cards, .procedimento { page-break-inside: avoid; break-inside: avoid; }
+        details.popup-aprofundamento, details.gabarito-detalhes { display: block !important; }
+        details.popup-aprofundamento summary, details.gabarito-detalhes summary { display: none !important; }
+        .conteudo-popup, .feedback-correto { display: block !important; padding: 0 !important; }
+        video { display: none !important; }
+    }
+
+  </style>
+
+  <div class="aula">
+
+    <!-- SLIDE 1: ABERTURA & LINHA DO TEMPO DA SOBREVIVÊNCIA -->
+    <section>
+      <h1>Gestão de Estresse no Combate Armado</h1>
+      <p class="subtitulo">Neurofisiologia do Sobrevivente, Modulação Vagal e Ciclo Decisório sob Sobrecarga Adrenérgica (MTP 01)</p>
+
+      <div class="painel doutrina">
+        <p>No confronto armado, o desempenho técnico e a sobrevivência do policial militar dependem da gestão das alterações fisiológicas provocadas pelo estresse de combate. A compreensão dos efeitos biológicos sobre a percepção sensorial, a motricidade e o ciclo decisório fundamenta os procedimentos padronizados pelo MTP 3.04.01/2020-CG, desde a prontidão preventiva até as ações pós-disparos.</p>
+      </div>
+
+      <div class="video-container">
+        <video controls poster="video/poster_videoaula.jpg" preload="metadata">
+          <source src="video/videoaula_gestao_estresse.mp4" type="video/mp4">
+          Seu navegador não suporta a reprodução deste vídeo.
+        </video>
+      </div>
+      <p class="legenda-midia">Videoaula — Neurofisiologia do Combate Armado: Do Estresse Operacional à Estabilização Tática. <em>(Full HD 1080p • Central Virtual de Treinamento - CVT / PMMG)</em></p>
+
+      <div class="timeline-confronto">
+        <div class="timeline-etapa">
+          <span class="fase-tag">Fase 1 • Antes</span>
+          <h4>Prontidão Mental</h4>
+          <p>Condição Amarela em patrulhamento ostensivo; foco atencional e antecipação tática (115–145 BPM).</p>
+        </div>
+        <div class="timeline-etapa">
+          <span class="fase-tag">Fase 2 • Início</span>
+          <h4>Resposta Simpática</h4>
+          <p>Ativação do Sistema Nervoso Simpático; elevação de pulso, visão em túnel e exclusão auditiva.</p>
+        </div>
+        <div class="timeline-etapa">
+          <span class="fase-tag">Fase 3 • Sob Fogo</span>
+          <h4>Ciclo ICDA & Ação</h4>
+          <p>Tomada de decisão em frações de segundo e emprego prioritário de motricidade grossa.</p>
+        </div>
+        <div class="timeline-etapa">
+          <span class="fase-tag">Fase 4 • Pós-Disparos</span>
+          <h4>Box Breathing</h4>
+          <p>Protocolo 4x4x4x4 para modulação parassimpática, abrigo balístico e varredura 360°.</p>
+        </div>
+        <div class="timeline-etapa">
+          <span class="fase-tag">Fase 5 • Pós-Incidente</span>
+          <h4>Rede NAIS / SAS</h4>
+          <p>Acompanhamento biopsicossocial institucional no Núcleo de Atenção Integral à Saúde.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: FASE 1 — PRÉ-CONFRONTO: CALIBRAGEM MENTAL E PRONTIDÃO -->
+    <section>
+      <h2>Fase 1: Calibragem Mental e Estados de Prontidão (MTP 01)</h2>
+      <p>A reação sob fogo é decidida antes do primeiro disparo. O policial que patrulha desligado do ambiente sofre o <em>startle reflex</em> (reflexo de sobressalto), paralisando temporariamente o processamento cognitivo. A PMMG adota a escala de foco atencional estruturada para manter a guarnição sempre na zona ideal de resposta:</p>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">⚪ Branco (Desatenção Total)</div>
+          <p>Desconectado do ambiente, focado em pensamentos internos ou celular. <strong>Estritamente proibido no serviço operacional</strong> por elevar a vulnerabilidade da equipe ao nível crítico.</p>
+        </div>
+
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">🟡 Amarelo (Atenção Relaxada e Constante)</div>
+          <p>Estado padrão de patrulhamento ostensivo. Consciência situacional ativa, varredura em 360° e leitura contínua de pessoas e veículos sem tensão muscular desnecessária.</p>
+        </div>
+
+        <div class="card-nivel nivel-2">
+          <div class="card-item-header">🟠 Laranja (Alerta Específico)</div>
+          <p>Detecção de anomalia, indivíduo em fundada suspeita ou indício de emboscada. O policial define mentalmente o plano de ação imediato e localiza abrigos balísticos no terreno.</p>
+        </div>
+
+        <div class="card-nivel nivel-3">
+          <div class="card-item-header">🔴 Vermelho (Confronto Ativo)</div>
+          <p>A agressão letal foi deflagrada ou é iminente. O militar executa a transição imediata para a ação em legítima defesa sob controle doutrinário.</p>
+        </div>
+      </div>
+
+      <div class="box-saiba-mais">
+        <strong>A Matriz Psicomotora de Grossman e Siddle:</strong> Pesquisas balísticas e fisiológicas demonstram que na faixa de <strong>115 a 145 BPM</strong> (atingida em Condição Amarela/Laranja consciente) o policial atinge seu ápice de reflexo motor, tempo de reação e acuidade visual. Ultrapassar 145 BPM sem treinamento prévio degrada progressivamente o autocontrole.
+      </div>
+    </section>
+
+    <!-- SLIDE 3: FASE 2 — A ECLOSÃO: A CASCATA NEUROFISIOLÓGICA (FIGURA 1 AMPLIADA) -->
+    <section>
+      <h2>Fase 2: O Choque Adrenérgico e a Reação Biológica Inevitável</h2>
+      <p>Ao reconhecer uma ameaça de morte iminente, a amígdala cerebral ativa instantaneamente o Sistema Nervoso Simpático (SNS). Glândulas suprarrenais inundam a corrente sanguínea com adrenalina e noradrenalina, gerando alterações fisiológicas que fogem ao controle voluntário direto:</p>
+
+      <div class="container-infografico-vertical">
+        <img src="imagem/estresse_corpo.png" alt="Infográfico detalhado das alterações neurofisiológicas sob estresse de combate" tabindex="0">
+      </div>
+      <p class="legenda-midia">Figura 1 — Cascata Neurofisiológica sob Estresse Agudo de Combate. <em>(Fonte: Siddle, 1995; Grossman, 2008 / APM PMMG. Toque na imagem para ampliar)</em></p>
+
+      <div class="painel seguranca">
+        <p><strong>Efeitos Fisiológicos Observados:</strong> Tremores nas mãos, sudorese, taquicardia e respiração acelerada decorrem da liberação hormonal de adrenalina e noradrenalina pelo Sistema Nervoso Simpático. A compreensão desses efeitos assegura que o operador mantenha a concentração nas ações de tiro e proteção.</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: FASE 3 — SOB FOGO: DEGRADAÇÃO SENSÓRIO-MOTORA E ADAPTAÇÃO -->
+    <section>
+      <h2>Fase 3: Degradação Sensorial e Adaptação Biomecânica</h2>
+      <p>Sob sobrecarga adrenérgica severa, o cérebro fecha canais sensoriais periféricos para focar no ponto da ameaça imediata. Essa alteração gera dois bloqueios perceptivos durante o confronto:</p>
+
+      <div class="container-imagem">
+        <img src="imagem/visao_tunel.png" alt="Simulação da perda de visão periférica e visão em túnel sob estresse" tabindex="0">
+      </div>
+      <p class="legenda-midia">Figura 2 — Estreitamento do Campo Visual Periférico (Visão em Túnel). <em>(Fonte: Force Science Institute / APM PMMG)</em></p>
+
+      <div class="ficha-cards">
+        <div class="card-comparativo">
+          <div class="card-comparativo-header">Visão em Túnel e Exclusão Auditiva</div>
+          <p>O militar perde até <strong>70% do seu campo visual periférico</strong> e pode deixar de ouvir disparos efetuados por seu companheiro a poucos metros. <strong>Procedimento doutrinário:</strong> movimentar a cabeça para os lados para quebrar o foco restrito e utilizar comandos verbais objetivos e padronizados.</p>
+        </div>
+
+        <div class="card-comparativo">
+          <div class="card-comparativo-header">Redução da Motricidade Fina</div>
+          <p>A vasoconstrição periférica reduz a irrigação sanguínea nas extremidades dos dedos. Travas diminutas ou comandos delicados tornam-se ineficazes sob estresse agudo.</p>
+        </div>
+
+        <div class="card-comparativo">
+          <div class="card-comparativo-header">Emprego de Motricidade Grossa</div>
+          <p>A doutrina de tiro da PMMG prioriza movimentos de grupos musculares amplos: empunhadura bimanual firme, golpeio de ferrolho com a palma espalmada e saque em coldre de retenção intuitiva.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: FASE 3 (CONT.) — O CICLO DECISÓRIO ICDA & CASUÍSTICA REAL EM VÍDEO -->
+    <section>
+      <h2>Fase 3 (Continuação): O Ciclo Decisório ICDA sob Fogo</h2>
+      <p>Mesmo com a elevação dos batimentos cardíacos, o processo de tomada de decisão do policial militar deve seguir as etapas estruturadas pelo MTP 3.04.01/2020-CG:</p>
+
+      <div class="procedimento">
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>I — Identificar</h4>
+            <p>Varredura rápida do ambiente e percepção sensorial de indivíduo ou veículo que apresente comportamento de risco.</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>C — Certificar (Confirmação da Ameaça)</h4>
+            <p>Confirmação da existência de arma de fogo e agressão atual ou iminente. A certificação consciente evita disparos contra pessoas desarmadas ou portando objetos cotidianos.</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>D — Decidir</h4>
+            <p>Seleção do meio de força proporcional e legalmente adequado para repelir a agressão letal.</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>A — Agir</h4>
+            <p>Execução biomecânica precisa: alinhamento dos aparelhos de pontaria e disparos controlados na massa central do agressor até cessar a agressão.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-container-vertical">
+        <video controls poster="cover.png" preload="metadata">
+          <source src="video/casuistica_estresse_confronto.mp4" type="video/mp4">
+          Seu navegador não suporta a reprodução deste vídeo.
+        </video>
+      </div>
+      <p class="legenda-midia">Vídeo 1 — Casuística Operacional: Reação sob Fogo e Tomada de Decisão em Frações de Segundo. <em>(Fonte: Central Virtual de Treinamento - CVT / PMMG)</em></p>
+
+      <div class="painel instrutor">
+        <p><strong>Análise da Casuística:</strong> Observe na gravação como o tempo real de decisão é inferior a dois segundos. A repetição no treinamento de tiro e a verificação no <strong>Certificar</strong> fundamentam a intervenção proporcional.</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: FASE 4 — PROCEDIMENTOS PÓS-DISPAROS E BOX BREATHING -->
+    <section>
+      <h2>Fase 4: Procedimentos Pós-Disparos e Box Breathing (4x4x4x4)</h2>
+      <p>Cessados os disparos, o estado de alerta biológico permanece elevado. O policial militar deve buscar abrigo balístico e aplicar a técnica de respiração diafragmática para estabilizar os batimentos e restabelecer a visão periférica:</p>
+
+      <div class="container-imagem">
+        <img src="imagem/box_breathing_4x4.svg" alt="Diagrama da técnica Box Breathing em 4 tempos" tabindex="0">
+      </div>
+      <p class="legenda-midia">Figura 3 — Protocolo Padronizado Box Breathing em 4 Tempos de 4 Segundos. <em>(Fonte: Grossman, 2008 / APM PMMG)</em></p>
+
+      <div class="procedimento">
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>Tempo 1: Inalação Diafragmática (4 segundos)</h4>
+            <p>Inspire profundamente pelo nariz projetando o abdômen para fora, permitindo máxima oxigenação pulmonar.</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>Tempo 2: Retenção com Pulmão Cheio (4 segundos)</h4>
+            <p>Sustente o oxigênio sem tensionar a musculatura de ombros ou mandíbula.</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>Tempo 3: Expiração Controlada (4 segundos)</h4>
+            <p>Esvazie o ar pela boca de forma suave e contínua, estimulando a via do nervo vago e a desaceleração cardíaca.</p>
+          </div>
+        </div>
+
+        <div class="etapa">
+          <div class="etapa-conteudo">
+            <h4>Tempo 4: Retenção com Pulmão Vazio (4 segundos)</h4>
+            <p>Mantenha a pausa respiratória de forma estável antes de reiniciar o próximo ciclo de 4 segundos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="painel prática">
+        <p><strong>Procedimento de Guarnição:</strong> Abrigado e com a arma em posição de pronta-resposta, execute de <strong>3 a 4 ciclos</strong> de Box Breathing enquanto realiza a varredura visual em 360°, verifica o estado físico do companheiro de guarnição e transmite as informações ao COPOM via rádio.</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: FASE 5 — PÓS-INCIDENTE: SUPORTE BIOPSICOSSOCIAL E REDE NAIS / SAS -->
+    <section>
+      <h2>Fase 5: Acompanhamento Biopsicossocial e Rede NAIS / SAS</h2>
+      <p>Concluída a ocorrência no terreno, as alterações fisiológicas e o estresse pós-confronto demandam acompanhamento médico e psicológico institucional:</p>
+
+      <div class="cards-container">
+        <div class="card-nivel nivel-1">
+          <div class="card-item-header">🏥 A Rede NAIS / SAS da PMMG</div>
+          <p>Após ocorrências com disparos de arma de fogo ou lesões corporais, o encaminhamento ao <strong>NAIS (Núcleo de Atenção Integral à Saúde)</strong> e à <strong>SAS (Seção de Assistência à Saúde)</strong> é procedimento institucional padronizado para acompanhamento biopsicossocial do efetivo.</p>
+        </div>
+
+        <div class="card-nivel nivel-2">
+          <div class="card-item-header">🤝 Acompanhamento Biopsicossocial</div>
+          <p>Alterações temporárias de sono, tremores residuais, hipervigilância ou recordações recorrentes do evento constituem reações fisiológicas esperadas diante de confronto armado. O acompanhamento especializado visa restabelecer o equilíbrio e a saúde integral do militar.</p>
+        </div>
+      </div>
+
+      <div class="painel doutrina">
+        <p><strong>Acompanhamento de Guarnição:</strong> Cabe ao Comandante de Guarnição e aos companheiros de equipe observar sinais de isolamento ou sofrimento mental após o incidente, assegurando o pronto encaminhamento do policial militar aos profissionais do NAIS/SAS.</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: FIXAÇÃO DE CONHECIMENTO SITUACIONAL -->
+    <section>
+      <h2>Fixação de Conhecimento Situacional</h2>
+      <p>Avalie o cenário operacional abaixo com base na linha de conduta ensinada nesta instrução:</p>
+
+      <div class="quiz-bloco">
+        <div class="quiz-pergunta">Cenário Operacional: Imediatamente após cessar um confronto armado com disparos de arma de fogo no qual uma agressão letal foi neutralizada, um policial militar percebe respiração ofegante, tremores nas mãos e não ouviu os disparos efetuados pelo seu companheiro de guarnição. Com base na neurofisiologia e na doutrina do MTP 3.04.01, o que explica essa condição e qual o procedimento técnico a ser adotado?</div>
+        
+        <div class="quiz-opcoes">
+          <div class="quiz-opcao-box">A) Trata-se de desajuste funcional permanente; o policial deve pedir afastamento definitivo do serviço operacional e entregar a arma.</div>
+          <div class="quiz-opcao-box">B) O policial foi atingido por um disparo oculto e deve imediatamente deitar-se ao solo em decúbito dorsal para aguardar a chegada de resgate médico.</div>
+          <div class="quiz-opcao-box">C) É a resposta fisiológica esperada de ativação do Sistema Nervoso Simpático (exclusão auditiva temporária e redução da motricidade fina). O policial deve abrigar-se, manter a arma sob controle seguro e executar de 3 a 4 ciclos de Box Breathing (4x4x4x4) enquanto realiza a varredura 360°.</div>
+          <div class="quiz-opcao-box">D) O policial deve abandonar o abrigo imediatamente e sair correndo a pé em perseguição a possíveis comparsas sem avisar a equipe ou o rádio.</div>
+        </div>
+
+        <details class="gabarito-detalhes">
+          <summary class="gabarito-btn"><span>🔍 Conferir Gabarito e Justificativa Doutrinária</span></summary>
+          <div class="feedback-correto">
+            <strong>Gabarito Doutrinário Oficial: Alternativa C.</strong><br><br>
+            Tremores nas mãos e exclusão auditiva decorrem da descarga de adrenalina e da vasoconstrição periférica ativadas pelo Sistema Nervoso Simpático sob ameaça letal (Siddle, 1995; Grossman, 2008). O procedimento imediato consiste em abrigar-se, manter o controle da arma e aplicar de 3 a 4 ciclos da respiração Box Breathing (4x4x4x4). A técnica ativa a via parassimpática, reduzindo os batimentos cardíacos, restabelecendo a percepção periférica e permitindo a comunicação clara com a equipe e o COPOM.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- SLIDE 9: REFERÊNCIAS BIBLIOGRÁFICAS E DOUTRINÁRIAS -->
+    <section>
+      <h2>Referências Bibliográficas e Doutrinárias</h2>
+      <p class="legenda-midia" style="text-align: left;">Normatização ABNT NBR 6023 — Ordenação Alfabética Rigorosa</p>
+
+      <div class="referencias-box">
+        <ul>
+          <li><strong>ARTWOHL, Alexis; CHRISTENSEN, Loren W.</strong> <em>Deadly Force Encounters: What Cops Need to Know to Mentally and Physically Prepare for and Survive a Gunfight</em>. Boulder, CO: Paladin Press, 1997.</li>
+          <li><strong>COOPER, Jeff.</strong> <em>Principles of Personal Defense</em>. Boulder, CO: Paladin Press, 1989.</li>
+          <li><strong>GROSSMAN, Dave; CHRISTENSEN, Loren W.</strong> <em>On Combat: The Psychology and Physiology of Deadly Conflict in War and in Peace</em>. 3. ed. Millstadt, IL: Warrior Science Publications, 2008.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar.</strong> <em>Manual Técnico-Profissional nº 3.04.01/2020-CG</em>: Intervenção Policial, Processo de Comunicação e Uso da Força. Belo Horizonte: Academia de Polícia Militar, 2020.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar.</strong> <em>Manual Técnico-Profissional nº 3.04.02/2020-CG</em>: Abordagem a Pessoas e Técnicas de Busca. Belo Horizonte: Academia de Polícia Militar, 2020.</li>
+          <li><strong>MINAS GERAIS. Polícia Militar. Comando-Geral.</strong> <em>Diretriz de Segurança para o Emprego Operacional nº 3.02.007/2024-CG</em>. Belo Horizonte: PMMG, 2024.</li>
+          <li><strong>SAPOLSKY, Robert M.</strong> <em>Why Zebras Don't Get Ulcers: The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping</em>. New York: Henry Holt and Co., 2004.</li>
+          <li><strong>SIDDLE, Bruce K.</strong> <em>Sharpening the Warrior's Edge: The Psychology & Science of Training</em>. Belleville, IL: PPCT Research Publications, 1995.</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+</page>
+  
+<footer class="pmmg-footer-nav">
+  <a class='pmmg-btn-nav pmmg-btn-prev' href='/dentro-do-confronto/controle-verbal/'>← Módulo 2: Verbalização</a>
+  <button id="completeModuleBtn" class="pmmg-btn-complete" onclick="markModuleCompleted('gestao-de-estresse')">
+    Marcar como Concluído
+  </button>
+  <a class='pmmg-btn-nav pmmg-btn-next' href='/dentro-do-confronto/intervencao-policial/'>Módulo 4 (Parte 1): Intervenção Policial →</a>
+</footer>
+
+  
+<script>
+  window.addEventListener('scroll', function() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const bar = document.getElementById('pmmgScrollProgress');
+    if (bar) bar.style.width = Math.min(100, Math.max(0, scrolled)) + '%';
+  });
+
+  function adjustFontSize(delta) {
+    const root = document.querySelector('.aula') || document.querySelector('page') || document.body;
+    const current = parseFloat(window.getComputedStyle(root, null).getPropertyValue('font-size')) || 16;
+    const next = Math.max(12, Math.min(26, current + delta));
+    root.style.fontSize = next + 'px';
+  }
+
+  function markModuleCompleted(modKey) {
+    let completed = JSON.parse(localStorage.getItem('pmmg_confronto_completed') || '[]');
+    if (!completed.includes(modKey)) {
+      completed.push(modKey);
+      localStorage.setItem('pmmg_confronto_completed', JSON.stringify(completed));
+    }
+    const btn = document.getElementById('completeModuleBtn');
+    if (btn) {
+      btn.innerHTML = '✔ Concluído com Sucesso!';
+      btn.style.background = '#15803d';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const parts = window.location.pathname.replace(/\\/g, '/').split('/');
+    let modKey = parts[parts.length - 2] || 'modulo';
+    if (parts[parts.length - 1].includes('treinamento_intervencao')) {
+      modKey = 'intervencao-policial-p2';
+    }
+    let completed = JSON.parse(localStorage.getItem('pmmg_confronto_completed') || '[]');
+    const btn = document.getElementById('completeModuleBtn');
+    if (btn && completed.includes(modKey)) {
+      btn.innerHTML = '✔ Módulo Concluído';
+      btn.style.background = '#15803d';
+    }
+  });
+</script>
+
+</body>
+</html>
